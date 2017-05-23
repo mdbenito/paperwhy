@@ -418,4 +418,19 @@ references:
   URL: https://link.springer.com/article/10.1023/A:1018054314350
   DOI: 10.1023/A:1018054314350
   ISSN: 0885-6125, 1573-0565
+
+- id: nair_rectified_2010
+  type: paper-conference
+  author:
+  - family: Nair
+    given: Vinod
+  - family: Hinton
+    given: Geoffrey E
+  issued:
+  - year: '2010'
+  title: Rectified linear units improve restricted boltzmann machines
+  container-title: Proceedings of the 27th international conference on machine learning
+    (ICML-10)
+  publisher-place: Haifa, Israel
+  page: '807-814'
 ...

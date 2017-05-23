@@ -10,12 +10,13 @@ paper_key: glorot_deep_2011
 ---
 
 **tl;dr:** use ReLUs by default. Don't pretrain if you have lots of
-labeled training data. Do in unsupervised settings. Use regularisation
-on weights / activations ($L_1$ might promote sparsity).
+labeled training data, but do in unsupervised settings. Use
+regularisation on weights / activations. $L_1$ might promote sparsity,
+ReLUs already do and this seems good if the data itself is.
 
 This seminal paper settled the **introduction of ReLUs**[^1] into the
 neural network community (they had already been used in other
-contexts, e.g. in RBMs (Hinton 2010)[^2])
+contexts, e.g. in RBMs.[^2]
 
 >rectifying neurons (…) yield equal or better performance than
 >hyperbolic tangent networks in spite of the hard non-linearity and
@@ -227,5 +228,5 @@ average sparsity of around 50%, still much lower that the average of
 99.4% zero features in the data, but a significant improvement.
 
 [^1]: The name *ReLU* was not used in this paper so we are indulging in a bit of an anachronism by using it.
-[^2]: Citation...
 
+[^2]: {{< cite nair_rectified_2010 >}}
