@@ -1417,6 +1417,8 @@ a.paper-author:hover {
 .citation-authors {
     font-size: 80%;
     text-transform: uppercase
-                   
-    
+}
+
+.citation-date {
+    /* font-size: 90% */
 }

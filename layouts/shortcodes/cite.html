@@ -9,6 +9,7 @@
     {{ $entries := where $bib "id" $key }}
     {{ if $entries }}
       {{ $entry := index $entries 0 }}
+      {{ $year := (index $entry.issued 0).year }}
       <span class="citation-title">{{ $entry.title | htmlEscape }}</span>, 
       <span class="citation-authors">
         {{ range $i, $author := $entry.author }}
@@ -20,9 +21,10 @@
           {{ else }}
             {{ $abbrev | htmlEscape }}.
           {{ end }}
-          {{ if $i }}, {{end}}
+          {{ if lt $i (sub (len $entry.author) 1)}}, {{end}}
         {{ end }}
       </span>
+      <span class="citation-date">({{ $year }})</span>
     {{ else }} 
       <strong>Wrong citekey: {{ $key }}</strong>
     {{ end }}
