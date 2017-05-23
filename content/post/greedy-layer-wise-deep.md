@@ -6,7 +6,6 @@ title: Greedy layer-wise training of Deep Networks
 tags: ["deep-belief-networks", "boltzmann-machines"]
 
 paper_authors: ["Bengio, Yoshua", "Lamblin, Pascal", "Popovici, Dan", "Larochelle, Hugo"]
-paper_date: 2007
 paper_key: bengio_greedy_2007
 ---
 
