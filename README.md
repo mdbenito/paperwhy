@@ -29,6 +29,11 @@ Paths here are relative to the root of the code.
    `pandoc-citeproc -y bibtexfile > data/bibliography.yml`.
 3. Posts are stored in `content/post/` as markdown files.
 
+The **extra** field in Zotero (**notes** in the bibtex) can hold
+further fields. For now only `code: http://urltowhatever` (for any
+sourcecode published with the paper) is used in the templates to
+automatically add a link to it next to the one to the original paper,
+authors, etc.
 
 ## Structure of a post
 
