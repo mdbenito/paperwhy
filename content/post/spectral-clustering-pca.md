@@ -106,8 +106,8 @@ detail:
 * Assumes smooth manifolds intersect at non zero angles (but consider
   the graphs of $x^2$ and $x^3$ intersecting at 0).[^6]
 
-[^1]: See e.g. the review *R. Vidal, “Subspace Clustering,” IEEE Signal Processing Magazine, vol. 28, no. 2, pp. 52–68, Mar. 2011.*
-[^2]: A. Y. Ng, M. I. Jordan, and  Y. Weiss. On spectral clustering: Analysis and an algorithm. Advances in Neural Information Processing Systems (NIPS), 2:849–856, 2002
+[^1]: See e.g. the review {{< cite vidal_subspace_2011 >}}
+[^2]: {{< cite ng_spectral_2002 >}}
 [^3]: Manifold clustering is particularly relevant in motion segmentation and some specific cases of face recognition. But what has been the effect of the development of deep convolutional neural networks on the relevance of these techniques?
 [^4]: Local PCA amounts to an eigenvalue decomposition of the local covariance matrix $C\_i$.
 [^5]: **Check me:** Is this essential for the proofs?

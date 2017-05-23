@@ -165,6 +165,36 @@ references:
   note: 'code: http://sciences.ucf.edu/math/tengz'
   URL: http://jmlr.org/papers/v18/14-318.html
 
+- id: ng_spectral_2002
+  type: chapter
+  author:
+  - family: Ng
+    given: Andrew Y.
+  - family: Jordan
+    given: Michael I.
+  - family: Weiss
+    given: Yair
+  editor:
+  - family: Dietterich
+    given: T. G.
+  - family: Becker
+    given: S.
+  - family: Ghahramani
+    given: Z.
+  issued:
+  - year: '2002'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '12'
+  title: 'On Spectral Clustering: Analysis and an algorithm'
+  title-short: On Spectral Clustering
+  container-title: Advances in Neural Information Processing Systems 14
+  publisher: MIT Press
+  page: '849-856'
+  keyword: shredder
+  URL: http://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf
+
 - id: nevo_identifying_2017
   type: article-journal
   author:
@@ -386,6 +416,29 @@ references:
   publisher: MIT Press
   page: '153-160'
   URL: http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf
+
+- id: vidal_subspace_2011
+  type: article-journal
+  author:
+  - family: Vidal
+    given: R.
+  issued:
+  - year: '2011'
+    month: '3'
+  title: Subspace Clustering
+  container-title: IEEE Signal Processing Magazine
+  page: '52-68'
+  volume: '28'
+  issue: '2'
+  abstract: Over the past few decades, significant progress has been made in clustering
+    high-dimensional data sets distributed around a collection of linear and affine
+    subspaces. This article presented a review of such progress, which included a
+    number of existing subspace clustering algorithms together with an experimental
+    evaluation on the motion segmentation and face clustering problems in computer
+    vision.
+  keyword: shredder
+  DOI: 10.1109/MSP.2010.939739
+  ISSN: '1053-5888'
 
 - id: breiman_bagging_1996
   type: article-journal
