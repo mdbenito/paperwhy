@@ -1395,3 +1395,13 @@ a.paper-author:hover {
     padding-left: 1.5em
 }
 
+.citation-title {
+    font-style: italic
+}
+
+.citation-authors {
+    font-size: 80%;
+    text-transform: uppercase
+                   
+    
+}

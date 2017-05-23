@@ -5,14 +5,18 @@
     {{ $post := index $posts 0 }}
     <a href="{{ $post.URL }}">{{ $post.Params.linktitle | default $post.Params.title | htmlEscape }}</a>
   {{ else }}
-    {{ $bib := index (index $.Site.Data "bibliography") "references"}}
+    {{ $bib :=  $.Site.Data.bibliography.references}}
     {{ $entries := where $bib "id" $key }}
     {{ if $entries }}
       {{ $entry := index $entries 0 }}
-      <span class="citation-title">{{ $entry.title | htmlEscape }}</span>
-          <!-- To do:
-             * iterate over authors / author names, etc.
-             * -->
+      <span class="citation-title">{{ $entry.title | htmlEscape }}</span>, 
+      <span class="citation-authors">
+        {{ range $i, $author := $entry.author }}
+          {{ $full := delimit (slice $author.given $author.family) " " }}
+          {{ $abbrev := delimit (slice $author.family (substr $author.given 0 1)) ", "}}
+          <a href="{{ $.Site.BaseURL }}paper_authors/{{ $full }}">{{ $abbrev | htmlEscape }}.</a>{{ if $i }}, {{end}}
+        {{ end }}
+      </span>
     {{ else }} 
       <strong>Wrong citekey: {{ $key }}</strong>
     {{ end }}
