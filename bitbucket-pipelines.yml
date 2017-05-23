@@ -4,5 +4,5 @@ pipelines:
     master:
       - step:
           script:
-            - hugo --baseURL https://__baseurl__
+            - hugo --buildDrafts --baseURL https://__baseurl__
             - aero deploy -d public
