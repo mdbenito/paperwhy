@@ -1,0 +1,8 @@
+image: aerobatic/hugo
+pipelines:
+  branches:
+    master:
+      - step:
+          script:
+            - hugo --baseURL https://__baseurl__
+            - aero deploy -d public
