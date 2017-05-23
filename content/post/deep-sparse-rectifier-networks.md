@@ -23,10 +23,10 @@ contexts, e.g. in RBMs.[^2]
 >non-differentiability at zero, creating sparse representations with
 >true zeros, which seem remarkably suitable for naturally sparse data
 
-We already saw in {{< cite bengio_greedy_2007 >}} that at the time
-layer-wise pretraining was widely used to prime neural networks,
-achieving significant improvements in performance. The authors used
-the now classical $\max (0,x)$ function together with
+Back in the late 2000s, layer-wise pretraining was introduced to prime
+neural networks, achieving significant improvements in
+performance.[^4] The authors used the now classical $\max (0,x)$
+function together with
 
 >an $L_1$ regularizer on the activation values to promote sparsity and
 >prevent potential numerical problems with unbounded activation,
@@ -234,3 +234,5 @@ average sparsity of around 50%, still much lower that the average of
 [^2]: {{< cite nair_rectified_2010 >}}
 
 [^3]: {{< cite hinton_improving_2012 >}}
+
+[^4]: {{< cite bengio_greedy_2007 >}}
