@@ -1,7 +1,7 @@
 {{ partial "head" . }}
 <body>
     {{ $key := .Params.paper_key }}
-    {{ $bib := index (index $.Site.Data "bibliography") "references"}}
+    {{ $bib := $.Site.Data.bibliography.references}}
     {{ $entry := index (where $bib "id" $key) 0}}
     {{ $year := (index $entry.issued 0).year }}
     {{ $month := (index $entry.issued 0).month }}

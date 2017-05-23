@@ -2,15 +2,25 @@
     <div id="home">
         <ul class="posts">
         {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+        {{ $bib := $.Site.Data.bibliography.references}}
         {{ range $paginator.Pages }}
+            {{ $key := .Params.paper_key }}
+            {{ $entry := index (where $bib "id" $key) 0}}
+            {{ $year := (index $entry.issued 0).year }}
+
             <li itemscope itemtype="//schema.org/BlogPosting">
                 <a href="{{ .Permalink }}" itemprop="url">
                     <div class="p-wrap">
                         <time datetime="" itemprop="datePublished">
-                        {{ .Date.Format "02 Jan 2006" }}
+                        {{ .Date.Format "02 Jan 06" }}
                         </time>
-                        <p itemprop="name headline">{{ .Title }}</p>
-                        <p class="posts-list-authors">
+                        <p class="post-title" itemprop="name headline">
+                            {{ .Title | truncate 50 "..." }}
+                        </p>
+                        <p class="paper-date">
+                            ({{ $year }})
+                        </p>
+                        <p class="post-authors">
 		            {{ range .Params.paper_authors }}
                             {{ $both := split . "," }}
                             {{ $name := index $both 1 }}

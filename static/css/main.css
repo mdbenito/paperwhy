@@ -334,7 +334,7 @@ h2 {
 }
 
 h3,.h-wrap h1.title,.off-canvas .intro h1 {
-    font-size: 150%;
+    font-size: 155%;
     font-weight: lighter;
     margin: 1.5em 0 .5em
 }
@@ -897,15 +897,15 @@ footer small {
 .posts li {
     display: inline-block;
     width: 100%;
-    border-bottom: 1px solid #fa5305
+    border-bottom: 1px dotted #fa5305
 }
 
 .posts li:first-child {
-    border-top: 1px solid #fa5305
+    border-top: 1px dotted #fa5305
 }
 
 .posts li .p-wrap {
-    padding: 2.5em 2em;
+    padding: 2em 2em;
     background: #ffffff;
     transition: all .15s ease-in;
     display: flex;
@@ -954,8 +954,22 @@ footer small {
     margin: 0
 }
 
+.posts li .p-wrap .post-title {
+    /* font-weight: bolder */
+    font-size: 105%
+}
+
+.posts li .p-wrap .post-authors {
+
+}
+.posts li .p-wrap .paper-date {
+    font-weight: lighter;
+    font-size: 70%
+}
+
+
 .posts li time {
-    font-size: 80%;
+    font-size: 60%;
     color: #555;
     padding-right: 1em
 }
@@ -1338,9 +1352,10 @@ a.paper-author:hover {
 /* link icons for the sidebar */
 
 .off-canvas .link-icons {
-  text-decoration: none;
-  position: absolute;
-  bottom: 1em
+    font-size: 120%;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0.8em
 }
 
 .off-canvas .link-icons li {
