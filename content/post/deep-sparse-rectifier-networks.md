@@ -42,9 +42,9 @@ of the training data is unlabeled (in semi-supervised settings)
 [Let's skip the brain stuff, which is always pretty unconvincing
 anyway…]
 
-A very interesting feature of ReLUs is the fact that they induce
-sparse representations because they can be completely off. The authors
-give four reasons why this is good:
+A very interesting feature of ReLUs is that **they induce sparse
+representations because they can be completely off**. The authors give
+four reasons why this is good:
 
 -  *"Information disentangling"*: small perturbations of the input are
    less likely to shift many weights in the network if many of them
@@ -59,6 +59,9 @@ give four reasons why this is good:
 -  *"Distributed but sparse"*: albeit of lower expressivity than dense
    representations, being still distributed makes them *"exponentially
    better than local ones"*.
+   
+{{< figure src="/img/glorot_deep_2011-fig3.jpg"
+           title="enforcing sparsity of the activation does not hurt final performance until around 85% of true zeros.">}}
 
 **The ReLU acts like a switch**. A unit either works linearly or not at
 all. This asymmetry might create some issues (see below) but it has
@@ -66,12 +69,12 @@ the advantage that for any fixed input, the whole network is linear
 and thus can be seen as an *"exponential number of linear models that
 share parameters"*.
 
-This is very reminiscent of the interpretation of Dropout as
-an extreme form of bagging ({{< cite hinton_improving_2012 >}}).
-But perhaps more importantly, gradients flow backwards unhindered in
-active neurons, thus facilitating learning and alleviating the
-vanishing gradient problem. This is typically seen as the reason why
-ReLUs perform so well, brain stuff notwithstanding.
+This is very reminiscent of the interpretation of Dropout as an
+extreme form of bagging.[^3] But perhaps more importantly, gradients
+flow backwards unhindered in active neurons, thus facilitating
+learning and alleviating the vanishing gradient problem. This is
+typically seen as the reason why ReLUs perform so well, brain stuff
+notwithstanding.
 
 What are some **possible disadvantages of ReLUs**? Experimental results
 show that the non-differentiability (*"hard saturation"*) is not an
@@ -105,79 +108,77 @@ Four different combinations of modified activations and cost functions are propo
 
 <table style="width: 100%">
   <tbody><tr>
-    <td style="text-align: center; padding-left: 0em; padding-right: 0em"><table style="display: inline; vertical-align: -2.2em; width: 80%">
+    <td style="text-align: center; padding-left: 0em; padding-right: 0em">
+    <table style="display: inline; vertical-align: -2.2em; width: 80%">
       <tbody><tr>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: right; text-align: center"><p>
-          
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: right; text-align: center"><p>
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: center; border-bottom: 1px solid" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: center; border-bottom: 1px solid" bgcolor="#dfdfdf"><p>
           A
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: center; border-bottom: 1px solid" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: center; border-bottom: 1px solid" bgcolor="#dfdfdf"><p>
           B
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: center" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: center" bgcolor="#dfdfdf"><p>
           C
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: center" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: center" bgcolor="#dfdfdf"><p>
           D
         </p></td>
       </tr><tr>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
           Activation
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-top: 1px solid; border-left: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-top: 1px solid; border-left: 1px solid"><p>
           softplus
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-top: 1px solid; border-right: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-top: 1px solid; border-right: 1px solid"><p>
           scaled ReLU + sigmoid reconstr.
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-left: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-left: 1px solid"><p>
           linear + scaled inputs
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em"><p>
           ReLU + scaled inputs
         </p></td>
       </tr><tr>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
           Cost function
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-bottom: 0px solid; border-left: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-bottom: 0px solid; border-left: 1px solid"><p>
           quadratic
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-bottom: 0px solid; border-bottom: 0px solid; border-bottom: 0px solid; border-right: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-bottom: 0px solid; border-right: 1px solid"><p>
           cross-entropy
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-bottom: 0px solid; border-bottom: 0px solid; border-left: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-bottom: 0px solid; border-left: 1px solid"><p>
           quadratic
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em"><p>
           quadratic
         </p></td>
       </tr><tr>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; text-align: right; border-right: 1px solid" bgcolor="#dfdfdf"><p>
           Regularisation
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-top: 0px solid; border-bottom: 0px solid; border-right: 0px solid; border-bottom: 1px solid; border-left: 1px solid"><p>
-          <m:math xmlns="http://www.w3.org/1998/Math/MathML"><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub></m:math>
-          (act.)
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-bottom: 1px solid; border-left: 1px solid"><p>
+          $L\_1$ (act.)
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-top: 0px solid; border-bottom: 0px solid; border-top: 0px solid; border-bottom: 0px solid; border-top: 0px solid; border-left: 0px solid; border-bottom: 1px solid; border-right: 1px solid"><p>
-          <m:math xmlns="http://www.w3.org/1998/Math/MathML"><m:msub><m:mi>L</m:mi><m:mn>1</m:mn></m:msub></m:math>
-          (act.)
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-bottom: 1px solid; border-right: 1px solid"><p>
+          $L\_1$ (act.)
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-top: 0px solid; border-bottom: 0px solid; border-top: 0px solid; border-bottom: 0px solid; border-right: 0px solid; border-left: 1px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em; border-left: 1px solid"><p>
           ?
         </p></td>
-        <td style="vertical-align: middle; padding-left: 0.4em; padding-right: 0.4em; padding-bottom: 0.4em; padding-top: 0.4em; vertical-align: middle; border-left: 0px solid"><p>
+        <td style="vertical-align: middle; padding: 0em 0.4em;"><p>
           ?
         </p></td>
       </tr></tbody>
     </table></td>
   </tr><tr>
-    <td style="text-align: center; padding-left: 0em; padding-right: 0em; height: 0.5em"></td>
+    <td style="text-align: center; padding: 0em; height: 0.5em"></td>
   </tr><tr>
-    <td style="text-align: center; padding-left: 0em; padding-right: 0em; padding-left: 1.5em; padding-right: 1.5em"><p>
+    <td style="text-align: center; padding-left: 1.5em; padding-right: 1.5em"><p>
       <font size="-1"><p>
         <b>Table 1. </b><a id="auto-1"></a>Strategies tested. See the paper for
         definitions. &ldquo;act.&rdquo; means &ldquo;on activations&rdquo;
@@ -198,10 +199,11 @@ SGD and no other regularisation. An important detail of their setup was:
 >being symmetric around 0, we use a variant of the activation function
 >for which half of the units output values are multiplied by -1.
 
-![Missing plot](softplus-relu.svg)
+{{< figure src="/img/glorot_deep_2011-fig1.svg"
+           title="The Softplus is a smooth approximation to the ReLU" >}}
 
 Interestingly, they tried a cost function interpolating between
-softplus and ReLU and by moving the parameter in its whole range,
+softplus and ReLU and by moving the parameter in its whole range and
 found that **there is no performance gain in using the smoother
 activation over the ReLU**. Therefore, rectifier units are preferable
 due to their being computationally cheaper and inherently sparse (an
@@ -230,3 +232,5 @@ average sparsity of around 50%, still much lower that the average of
 [^1]: The name *ReLU* was not used in this paper so we are indulging in a bit of an anachronism by using it.
 
 [^2]: {{< cite nair_rectified_2010 >}}
+
+[^3]: {{< cite hinton_improving_2012 >}}
