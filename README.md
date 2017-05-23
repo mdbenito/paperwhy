@@ -1,6 +1,6 @@
 # Paperwhy
 
-This is Paperwhy. Our sisyphean endeavour not to drown in the
+This is PaperWhy. Our sisyphean endeavour not to drown in the
 immense Machine Learning literature.
 
 With thousands of papers every month, keeping up with and making sense
@@ -71,6 +71,13 @@ subject of a previous post by a link to it.
 
 ```
 {{< youtube [videoid] >}}
+```
+
+**Figures** can be added with
+```
+{{< figure src="/img/citekey-fig1.svg" title="some caption" >}}
+```
+There's also a caption field, but looks worse in the current theme.
 
 ## To do
 
