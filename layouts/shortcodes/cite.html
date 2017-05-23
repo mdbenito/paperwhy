@@ -12,9 +12,15 @@
       <span class="citation-title">{{ $entry.title | htmlEscape }}</span>, 
       <span class="citation-authors">
         {{ range $i, $author := $entry.author }}
-          {{ $full := delimit (slice $author.given $author.family) " " }}
+          {{ $full := printf "%s %s" $author.given $author.family }}
+          {{ $fullrev := printf "%s, %s" $author.family $author.given }}
           {{ $abbrev := delimit (slice $author.family (substr $author.given 0 1)) ", "}}
-          <a href="{{ $.Site.BaseURL }}paper_authors/{{ $full }}">{{ $abbrev | htmlEscape }}.</a>{{ if $i }}, {{end}}
+          {{ if (index $.Site.Taxonomies.paper_authors $fullrev) }}
+          <a href="{{ $.Site.BaseURL }}paper_authors/{{ print $fullrev | urlize }}">{{ $abbrev | htmlEscape }}.</a>
+          {{ else }}
+            {{ $abbrev | htmlEscape }}.
+          {{ end }}
+          {{ if $i }}, {{end}}
         {{ end }}
       </span>
     {{ else }} 
