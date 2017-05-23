@@ -1,0 +1,20 @@
+<span class="{{ if len .Params | eq 2 }}{{ .Get 1 }}{{ else }}citation{{ end }}">
+  {{ $key := .Get 0 }}
+  {{ $posts := where $.Site.RegularPages "Params.paper_key" $key}}
+  {{ if $posts }}
+    {{ $post := index $posts 0 }}
+    <a href="{{ $post.URL }}">{{ $post.Params.linktitle | default $post.Params.title | htmlEscape }}</a>
+  {{ else }}
+    {{ $bib := index (index $.Site.Data "bibliography") "references"}}
+    {{ $entries := where $bib "id" $key }}
+    {{ if $entries }}
+      {{ $entry := index $entries 0 }}
+      <span class="citation-title">{{ $entry.title | htmlEscape }}</span>
+          <!-- To do:
+             * iterate over authors / author names, etc.
+             * -->
+    {{ else }} 
+      <strong>Wrong citekey: {{ $key }}</strong>
+    {{ end }}
+  {{ end }}
+</span>

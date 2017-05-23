@@ -1,0 +1,389 @@
+---
+references:
+- id: baldi_understanding_2013
+  type: chapter
+  author:
+  - family: Baldi
+    given: Pierre
+  - family: Sadowski
+    given: Peter J
+  editor:
+  - family: Burges
+    given: C. J. C.
+  - family: Bottou
+    given: L.
+  - family: Welling
+    given: M.
+  - family: Ghahramani
+    given: Z.
+  - family: Weinberger
+    given: K. Q.
+  issued:
+  - year: '2013'
+  title: Understanding Dropout
+  container-title: Advances in Neural Information Processing Systems 26
+  page: '2814-2822'
+  abstract: Dropout is a relatively new algorithm for training neural networks which
+    relies on stochastically dropping out neurons during training in order to avoid
+    the co-adaptation of feature detectors. We introduce a general formalism for studying
+    dropout on either units or connections, with arbitrary probability values, and
+    use it to analyze the averaging and regularizing properties of dropout in both
+    linear and non-linear networks. For deep neural networks, the averaging properties
+    of dropout are characterized by three recursive equations, including the approximation
+    of expectations by normalized weighted geometric means. We provide estimates and
+    bounds for these approximations and corroborate the results with simulations.
+    We also show in simple cases how dropout performs stochastic gradient descent
+    on a regularized error function.
+  URL: http://papers.nips.cc/paper/4878-understanding-dropout.pdf
+
+- id: tang_deep_2013
+  type: article-journal
+  author:
+  - family: Tang
+    given: Yichuan
+  issued:
+  - year: '2013'
+    month: '6'
+  accessed:
+  - year: '2015'
+    month: '4'
+    day: '29'
+  title: Deep learning using linear Support Vector Machines
+  container-title: arXiv:1306.0239 \[cs, stat\]
+  page: '6'
+  note: 'arXiv: 1306.0239'
+  abstract: Recently, fully-connected and convolutional neural networks have been
+    trained to achieve state-of-the-art performance on a wide variety of tasks such
+    as speech recognition, image classification, natural language processing, and
+    bioinformatics. For classification tasks, most of these “deep learning” models
+    employ the softmax activation function for prediction and minimize cross-entropy
+    loss. In this paper, we demonstrate a small but consistent advantage of replacing
+    the softmax layer with a linear support vector machine. Learning minimizes a margin-based
+    loss instead of the cross-entropy loss. While there have been various combinations
+    of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply
+    replacing softmax with linear SVMs gives significant gains on popular deep learning
+    datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop’s
+    face expression recognition challenge.
+  URL: http://arxiv.org/abs/1306.0239
+
+- id: lin_why_2016
+  type: article-journal
+  author:
+  - family: Lin
+    given: Henry W.
+  - family: Tegmark
+    given: Max
+  issued:
+  - year: '2016'
+    month: '8'
+  accessed:
+  - year: '2016'
+    month: '10'
+    day: '26'
+  title: Why does deep and cheap learning work so well?
+  container-title: arXiv:1608.08225 \[cond-mat, stat\]
+  page: '17'
+  note: 'arXiv: 1608.08225'
+  abstract: 'We show how the success of deep learning depends not only on mathematics
+    but also on physics: although well-known mathematical theorems guarantee that
+    neural networks can approximate arbitrary functions well, the class of functions
+    of practical interest can be approximated through “cheap learning” with exponentially
+    fewer parameters than generic ones, because they have simplifying properties tracing
+    back to the laws of physics. The exceptional simplicity of physics-based functions
+    hinges on properties such as symmetry, locality, compositionality and polynomial
+    log-probability, and we explore how these properties translate into exceptionally
+    simple neural networks approximating both natural phenomena such as images and
+    abstract representations thereof such as drawings. We further argue that when
+    the statistical process generating the data is of a certain hierarchical form
+    prevalent in physics and machine-learning, a deep neural network can be more efficient
+    than a shallow one. We formalize these claims using information theory and discuss
+    the relation to renormalization group procedures. We prove various “no-flattening
+    theorems” showing when such efficient deep networks cannot be accurately approximated
+    by shallow ones without efficiency loss: flattening even linear functions can
+    be costly, and flattening polynomials is exponentially expensive; we use group
+    theoretic techniques to show that n variables cannot be multiplied using fewer
+    than 2\^n neurons in a single hidden layer.'
+  URL: http://arxiv.org/abs/1608.08225
+
+- id: glorot_deep_2011
+  type: paper-conference
+  author:
+  - family: Glorot
+    given: Xavier
+  - family: Bordes
+    given: Antoine
+  - family: Bengio
+    given: Yoshua
+  issued:
+  - year: '2011'
+    month: '4'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '7'
+  title: Deep Sparse Rectifier Neural Networks
+  container-title: Proceedings of the Fourteenth International Conference on Artificial
+    Intelligence and Statistics April 11-13, 2011, Fort Lauderdale, FL, USA
+  publisher-place: Florida, USA
+  page: '315-323'
+  volume: '15'
+  abstract: While logistic sigmoid neurons are more biologically plausible than hyperbolic
+    tangent neurons, the latter work better for training multi-layer neural networks.
+    This paper shows that rectifying neurons are an even better model of biological
+    neurons and yield equal or better performance than hyperbolic tangent networks
+    in spite of the hard non-linearity and non-differentiability at zero, creating
+    sparse representations with true zeros which seem remarkably suitable for naturally
+    sparse data. Even though they can take advantage of semi-supervised setups with
+    extra-unlabeled data, deep rectifier networks can reach their best performance
+    without requiring any unsupervised pre-training on purely supervised tasks with
+    large labeled datasets. Hence, these results can be seen as a new milestone in
+    the attempts at understanding the difficulty in training deep but purely supervised
+    neural networks, and closing the performance gap between neural networks learnt
+    with and without unsupervised pre-training.
+  URL: http://www.jmlr.org/proceedings/papers/v15/
+
+- id: arias-castro_spectral_2017
+  type: article-journal
+  author:
+  - family: Arias-Castro
+    given: Ery
+  - family: Lerman
+    given: Gilad
+  - family: Zhang
+    given: Teng
+  issued:
+  - year: '2017'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '12'
+  title: Spectral Clustering based on local PCA
+  container-title: Journal of Machine Learning Research
+  page: '1-57'
+  volume: '18'
+  issue: '9'
+  note: 'code: http://sciences.ucf.edu/math/tengz'
+  URL: http://jmlr.org/papers/v18/14-318.html
+
+- id: nevo_identifying_2017
+  type: article-journal
+  author:
+  - family: Nevo
+    given: Daniel
+  - family: Ritov
+    given: Ya’acov
+  issued:
+  - year: '2017'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '16'
+  title: Identifying a minimal class of models for high-dimensional data
+  container-title: Journal of Machine Learning Research
+  page: '1-29'
+  volume: '18'
+  issue: '24'
+  URL: http://jmlr.org/papers/v18/16-172.html
+
+- id: goodfellow_maxout_2013
+  type: article-journal
+  author:
+  - family: Goodfellow
+    given: Ian J.
+  - family: Warde-Farley
+    given: David
+  - family: Mirza
+    given: Mehdi
+  - family: Courville
+    given: Aaron
+  - family: Bengio
+    given: Yoshua
+  issued:
+  - year: '2013'
+    month: '2'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '18'
+  title: Maxout Networks
+  container-title: arXiv:1302.4389 \[cs, stat\]
+  page: '9'
+  note: 'code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html arxiv: 1302.4389'
+  abstract: 'We consider the problem of designing models to leverage a recently
+    introduced approximate model averaging technique called dropout. We define a simple
+    new model called maxout (so named because its output is the max of a set of inputs,
+    and because it is a natural companion to dropout) designed to both facilitate
+    optimization by dropout and improve the accuracy of dropout’s fast approximate
+    model averaging technique. We empirically verify that the model successfully accomplishes
+    both of these tasks. We use maxout and dropout to demonstrate state of the art
+    classification performance on four benchmark datasets: MNIST, CIFAR-10, CIFAR-100,
+    and SVHN.'
+  keyword: shredder
+  URL: http://arxiv.org/abs/1302.4389
+
+- id: hinton_improving_2012
+  type: article-journal
+  author:
+  - family: Hinton
+    given: Geoffrey E.
+  - family: Srivastava
+    given: Nitish
+  - family: Krizhevsky
+    given: Alex
+  - family: Sutskever
+    given: Ilya
+  - family: Salakhutdinov
+    given: Ruslan R.
+  issued:
+  - year: '2012'
+    month: '7'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '28'
+  title: Improving neural networks by preventing co-adaptation of feature detectors
+  container-title: arXiv:1207.0580 \[cs\]
+  page: '18'
+  note: 'arXiv: 1207.0580'
+  abstract: When a large feedforward neural network is trained on a small training
+    set, it typically performs poorly on held-out test data. This “overfitting” is
+    greatly reduced by randomly omitting half of the feature detectors on each training
+    case. This prevents complex co-adaptations in which a feature detector is only
+    helpful in the context of several other specific feature detectors. Instead, each
+    neuron learns to detect a feature that is generally helpful for producing the
+    correct answer given the combinatorially large variety of internal contexts in
+    which it must operate. Random “dropout” gives big improvements on many benchmark
+    tasks and sets new records for speech and object recognition.
+  URL: http://arxiv.org/abs/1207.0580
+
+- id: baldi_dropout_2014
+  type: article-journal
+  author:
+  - family: Baldi
+    given: Pierre
+  - family: Sadowski
+    given: Peter
+  issued:
+  - year: '2014'
+    month: '5'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '2'
+  title: The Dropout Learning Algorithm
+  container-title: Artificial intelligence
+  page: '78-122'
+  volume: '210'
+  abstract: 'Dropout is a recently introduced algorithm for training neural network
+    by randomly dropping units during training to prevent their co-adaptation. A mathematical
+    analysis of some of the static and dynamic properties of dropout is provided using
+    Bernoulli gating variables, general enough to accommodate dropout on units or
+    connections, and with variable rates. The framework allows a complete analysis
+    of the ensemble averaging properties of dropout in linear networks, which is useful
+    to understand the non-linear case. The ensemble averaging properties of dropout
+    in non-linear logistic networks result from three fundamental equations: (1) the
+    approximation of the expectations of logistic functions by normalized geometric
+    means, for which bounds and estimates are derived; (2) the algebraic equality
+    between normalized geometric means of logistic functions with the logistic of
+    the means, which mathematically characterizes logistic functions; and (3) the
+    linearity of the means with respect to sums, as well as products of independent
+    variables. The results are also extended to other classes of transfer functions,
+    including rectified linear functions. Approximation errors tend to cancel each
+    other and do not accumulate. Dropout can also be connected to stochastic neurons
+    and used to predict firing rates, and to backpropagation by viewing the backward
+    propagation as ensemble averaging in a dropout linear network. Moreover, the convergence
+    properties of dropout can be understood in terms of stochastic gradient descent.
+    Finally, for the regularization properties of dropout, the expectation of the
+    dropout gradient is the gradient of the corresponding approximation ensemble,
+    regularized by an adaptive weight decay term with a propensity for self-consistent
+    variance minimization and sparse representations.'
+  keyword: shredder
+  URL: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/
+  DOI: 10.1016/j.artint.2014.02.004
+  ISSN: '0004-3702'
+  PMCID: PMC3996711
+  PMID: '24771879'
+
+- id: bartlett_representational_2017
+  type: no-type
+  author:
+  - family: Bartlett
+    given: Peter
+  issued:
+  - year: '2017'
+    month: '5'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '2'
+  title: Representational and optimization properties of Deep Residual Networks
+  publisher-place: Simons Institute
+  genre: Talk
+  note: 2681 seconds
+  URL: https://simons.berkeley.edu/talks/tba-1
+
+- id: swirszcz_local_2016
+  type: article-journal
+  author:
+  - family: Swirszcz
+    given: Grzegorz
+  - family: Czarnecki
+    given: Wojciech Marian
+  - family: Pascanu
+    given: Razvan
+  issued:
+  - year: '2016'
+    month: '11'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '3'
+  title: Local minima in training of neural networks
+  container-title: arXiv:1611.06310 \[cs, stat\]
+  page: '12'
+  note: 'arXiv: 1611.06310'
+  abstract: There has been a lot of recent interest in trying to characterize the
+    error surface of deep models. This stems from a long standing question. Given
+    that deep networks are highly nonlinear systems optimized by local gradient methods,
+    why do they not seem to be affected by bad local minima? It is widely believed
+    that training of deep models using gradient methods works so well because the
+    error surface either has no local minima, or if they exist they need to be close
+    in value to the global minimum. It is known that such results hold under very
+    strong assumptions which are not satisfied by real models. In this paper we present
+    examples showing that for such theorem to be true additional assumptions on the
+    data, initialization schemes and/or the model classes have to be made. We look
+    at the particular case of finite size datasets. We demonstrate that in this scenario
+    one can construct counter-examples (datasets or initialization schemes) when the
+    network does become susceptible to bad local minima over the weight space.
+  URL: http://arxiv.org/abs/1611.06310
+
+- id: bengio_greedy_2007
+  type: chapter
+  author:
+  - family: Bengio
+    given: Yoshua
+  - family: Lamblin
+    given: Pascal
+  - family: Popovici
+    given: Dan
+  - family: Larochelle
+    given: Hugo
+  editor:
+  - family: Schölkopf
+    given: P. B.
+  - family: Platt
+    given: J. C.
+  - family: Hoffman
+    given: T.
+  issued:
+  - year: '2007'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '13'
+  title: Greedy layer-wise training of Deep Networks
+  container-title: Advances in Neural Information Processing Systems 19
+  publisher: MIT Press
+  page: '153-160'
+  URL: http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf
+...

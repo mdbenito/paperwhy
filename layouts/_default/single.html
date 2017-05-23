@@ -1,0 +1,88 @@
+{{ partial "head" . }}
+<body>
+    {{ $key := .Params.paper_key }}
+    {{ $bib := index (index $.Site.Data "bibliography") "references"}}
+    {{ $entry := index (where $bib "id" $key) 0}}
+    {{ $year := (index $entry.issued 0).year }}
+    {{ $month := (index $entry.issued 0).month }}
+    {{ partial "off-canvas" . }}
+
+    <div class="site-wrapper">
+        {{ partial "header" . }}
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    {{ .Date.Format "2. January 2006" }}
+                    </time>
+                    </h5>
+                    {{ if .Params.tags }}
+		    <span class="post-tags">
+		        {{ range .Params.tags }}
+		        <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}">{{ humanize . }}</a>&nbsp;
+		        {{ end }}
+		    </span>
+		    {{ end }}
+                </div>
+                <h1 class="page-title" itemprop="name headline">{{ .Title }}</h1>
+                <div class="paper-metadata">
+                    {{ range .Params.paper_authors }}
+                      {{ $both := split . "," }}
+                      {{ $full := printf "%s %s" (index $both 1) (index $both 0)}}
+		      <a href="{{ $.Site.BaseURL }}paper_authors/{{ . | urlize }}"
+                         class="paper-author">{{ $full }}</a>&nbsp;
+		    {{ end }}
+                    | <time datetime="" >
+                        {{ if $month }}
+                          {{ dateFormat "Jan 2006" (printf "%s-%02s-01" $year $month)}}
+                        {{ else }}
+                          {{ $year }}
+                        {{ end }}
+                    </time>
+                    {{ $code_tag := findRE "code: .*?(\n|$)" ($entry.note | default "") 1 }}
+                    {{ if ge (len $code_tag) 1 }}
+                      {{ $code_url := index (split (index $code_tag 0) " ") 1}}
+                      | <a href="{{ $code_url }}">Code</a>
+                    {{ end }}
+                    {{ if $entry.URL }}
+                      | <a href="{{ $entry.URL }}">Paper</a>
+                    {{ end }}
+		</div>
+                <div itemprop="articleBody">
+                    {{ .Content }}
+                </div>
+                <div class="feat share">
+                    <p class="posted-by">Posted by
+                        <a href="{{ $.Site.BaseURL }}authors/{{ .Params.author | urlize }}" >{{ .Params.author }}</a>
+                        on {{ .Date.Format "January 2. 2006" }}
+                    </p>
+                    
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+
+                </div>
+                
+                {{ template "_internal/disqus.html" . }}
+
+                {{ if .NextInSection }}
+                    <a rel="next" href="{{ .NextInSection.Permalink }}" id="next">
+                        <span class="nav-title nav-title-next">{{ with .Site.Params.newer }}{{ . }}{{ end }}</span> &rarr;
+                    </a>
+                {{ end }}
+                {{ if .PrevInSection }}
+                    <a rel="prev" href="{{ .PrevInSection.Permalink }}" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">{{ with .Site.Params.older }}{{ . }}{{ end }}</span>
+                    </a>
+                {{ end }}
+            </article>
+        </section>
+
+        {{ partial "footer" . }}
+    </div>
+    
+    {{ partial "js" . }}
+</body>
+</html>
