@@ -19,7 +19,7 @@
         <h6>People</h6>
         <ul class="people-icons">
             {{ range .Site.Params.authors }}
-            <li id="{{ .icon_class }}"><a href="/authors/{{ .name | urlize }}">{{ index (split .name " ") 0 }}</a></li>
+            <li><a href="/authors/{{ .name | urlize }}"><img src="{{ .thumbnail }}" />{{ index (split .name " ") 0 }}</a></li>
             {{ end }}
         </ul>
 

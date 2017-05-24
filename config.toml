@@ -41,12 +41,12 @@ FootnoteReturnLinkContents = "<sup>⇧</sup>"
 [[params.authors]]
         name = "Álvaro Tejero Cantero"
 	url = "//scholar.google.com/citations?user=VObPwpUAAAAJ&hl=en"
-        icon_class = "alvaro"
+        thumbnail = "/img/people/alvaro.jpg"
 
 [[params.authors]]
         name = "Miguel de Benito Delgado"
         url = "//mdbenito.aerobatic.io"
-        icon_class = "miguel"
+        thumbnail = "/img/people/miguel.jpg"
 
 [taxonomies]
         tag = "tags"
