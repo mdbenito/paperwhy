@@ -312,11 +312,13 @@ body {
     }
 }
 
+/*
 @media (max-width: 642px) {
     body {
-        font-size:.875em
+        font-size:.95em
     }
 }
+*/
 
 h1,h2,h3,.h-wrap h1.title,.off-canvas .intro h1,h4,h5,h6,h5,h6 {
     font-family: 'Open Sans',sans-serif
@@ -1351,9 +1353,10 @@ a.paper-author:hover {
 
 /* link icons for the sidebar */
 
-.off-canvas .link-icons {
-    font-size: 120%;
-    text-decoration: none;
+/* FIXME: I'd like to center these but enclosing in an abolute div and
+making these relative and text-align center doesn't seem to work */
+.off-canvas ul.link-icons {
+    font-size: 115%;
     position: absolute;
     bottom: 0.8em
 }
@@ -1366,46 +1369,50 @@ a.paper-author:hover {
 
 /**/
 
+.off-canvas ul.people-icons {
+    text-align: center
+}
 .off-canvas ul.people-icons li {
-  text-decoration: none;
-  display: inline-block;
-  margin: 0 20px 0 20px;
-  width: 80px;
-  line-height: 80px;
-  border-radius:40px;
-  background-size: 80px;
-  background-position: top left;
-  background-repeat: no-repeat
+    display: inline-block;
+    margin: 0 20px 0 20px
+}
+
+.off-canvas ul.people-icons li img {
+    width: 80px;
+    border-radius: 40px;
+    display:block
 }
 
 .off-canvas ul.people-icons li a {
     text-decoration: none;
-    font-size: 80%;
-    margin-left: 12px;
-    position:relative;
-    bottom: -55px
+    display: inline-block
+                 
 }
+
+.off-canvas ul.people-icons li a:hover {
+    text-decoration: none;
+    display: inline-block;
+    background: #ff8952
+}
+
 
 @media (max-width: 399px) {
     .off-canvas ul.people-icons li {
-        margin: 0 10px 0 10px;
-        width: 40px;
-        line-height: 40px
-        border-radius:20px;
-        background-size: 40px;
-    }
-
-    .off-canvas ul.people-icons li a {
-        padding-left: 0.5em;
-        position:relative;
-        bottom: -25px
+        margin: 0 10px 0 10px
     }
 }
-
-#ana { background-image: url('/img/people/ana.jpg') }
-#alvaro { background-image: url('/img/people/alvaro.jpg') }
-#miguel { background-image: url('/img/people/miguel.jpg') }
-
+@media (max-width: 399px) {
+    .off-canvas ul.people-icons li img {
+        width: 40px;
+        border-radius: 20px;
+        display:block
+    }
+}
+@media (max-width: 399px) {
+    .off-canvas ul.people-icons li a {
+        
+    }
+}
 .single-wrap ul > li > ul {
     padding-left: 1.5em
 }
