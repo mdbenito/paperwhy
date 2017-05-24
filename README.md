@@ -100,7 +100,10 @@ There's also a caption field, but looks worse in the current theme.
 
 This site is built with [HUGO](gohugo.io) based on
 the [hikari](github.com/digitalcraftsman/hugo-hikari-theme) theme.
-Deployment is through bitbucket pipelines via [aerobatic](aerobatic.com).
+Deployment is through bitbucket pipelines
+via [aerobatic](aerobatic.com).  A custom docker image is used because
+we need Hugo >= 0.20 and currently (May 2017) aerobatic's docker
+container for hugo has version 0.19
 
 ## Credits
 

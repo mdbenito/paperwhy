@@ -1,4 +1,4 @@
-image: aerobatic/hugo
+image: mdbenito/aerobatic-hugo
 pipelines:
   branches:
     master:
