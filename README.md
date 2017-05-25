@@ -17,7 +17,7 @@ install [Hugo](gohugo.io). From the source of the repo type
 hugo server
 ```
 
-and open a browser to [localhost:1313](localhost:1313).
+and open a browser to [localhost:1313](//localhost:1313).
 
 ## Adding a new post
 
@@ -70,7 +70,7 @@ subject of a previous post by a link to it.
 **Videos** can be embedded with another shortcode:
 
 ```
-{{< youtube [videoid] >}}
+{{< youtube videoid >}}
 ```
 
 **Figures** can be added with
