@@ -1,71 +1,5 @@
 ---
 references:
-- id: baldi_understanding_2013
-  type: chapter
-  author:
-  - family: Baldi
-    given: Pierre
-  - family: Sadowski
-    given: Peter J
-  editor:
-  - family: Burges
-    given: C. J. C.
-  - family: Bottou
-    given: L.
-  - family: Welling
-    given: M.
-  - family: Ghahramani
-    given: Z.
-  - family: Weinberger
-    given: K. Q.
-  issued:
-  - year: '2013'
-  title: Understanding Dropout
-  container-title: Advances in Neural Information Processing Systems 26
-  page: '2814-2822'
-  abstract: Dropout is a relatively new algorithm for training neural networks which
-    relies on stochastically dropping out neurons during training in order to avoid
-    the co-adaptation of feature detectors. We introduce a general formalism for studying
-    dropout on either units or connections, with arbitrary probability values, and
-    use it to analyze the averaging and regularizing properties of dropout in both
-    linear and non-linear networks. For deep neural networks, the averaging properties
-    of dropout are characterized by three recursive equations, including the approximation
-    of expectations by normalized weighted geometric means. We provide estimates and
-    bounds for these approximations and corroborate the results with simulations.
-    We also show in simple cases how dropout performs stochastic gradient descent
-    on a regularized error function.
-  URL: http://papers.nips.cc/paper/4878-understanding-dropout.pdf
-
-- id: tang_deep_2013
-  type: article-journal
-  author:
-  - family: Tang
-    given: Yichuan
-  issued:
-  - year: '2013'
-    month: '6'
-  accessed:
-  - year: '2015'
-    month: '4'
-    day: '29'
-  title: Deep learning using linear Support Vector Machines
-  container-title: arXiv:1306.0239 \[cs, stat\]
-  page: '6'
-  note: 'arXiv: 1306.0239'
-  abstract: Recently, fully-connected and convolutional neural networks have been
-    trained to achieve state-of-the-art performance on a wide variety of tasks such
-    as speech recognition, image classification, natural language processing, and
-    bioinformatics. For classification tasks, most of these “deep learning” models
-    employ the softmax activation function for prediction and minimize cross-entropy
-    loss. In this paper, we demonstrate a small but consistent advantage of replacing
-    the softmax layer with a linear support vector machine. Learning minimizes a margin-based
-    loss instead of the cross-entropy loss. While there have been various combinations
-    of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply
-    replacing softmax with linear SVMs gives significant gains on popular deep learning
-    datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop’s
-    face expression recognition challenge.
-  URL: http://arxiv.org/abs/1306.0239
-
 - id: lin_why_2016
   type: article-journal
   author:
@@ -105,151 +39,23 @@ references:
     than 2\^n neurons in a single hidden layer.'
   URL: http://arxiv.org/abs/1608.08225
 
-- id: glorot_deep_2011
-  type: paper-conference
+- id: bartlett_representational_2017
+  type: no-type
   author:
-  - family: Glorot
-    given: Xavier
-  - family: Bordes
-    given: Antoine
-  - family: Bengio
-    given: Yoshua
-  issued:
-  - year: '2011'
-    month: '4'
-  accessed:
-  - year: '2017'
-    month: '4'
-    day: '7'
-  title: Deep Sparse Rectifier Neural Networks
-  container-title: Proceedings of the Fourteenth International Conference on Artificial
-    Intelligence and Statistics April 11-13, 2011, Fort Lauderdale, FL, USA
-  publisher-place: Florida, USA
-  page: '315-323'
-  volume: '15'
-  abstract: While logistic sigmoid neurons are more biologically plausible than hyperbolic
-    tangent neurons, the latter work better for training multi-layer neural networks.
-    This paper shows that rectifying neurons are an even better model of biological
-    neurons and yield equal or better performance than hyperbolic tangent networks
-    in spite of the hard non-linearity and non-differentiability at zero, creating
-    sparse representations with true zeros which seem remarkably suitable for naturally
-    sparse data. Even though they can take advantage of semi-supervised setups with
-    extra-unlabeled data, deep rectifier networks can reach their best performance
-    without requiring any unsupervised pre-training on purely supervised tasks with
-    large labeled datasets. Hence, these results can be seen as a new milestone in
-    the attempts at understanding the difficulty in training deep but purely supervised
-    neural networks, and closing the performance gap between neural networks learnt
-    with and without unsupervised pre-training.
-  URL: http://www.jmlr.org/proceedings/papers/v15/
-
-- id: arias-castro_spectral_2017
-  type: article-journal
-  author:
-  - family: Arias-Castro
-    given: Ery
-  - family: Lerman
-    given: Gilad
-  - family: Zhang
-    given: Teng
+  - family: Bartlett
+    given: Peter
   issued:
   - year: '2017'
+    month: '5'
   accessed:
   - year: '2017'
-    month: '4'
-    day: '12'
-  title: Spectral Clustering based on local PCA
-  container-title: Journal of Machine Learning Research
-  page: '1-57'
-  volume: '18'
-  issue: '9'
-  note: 'code: http://sciences.ucf.edu/math/tengz'
-  URL: http://jmlr.org/papers/v18/14-318.html
-
-- id: ng_spectral_2002
-  type: chapter
-  author:
-  - family: Ng
-    given: Andrew Y.
-  - family: Jordan
-    given: Michael I.
-  - family: Weiss
-    given: Yair
-  editor:
-  - family: Dietterich
-    given: T. G.
-  - family: Becker
-    given: S.
-  - family: Ghahramani
-    given: Z.
-  issued:
-  - year: '2002'
-  accessed:
-  - year: '2017'
-    month: '4'
-    day: '12'
-  title: 'On Spectral Clustering: Analysis and an algorithm'
-  title-short: On Spectral Clustering
-  container-title: Advances in Neural Information Processing Systems 14
-  publisher: MIT Press
-  page: '849-856'
-  keyword: shredder
-  URL: http://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf
-
-- id: nevo_identifying_2017
-  type: article-journal
-  author:
-  - family: Nevo
-    given: Daniel
-  - family: Ritov
-    given: Ya’acov
-  issued:
-  - year: '2017'
-  accessed:
-  - year: '2017'
-    month: '4'
-    day: '16'
-  title: Identifying a minimal class of models for high-dimensional data
-  container-title: Journal of Machine Learning Research
-  page: '1-29'
-  volume: '18'
-  issue: '24'
-  URL: http://jmlr.org/papers/v18/16-172.html
-
-- id: goodfellow_maxout_2013
-  type: article-journal
-  author:
-  - family: Goodfellow
-    given: Ian J.
-  - family: Warde-Farley
-    given: David
-  - family: Mirza
-    given: Mehdi
-  - family: Courville
-    given: Aaron
-  - family: Bengio
-    given: Yoshua
-  issued:
-  - year: '2013'
-    month: '2'
-  accessed:
-  - year: '2017'
-    month: '4'
-    day: '18'
-  title: Maxout Networks
-  container-title: arXiv:1302.4389 \[cs, stat\]
-  page: '9'
-  note: 'code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html arxiv: 1302.4389'
-  abstract: 'We consider the problem of designing models to leverage a recently
-    introduced approximate model averaging technique called dropout. We define a simple
-    new model called maxout (so named because its output is the max of a set of inputs,
-    and because it is a natural companion to dropout) designed to both facilitate
-    optimization by dropout and improve the accuracy of dropout’s fast approximate
-    model averaging technique. We empirically verify that the model successfully accomplishes
-    both of these tasks. We use maxout and dropout to demonstrate state of the art
-    classification performance on four benchmark datasets: MNIST, CIFAR-10, CIFAR-100,
-    and SVHN.'
-  keyword: shredder
-  URL: http://arxiv.org/abs/1302.4389
+    month: '5'
+    day: '2'
+  title: Representational and optimization properties of Deep Residual Networks
+  publisher-place: Simons Institute
+  genre: Talk
+  note: 2681 seconds
+  URL: https://simons.berkeley.edu/talks/tba-1
 
 - id: hinton_improving_2012
   type: article-journal
@@ -327,30 +133,125 @@ references:
     dropout gradient is the gradient of the corresponding approximation ensemble,
     regularized by an adaptive weight decay term with a propensity for self-consistent
     variance minimization and sparse representations.'
-  keyword: shredder
   URL: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/
   DOI: 10.1016/j.artint.2014.02.004
   ISSN: '0004-3702'
   PMCID: PMC3996711
   PMID: '24771879'
 
-- id: bartlett_representational_2017
-  type: no-type
+- id: tang_deep_2013
+  type: article-journal
   author:
-  - family: Bartlett
-    given: Peter
+  - family: Tang
+    given: Yichuan
   issued:
-  - year: '2017'
-    month: '5'
+  - year: '2013'
+    month: '6'
+  accessed:
+  - year: '2015'
+    month: '4'
+    day: '29'
+  title: Deep learning using linear Support Vector Machines
+  container-title: arXiv:1306.0239 \[cs, stat\]
+  page: '6'
+  note: 'arXiv: 1306.0239'
+  abstract: Recently, fully-connected and convolutional neural networks have been
+    trained to achieve state-of-the-art performance on a wide variety of tasks such
+    as speech recognition, image classification, natural language processing, and
+    bioinformatics. For classification tasks, most of these “deep learning” models
+    employ the softmax activation function for prediction and minimize cross-entropy
+    loss. In this paper, we demonstrate a small but consistent advantage of replacing
+    the softmax layer with a linear support vector machine. Learning minimizes a margin-based
+    loss instead of the cross-entropy loss. While there have been various combinations
+    of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply
+    replacing softmax with linear SVMs gives significant gains on popular deep learning
+    datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop’s
+    face expression recognition challenge.
+  URL: http://arxiv.org/abs/1306.0239
+
+- id: goodfellow_maxout_2013
+  type: article-journal
+  author:
+  - family: Goodfellow
+    given: Ian J.
+  - family: Warde-Farley
+    given: David
+  - family: Mirza
+    given: Mehdi
+  - family: Courville
+    given: Aaron
+  - family: Bengio
+    given: Yoshua
+  issued:
+  - year: '2013'
+    month: '2'
   accessed:
   - year: '2017'
-    month: '5'
-    day: '2'
-  title: Representational and optimization properties of Deep Residual Networks
-  publisher-place: Simons Institute
-  genre: Talk
-  note: 2681 seconds
-  URL: https://simons.berkeley.edu/talks/tba-1
+    month: '4'
+    day: '18'
+  title: Maxout Networks
+  container-title: arXiv:1302.4389 \[cs, stat\]
+  page: '9'
+  note: 'code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html arxiv: 1302.4389'
+  abstract: 'We consider the problem of designing models to leverage a recently
+    introduced approximate model averaging technique called dropout. We define a simple
+    new model called maxout (so named because its output is the max of a set of inputs,
+    and because it is a natural companion to dropout) designed to both facilitate
+    optimization by dropout and improve the accuracy of dropout’s fast approximate
+    model averaging technique. We empirically verify that the model successfully accomplishes
+    both of these tasks. We use maxout and dropout to demonstrate state of the art
+    classification performance on four benchmark datasets: MNIST, CIFAR-10, CIFAR-100,
+    and SVHN.'
+  URL: http://arxiv.org/abs/1302.4389
+
+- id: ng_spectral_2002
+  type: chapter
+  author:
+  - family: Ng
+    given: Andrew Y.
+  - family: Jordan
+    given: Michael I.
+  - family: Weiss
+    given: Yair
+  editor:
+  - family: Dietterich
+    given: T. G.
+  - family: Becker
+    given: S.
+  - family: Ghahramani
+    given: Z.
+  issued:
+  - year: '2002'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '12'
+  title: 'On Spectral Clustering: Analysis and an algorithm'
+  title-short: On Spectral Clustering
+  container-title: Advances in Neural Information Processing Systems 14
+  publisher: MIT Press
+  page: '849-856'
+  URL: http://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf
+
+- id: nevo_identifying_2017
+  type: article-journal
+  author:
+  - family: Nevo
+    given: Daniel
+  - family: Ritov
+    given: Ya’acov
+  issued:
+  - year: '2017'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '16'
+  title: Identifying a minimal class of models for high-dimensional data
+  container-title: Journal of Machine Learning Research
+  page: '1-29'
+  volume: '18'
+  issue: '24'
+  URL: https://paperwhy.aerobatic.io/2017/05/18/deep-sparse-rectifier-neural-networks/
 
 - id: swirszcz_local_2016
   type: article-journal
@@ -387,6 +288,32 @@ references:
     network does become susceptible to bad local minima over the weight space.
   URL: http://arxiv.org/abs/1611.06310
 
+- id: athiwaratkun_multimodal_2017
+  type: article-journal
+  author:
+  - family: Athiwaratkun
+    given: Ben
+  - family: Wilson
+    given: Andrew Gordon
+  issued:
+  - year: '2017'
+    month: '4'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '25'
+  title: Multimodal Word Distributions
+  container-title: arXiv:1704.08424 \[cs, stat\]
+  note: 'arXiv: 1704.08424'
+  abstract: Word embeddings provide point representations of words containing useful
+    semantic information. We introduce multimodal word distributions formed from Gaussian
+    mixtures, for multiple word meanings, entailment, and rich uncertainty information.
+    To learn these distributions, we propose an energy-based max-margin objective.
+    We show that the resulting approach captures uniquely expressive semantic information,
+    and outperforms alternatives, such as word2vec skip-grams, and Gaussian embeddings,
+    on benchmark datasets such as word similarity and entailment.
+  URL: http://arxiv.org/abs/1704.08424
+
 - id: bengio_greedy_2007
   type: chapter
   author:
@@ -417,29 +344,6 @@ references:
   page: '153-160'
   URL: http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf
 
-- id: vidal_subspace_2011
-  type: article-journal
-  author:
-  - family: Vidal
-    given: R.
-  issued:
-  - year: '2011'
-    month: '3'
-  title: Subspace Clustering
-  container-title: IEEE Signal Processing Magazine
-  page: '52-68'
-  volume: '28'
-  issue: '2'
-  abstract: Over the past few decades, significant progress has been made in clustering
-    high-dimensional data sets distributed around a collection of linear and affine
-    subspaces. This article presented a review of such progress, which included a
-    number of existing subspace clustering algorithms together with an experimental
-    evaluation on the motion segmentation and face clustering problems in computer
-    vision.
-  keyword: shredder
-  DOI: 10.1109/MSP.2010.939739
-  ISSN: '1053-5888'
-
 - id: breiman_bagging_1996
   type: article-journal
   author:
@@ -467,10 +371,111 @@ references:
     element is the instability of the prediction method. If perturbing the learning
     set can cause significant changes in the predictor constructed, then bagging can
     improve accuracy.
-  keyword: shredder
   URL: https://link.springer.com/article/10.1023/A:1018054314350
   DOI: 10.1023/A:1018054314350
   ISSN: 0885-6125, 1573-0565
+
+- id: vilnis_word_2014
+  type: article-journal
+  author:
+  - family: Vilnis
+    given: Luke
+  - family: McCallum
+    given: Andrew
+  issued:
+  - year: '2014'
+    month: '12'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '25'
+  title: Word Representations via Gaussian Embedding
+  container-title: arXiv:1412.6623 \[cs\]
+  note: 'arXiv: 1412.6623'
+  abstract: Current work in lexical distributed representations maps each word to
+    a point vector in low-dimensional space. Mapping instead to a density provides
+    many interesting advantages, including better capturing uncertainty about a representation
+    and its relationships, expressing asymmetries more naturally than dot product
+    or cosine similarity, and enabling more expressive parameterization of decision
+    boundaries. This paper advocates for density-based distributed embeddings and
+    presents a method for learning representations in the space of Gaussian distributions.
+    We compare performance on various word embedding benchmarks, investigate the ability
+    of these embeddings to model entailment and other asymmetric relationships, and
+    explore novel properties of the representation.
+  URL: http://arxiv.org/abs/1412.6623
+
+- id: glorot_deep_2011
+  type: paper-conference
+  author:
+  - family: Glorot
+    given: Xavier
+  - family: Bordes
+    given: Antoine
+  - family: Bengio
+    given: Yoshua
+  issued:
+  - year: '2011'
+    month: '4'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '7'
+  title: Deep Sparse Rectifier Neural Networks
+  container-title: Proceedings of the Fourteenth International Conference on Artificial
+    Intelligence and Statistics April 11-13, 2011, Fort Lauderdale, FL, USA
+  publisher-place: Florida, USA
+  page: '315-323'
+  volume: '15'
+  abstract: While logistic sigmoid neurons are more biologically plausible than hyperbolic
+    tangent neurons, the latter work better for training multi-layer neural networks.
+    This paper shows that rectifying neurons are an even better model of biological
+    neurons and yield equal or better performance than hyperbolic tangent networks
+    in spite of the hard non-linearity and non-differentiability at zero, creating
+    sparse representations with true zeros which seem remarkably suitable for naturally
+    sparse data. Even though they can take advantage of semi-supervised setups with
+    extra-unlabeled data, deep rectifier networks can reach their best performance
+    without requiring any unsupervised pre-training on purely supervised tasks with
+    large labeled datasets. Hence, these results can be seen as a new milestone in
+    the attempts at understanding the difficulty in training deep but purely supervised
+    neural networks, and closing the performance gap between neural networks learnt
+    with and without unsupervised pre-training.
+  URL: http://www.jmlr.org/proceedings/papers/v15/
+
+- id: baldi_understanding_2013
+  type: chapter
+  author:
+  - family: Baldi
+    given: Pierre
+  - family: Sadowski
+    given: Peter J
+  editor:
+  - family: Burges
+    given: C. J. C.
+  - family: Bottou
+    given: L.
+  - family: Welling
+    given: M.
+  - family: Ghahramani
+    given: Z.
+  - family: Weinberger
+    given: K. Q.
+  issued:
+  - year: '2013'
+  title: Understanding Dropout
+  container-title: Advances in Neural Information Processing Systems 26
+  page: '2814-2822'
+  abstract: Dropout is a relatively new algorithm for training neural networks which
+    relies on stochastically dropping out neurons during training in order to avoid
+    the co-adaptation of feature detectors. We introduce a general formalism for studying
+    dropout on either units or connections, with arbitrary probability values, and
+    use it to analyze the averaging and regularizing properties of dropout in both
+    linear and non-linear networks. For deep neural networks, the averaging properties
+    of dropout are characterized by three recursive equations, including the approximation
+    of expectations by normalized weighted geometric means. We provide estimates and
+    bounds for these approximations and corroborate the results with simulations.
+    We also show in simple cases how dropout performs stochastic gradient descent
+    on a regularized error function.
+  URL: http://papers.nips.cc/paper/4878-understanding-dropout.pdf
 
 - id: nair_rectified_2010
   type: paper-conference
@@ -486,4 +491,164 @@ references:
     (ICML-10)
   publisher-place: Haifa, Israel
   page: '807-814'
+
+- id: arias-castro_spectral_2017
+  type: article-journal
+  author:
+  - family: Arias-Castro
+    given: Ery
+  - family: Lerman
+    given: Gilad
+  - family: Zhang
+    given: Teng
+  issued:
+  - year: '2017'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '12'
+  title: Spectral Clustering based on local PCA
+  container-title: Journal of Machine Learning Research
+  page: '1-57'
+  volume: '18'
+  issue: '9'
+  note: 'code: http://sciences.ucf.edu/math/tengz'
+  URL: http://jmlr.org/papers/v18/14-318.html
+
+- id: he_deep_2016
+  type: paper-conference
+  author:
+  - family: He
+    given: Kaiming
+  - family: Zhang
+    given: Xiangyu
+  - family: Ren
+    given: Shaoqing
+  - family: Sun
+    given: Jian
+  issued:
+  - year: '2016'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '2'
+  title: Deep Residual Learning for Image Recognition
+  page: '770-778'
+  note: Extended version with appendix from the Arxiv
+  abstract: Deeper neural networks are more difficult to train. We present a residual
+    learning framework to ease the training of networks that are substantially deeper
+    than those used previously. We explicitly reformulate the layers as learning residual
+    functions with reference to the layer inputs, instead of learning unreferenced
+    functions. We provide comprehensive empirical evidence showing that these residual
+    networks are easier to optimize, and can gain accuracy from considerably increased
+    depth. On the ImageNet dataset we evaluate residual nets with a depth of up to
+    152 layers—8x deeper than VGG nets but still having lower complexity. An ensemble
+    of these residual nets achieves 3.57% error on the ImageNet test set. This result
+    won the 1st place on the ILSVRC 2015 classification task. We also present analysis
+    on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central
+    importance for many visual recognition tasks. Solely due to our extremely deep
+    representations, we obtain a 28% relative improvement on the COCO object detection
+    dataset. Deep residual nets are foundations of our submissions to ILSVRC & COCO
+    2015 competitions, where we also won the 1st places on the tasks of ImageNet detection,
+    ImageNet localization, COCO detection, and COCO segmentation.
+  URL: http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html
+
+- id: he_identity_2016
+  type: article-journal
+  author:
+  - family: He
+    given: Kaiming
+  - family: Zhang
+    given: Xiangyu
+  - family: Ren
+    given: Shaoqing
+  - family: Sun
+    given: Jian
+  issued:
+  - year: '2016'
+    month: '3'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '2'
+  title: Identity Mappings in Deep Residual Networks
+  container-title: arXiv:1603.05027 \[cs\]
+  page: '15'
+  note: 'arXiv: 1603.05027'
+  abstract: 'Deep residual networks have emerged as a family of extremely deep architectures
+    showing compelling accuracy and nice convergence behaviors. In this paper, we
+    analyze the propagation formulations behind the residual building blocks, which
+    suggest that the forward and backward signals can be directly propagated from
+    one block to any other block, when using identity mappings as the skip connections
+    and after-addition activation. A series of ablation experiments support the importance
+    of these identity mappings. This motivates us to propose a new residual unit,
+    which makes training easier and improves generalization. We report improved results
+    using a 1001-layer ResNet on CIFAR-10 (4.62% error) and CIFAR-100, and a 200-layer
+    ResNet on ImageNet. Code is available at: https://github.com/KaimingHe/resnet-1k-layers'
+  URL: http://arxiv.org/abs/1603.05027
+
+- id: schmidt_minimizing_2016
+  type: manuscript
+  author:
+  - family: Schmidt
+    given: Mark
+  - family: Le Roux
+    given: Nicolas
+  - family: Bach
+    given: Francis
+  issued:
+  - year: '2016'
+    month: '5'
+  title: Minimizing Finite Sums with the Stochastic Average Gradient
+  URL: https://hal.inria.fr/hal-00860051
+
+- id: vidal_subspace_2011
+  type: article-journal
+  author:
+  - family: Vidal
+    given: R.
+  issued:
+  - year: '2011'
+    month: '3'
+  title: Subspace Clustering
+  container-title: IEEE Signal Processing Magazine
+  page: '52-68'
+  volume: '28'
+  issue: '2'
+  abstract: Over the past few decades, significant progress has been made in clustering
+    high-dimensional data sets distributed around a collection of linear and affine
+    subspaces. This article presented a review of such progress, which included a
+    number of existing subspace clustering algorithms together with an experimental
+    evaluation on the motion segmentation and face clustering problems in computer
+    vision.
+  DOI: 10.1109/MSP.2010.939739
+  ISSN: '1053-5888'
+
+- id: wang_general_2004
+  type: article-journal
+  author:
+  - family: Wang
+    given: Shuning
+  issued:
+  - year: '2004'
+    month: '9'
+  title: General constructive representations for continuous piecewise-linear functions
+  container-title: 'IEEE Transactions on Circuits and Systems I: Regular Papers'
+  page: '1889-1896'
+  volume: '51'
+  issue: '9'
+  abstract: The problem of constructing a canonical representation for an arbitrary
+    continuous piecewise-linear (PWL) function in any dimension is considered in this
+    paper. We solve the problem based on a general lattice PWL representation, which
+    can be determined for a given continuous PWL function using existing methods.
+    We first transform the lattice PWL representation into the difference of two convex
+    functions, then propose a constructive procedure to rewrite the latter as a canonical
+    representation that consists of at most n-level nestings of absolute-value functions
+    in n dimensions, hence give a thorough solution to the problem mentioned above.
+    In addition, we point out that there exist notable differences between a lattice
+    representation and the two novel general constructive representations proposed
+    in this paper, and explain that these differences make all the three representations
+    be of their particular interests.
+  DOI: 10.1109/TCSI.2004.834521
+  ISSN: '1549-8328'
 ...
