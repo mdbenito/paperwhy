@@ -146,4 +146,4 @@ vanishing gradient problem.
 
 [^2]: Quick reminder: in a convnet max pooling the input on one channel (or *slice*) consists of applying the following filter {{< figure src="/img/goodfellow_maxout_2013-fig2.jpg" title="Maxpooling (borrowed from cs231n.github.io)." >}}
 
-[^3]: A few years later, skip connections as in RNNs where proposed for convolutional ones in so-called Residual Networks {{< cite he_deep_2016 >}}.
+[^3]: A few years later, skip connections as in RNNs where proposed for convolutional ones in so-called Residual Networks. See: {{< cite he_deep_2016 >}} and {{< cite he_identity_2016>}}.
