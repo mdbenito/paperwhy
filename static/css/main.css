@@ -907,7 +907,7 @@ footer small {
 }
 
 .posts li .p-wrap {
-    padding: 2em 2em;
+    padding: 2em;
     background: #ffffff;
     transition: all .15s ease-in;
     display: flex;
@@ -942,12 +942,6 @@ footer small {
     .posts li .p-wrap:hover::after {
         content:none;
         margin: 0
-    }
-}
-
-@media (max-width: 942px) {
-    .posts li .p-wrap {
-        padding:2em
     }
 }
 
