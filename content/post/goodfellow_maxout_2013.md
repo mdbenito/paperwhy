@@ -61,8 +61,8 @@ piecewise linear (PWL) convex functions:
 Because we have
 
 > **Theorem**: Any continuous PWL function can be expressed as a
-> difference of two convex PWL functions [of the form
-> eq:def-maxout]. The proof is given in {{< cite wang_general_2004 >}}.
+> difference of two convex PWL functions [of the form (1)].
+> The proof is given in {{< cite wang_general_2004 >}}.
 
 and because PWL functions approximate continuous ones over compact
 sets by Stone-Weierstrass, it immediately follows that **maxout
