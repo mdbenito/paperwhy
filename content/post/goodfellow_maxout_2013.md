@@ -10,14 +10,13 @@ paper_key: "goodfellow_maxout_2013"
 
 **tl;dr:** this paper introduced an activation function for deep
 convolutional networks which specifically benefits from regularization
-with dropout {{< cite hinton_improving_2012 >}} and still has a
-universal approximation property for continuous functions. It is
-hypothesized that, analogously to ReLUs, the locally linear character
-of these units makes the averaging of the dropout ensemble more
-accurate than with fully non-linear units. Although sparsity of
-representation is lost wrt. ReLUs, backpropagation of errors is
-improved by not clamping to 0, resulting in significant performance
-gains.
+with dropout[^1] and still has a universal approximation property for
+continuous functions. It is hypothesized that, analogously to ReLUs,
+the locally linear character of these units makes the averaging of the
+dropout ensemble more accurate than with fully non-linear
+units. Although sparsity of representation is lost wrt. ReLUs,
+backpropagation of errors is improved by not clamping to 0, resulting
+in significant performance gains.
 
 Recall the intuition behind dropout: for each training batch, it masks
 out around 50% of the units, thus training a different model / network
@@ -26,11 +25,10 @@ $N$ is the total number of units in the network. Consequently it is
 benefficial to use **higher learning rates** in order to make each one
 of the models profit as much as possible from the batch it sees. But
 then at test time one needs either to sample from the whole ensemble
-again by using dropout or to use some averaging trick. {{< cite
-hinton_improving_2012 >}} mention that simply scaling the outputs
-actually approximates the expected output of an ensemble of shallow,
-toy networks, but at the time there was little rigorous work on the
-averaging properties of dropout.[^1]
+again by using dropout or to use some averaging trick. We recently[^2]
+saw that simply scaling the outputs actually approximates the expected
+output of an ensemble of shallow, toy networks, but at the time there
+was little rigorous work on the averaging properties of dropout.[^3]
 
 > Explicitly designing models to minimize this approximation error may
 > thus enhance dropout's performance
@@ -47,7 +45,7 @@ convention) and $W \in \mathbb{R}^{d \times m \times k}, b \in
 
 > In a convolutional network, a maxout feature map can be constructed
 > by taking the maximum across $k$ affine feature maps (i.e., pool
-> across channels, in addition [to] spatial locations).[^2]
+> across channels, in addition [to] spatial locations).[^4]
 
 The **key observation** here with respect to the approximation
 properties of maxout networks is the fact that since we are taking the
@@ -131,7 +129,7 @@ to single out characteristics of the optimization:
 
 2. Train a deep and narrow model on MNIST. Vanishing gradients (both
    for numerical reasons and because of the clamping to 0 blocking
-   gradients) will make optimization hard.[^3]
+   gradients) will make optimization hard.[^5]
 
 3. Train two-layer MLPs with 1200 filters per layer and 5-channel
    max-pooling: adding a constant 0 deactivates units and degrades
@@ -142,8 +140,12 @@ A final noteworthy test to keep in mind is keeping track of the
 variance at lower layers than ReLU networks: an indication of the
 vanishing gradient problem.
 
-[^1]: But see later developments, e.g. {{< cite baldi_dropout_2014 >}}.
+[^1]: See {{< cite hinton_improving_2012 >}}.
 
-[^2]: Quick reminder: in a convnet max pooling the input on one channel (or *slice*) consists of applying the following filter {{< figure src="/img/goodfellow_maxout_2013-fig2.jpg" title="Maxpooling (borrowed from cs231n.github.io)." >}}
+[^2]: {{< cite hinton_improving_2012 >}}.
 
-[^3]: A few years later, skip connections as in RNNs where proposed for convolutional ones in so-called Residual Networks. See: {{< cite he_deep_2016 >}} and {{< cite he_identity_2016>}}.
+[^3]: But see later developments, e.g. {{< cite baldi_dropout_2014 >}}.
+
+[^4]: Quick reminder: in a convnet max pooling the input on one channel (or *slice*) consists of applying the following filter {{< figure src="/img/goodfellow_maxout_2013-fig2.jpg" title="Maxpooling (borrowed from cs231n.github.io)." >}}
+
+[^5]: A few years later, skip connections as in RNNs where proposed for convolutional ones in so-called Residual Networks. See: {{< cite he_deep_2016 >}} and {{< cite he_identity_2016>}}.
