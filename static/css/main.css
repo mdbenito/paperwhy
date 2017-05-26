@@ -899,7 +899,8 @@ footer small {
 .posts li {
     display: inline-block;
     width: 100%;
-    border-bottom: 1px dotted #fa5305
+    border-bottom: 1px dotted #fa5305;
+    position:relative
 }
 
 .posts li:first-child {
@@ -966,8 +967,22 @@ footer small {
 
 .posts li time {
     font-size: 60%;
-    color: #555;
-    padding-right: 1em
+    color: #c0c0c0;
+    padding-right: 1em;
+
+/*    
+    padding-top: 2em;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    -webkit-transform-origin: left bottom 0;
+    transform-origin: left bottom 0 initial;
+    position:absolute;
+    left:2em
+  */               
+   
+    position:absolute;
+    bottom:0.6em;
+    left:0.6em
 }
 
 @media (max-width: 942px) {
