@@ -651,4 +651,54 @@ references:
     be of their particular interests.
   DOI: 10.1109/TCSI.2004.834521
   ISSN: '1549-8328'
+
+- id: pinkus_approximation_1999
+  type: article-journal
+  author:
+  - family: Pinkus
+    given: Allan
+  issued:
+  - year: '1999'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '29'
+  title: Approximation theory of the MLP model in neural networks
+  container-title: Acta Numerica
+  page: '143-195'
+  volume: '8'
+  URL: http://journals.cambridge.org/abstract_s0962492900002919
+
+- id: poggio_why_2016
+  type: article-journal
+  author:
+  - family: Poggio
+    given: Tomaso
+  - family: Mhaskar
+    given: Hrushikesh
+  - family: Rosasco
+    given: Lorenzo
+  - family: Miranda
+    given: Brando
+  - family: Liao
+    given: Qianli
+  issued:
+  - year: '2016'
+    month: '11'
+  accessed:
+  - year: '2017'
+    month: '4'
+    day: '7'
+  title: 'Why and When Can Deep – but Not Shallow – Networks Avoid the Curse of
+    Dimensionality: A Review'
+  title-short: Why and When Can Deep – but Not Shallow – Networks Avoid the Curse
+    of Dimensionality
+  container-title: arXiv:1611.00740 \[cs\]
+  page: '26'
+  note: 'arXiv: 1611.00740'
+  abstract: The paper characterizes classes of functions for which deep learning can
+    be exponentially better than shallow learning. Deep convolutional networks are
+    a special case of these conditions, though weight sharing is not the main reason
+    for their exponential advantage.
+  URL: http://arxiv.org/abs/1611.00740
 ...

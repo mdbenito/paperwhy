@@ -183,8 +183,15 @@ sub {
     bottom: -.25em
 }
 
+figure img {
+    text-align: center
+}
 img {
     border: 0
+}
+
+.half-width img {
+    width:50% !important
 }
 
 svg:not(:root) {
