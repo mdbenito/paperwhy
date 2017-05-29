@@ -2,7 +2,7 @@
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: "2017-05-23T22:45:50+02:00"
-tags: ["activations", "dropout", "convolutional networks", "maxout", "pooling"]
+tags: ["activations", "dropout", "convnets", "maxout", "pooling"]
 title: "Maxout Networks"
 paper_authors: ["Goodfellow, Ian J.", "Warde-Farley, David", "Mirza, Mehdi", "Courville, Aaron", "Bengio, Yoshua"]
 paper_key: "goodfellow_maxout_2013"
