@@ -25,6 +25,8 @@
 
   <assign|math-font|math-stix>
 
+  <assign|by-text|<macro|A review by>>
+
   <\active*>
     <\src-comment>
       Macro definitions.
@@ -40,6 +42,8 @@
       </indent-both>
     </padded>
   </macro>>
+
+  <assign|dfn|<macro|body|<strong|<with|font-shape|italic|<arg|body>>>>>
 </body>
 
 <initial|<\collection>

@@ -17,7 +17,7 @@ references:
   title: Why does deep and cheap learning work so well?
   container-title: arXiv:1608.08225 \[cond-mat, stat\]
   page: '17'
-  note: 'arXiv: 1608.08225'
+  note: 'citecount: 00019 arXiv: 1608.08225'
   abstract: 'We show how the success of deep learning depends not only on mathematics
     but also on physics: although well-known mathematical theorems guarantee that
     neural networks can approximate arbitrary functions well, the class of functions
@@ -54,7 +54,7 @@ references:
   title: Representational and optimization properties of Deep Residual Networks
   publisher-place: Simons Institute
   genre: Talk
-  note: 2681 seconds
+  note: 'citecount: 00000 2681 seconds'
   URL: https://simons.berkeley.edu/talks/tba-1
 
 - id: hinton_improving_2012
@@ -80,7 +80,7 @@ references:
   title: Improving neural networks by preventing co-adaptation of feature detectors
   container-title: arXiv:1207.0580 \[cs\]
   page: '18'
-  note: 'arXiv: 1207.0580'
+  note: 'citecount: 01870 arXiv: 1207.0580'
   abstract: When a large feedforward neural network is trained on a small training
     set, it typically performs poorly on held-out test data. This “overfitting” is
     greatly reduced by randomly omitting half of the feature detectors on each training
@@ -110,6 +110,7 @@ references:
   container-title: Artificial intelligence
   page: '78-122'
   volume: '210'
+  note: 'citecount: 00068'
   abstract: 'Dropout is a recently introduced algorithm for training neural network
     by randomly dropping units during training to prevent their co-adaptation. A mathematical
     analysis of some of the static and dynamic properties of dropout is provided using
@@ -154,7 +155,7 @@ references:
   title: Deep learning using linear Support Vector Machines
   container-title: arXiv:1306.0239 \[cs, stat\]
   page: '6'
-  note: 'arXiv: 1306.0239'
+  note: 'citecount: 00164 arXiv: 1306.0239'
   abstract: Recently, fully-connected and convolutional neural networks have been
     trained to achieve state-of-the-art performance on a wide variety of tasks such
     as speech recognition, image classification, natural language processing, and
@@ -192,7 +193,8 @@ references:
   title: Maxout Networks
   container-title: arXiv:1302.4389 \[cs, stat\]
   page: '9'
-  note: 'code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html arxiv: 1302.4389'
+  note: 'citecount: 00756 code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html
+    arxiv: 1302.4389'
   abstract: 'We consider the problem of designing models to leverage a recently
     introduced approximate model averaging technique called dropout. We define a simple
     new model called maxout (so named because its output is the max of a set of inputs,
@@ -231,6 +233,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 14
   publisher: MIT Press
   page: '849-856'
+  note: 'citecount: 05818'
   URL: http://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf
 
 - id: nevo_identifying_2017
@@ -251,6 +254,7 @@ references:
   page: '1-29'
   volume: '18'
   issue: '24'
+  note: 'citecount: 00000 arXiv:1504.00494'
   URL: https://paperwhy.aerobatic.io/2017/05/18/deep-sparse-rectifier-neural-networks/
 
 - id: swirszcz_local_2016
@@ -272,7 +276,7 @@ references:
   title: Local minima in training of neural networks
   container-title: arXiv:1611.06310 \[cs, stat\]
   page: '12'
-  note: 'arXiv: 1611.06310'
+  note: 'citecount: 00001 arXiv: 1611.06310'
   abstract: There has been a lot of recent interest in trying to characterize the
     error surface of deep models. This stems from a long standing question. Given
     that deep networks are highly nonlinear systems optimized by local gradient methods,
@@ -304,7 +308,7 @@ references:
     day: '25'
   title: Multimodal Word Distributions
   container-title: arXiv:1704.08424 \[cs, stat\]
-  note: 'arXiv: 1704.08424'
+  note: 'citecount: 00000 arXiv: 1704.08424'
   abstract: Word embeddings provide point representations of words containing useful
     semantic information. We introduce multimodal word distributions formed from Gaussian
     mixtures, for multiple word meanings, entailment, and rich uncertainty information.
@@ -342,6 +346,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 19
   publisher: MIT Press
   page: '153-160'
+  note: 'citecount: 02175'
   URL: http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf
 
 - id: breiman_bagging_1996
@@ -361,6 +366,7 @@ references:
   page: '123-140'
   volume: '24'
   issue: '2'
+  note: 'citecount: 16604'
   abstract: Bagging predictors is a method for generating multiple versions of a predictor
     and using these to get an aggregated predictor. The aggregation averages over
     the versions when predicting a numerical outcome and does a plurality vote when
@@ -391,7 +397,7 @@ references:
     day: '25'
   title: Word Representations via Gaussian Embedding
   container-title: arXiv:1412.6623 \[cs\]
-  note: 'arXiv: 1412.6623'
+  note: 'citecount: 00043 arXiv: 1412.6623'
   abstract: Current work in lexical distributed representations maps each word to
     a point vector in low-dimensional space. Mapping instead to a density provides
     many interesting advantages, including better capturing uncertainty about a representation
@@ -426,6 +432,7 @@ references:
   publisher-place: Florida, USA
   page: '315-323'
   volume: '15'
+  note: 'citecount: 00935'
   abstract: While logistic sigmoid neurons are more biologically plausible than hyperbolic
     tangent neurons, the latter work better for training multi-layer neural networks.
     This paper shows that rectifying neurons are an even better model of biological
@@ -464,6 +471,7 @@ references:
   title: Understanding Dropout
   container-title: Advances in Neural Information Processing Systems 26
   page: '2814-2822'
+  note: 'citecount: 00066'
   abstract: Dropout is a relatively new algorithm for training neural networks which
     relies on stochastically dropping out neurons during training in order to avoid
     the co-adaptation of feature detectors. We introduce a general formalism for studying
@@ -491,6 +499,7 @@ references:
     (ICML-10)
   publisher-place: Haifa, Israel
   page: '807-814'
+  note: 'citecount: 01616'
 
 - id: arias-castro_spectral_2017
   type: article-journal
@@ -512,7 +521,7 @@ references:
   page: '1-57'
   volume: '18'
   issue: '9'
-  note: 'code: http://sciences.ucf.edu/math/tengz'
+  note: 'citecount: 00025 code: http://sciences.ucf.edu/math/tengz'
   URL: http://jmlr.org/papers/v18/14-318.html
 
 - id: he_deep_2016
@@ -534,7 +543,7 @@ references:
     day: '2'
   title: Deep Residual Learning for Image Recognition
   page: '770-778'
-  note: Extended version with appendix from the Arxiv
+  note: 'citecount: 02156 Extended version with appendix from the Arxiv'
   abstract: Deeper neural networks are more difficult to train. We present a residual
     learning framework to ease the training of networks that are substantially deeper
     than those used previously. We explicitly reformulate the layers as learning residual
@@ -574,7 +583,7 @@ references:
   title: Identity Mappings in Deep Residual Networks
   container-title: arXiv:1603.05027 \[cs\]
   page: '15'
-  note: 'arXiv: 1603.05027'
+  note: 'citecount: 00247 arXiv: 1603.05027'
   abstract: 'Deep residual networks have emerged as a family of extremely deep architectures
     showing compelling accuracy and nice convergence behaviors. In this paper, we
     analyze the propagation formulations behind the residual building blocks, which
@@ -600,6 +609,7 @@ references:
   - year: '2016'
     month: '5'
   title: Minimizing Finite Sums with the Stochastic Average Gradient
+  note: 'citecount: 00250'
   URL: https://hal.inria.fr/hal-00860051
 
 - id: vidal_subspace_2011
@@ -615,6 +625,7 @@ references:
   page: '52-68'
   volume: '28'
   issue: '2'
+  note: 'citecount: 00774'
   abstract: Over the past few decades, significant progress has been made in clustering
     high-dimensional data sets distributed around a collection of linear and affine
     subspaces. This article presented a review of such progress, which included a
@@ -637,6 +648,7 @@ references:
   page: '1889-1896'
   volume: '51'
   issue: '9'
+  note: 'citecount: 00014'
   abstract: The problem of constructing a canonical representation for an arbitrary
     continuous piecewise-linear (PWL) function in any dimension is considered in this
     paper. We solve the problem based on a general lattice PWL representation, which
@@ -667,6 +679,7 @@ references:
   container-title: Acta Numerica
   page: '143-195'
   volume: '8'
+  note: 'citecount: 00333'
   URL: http://journals.cambridge.org/abstract_s0962492900002919
 
 - id: poggio_why_2016
@@ -695,10 +708,76 @@ references:
     of Dimensionality
   container-title: arXiv:1611.00740 \[cs\]
   page: '26'
-  note: 'arXiv: 1611.00740'
+  note: 'citecount: 00002 arXiv: 1611.00740'
   abstract: The paper characterizes classes of functions for which deep learning can
     be exponentially better than shallow learning. Deep convolutional networks are
     a special case of these conditions, though weight sharing is not the main reason
     for their exponential advantage.
   URL: http://arxiv.org/abs/1611.00740
+
+- id: wager_dropout_2013
+  type: chapter
+  author:
+  - family: Wager
+    given: Stefan
+  - family: Wang
+    given: Sida
+  - family: Liang
+    given: Percy
+  editor:
+  - family: Burges
+    given: C. J. C.
+  - family: Bottou
+    given: L.
+  - family: Welling
+    given: M.
+  - family: Ghahramani
+    given: Z.
+  - family: Weinberger
+    given: K. Q.
+  issued:
+  - year: '2013'
+  title: Dropout training as adaptive regularization
+  container-title: Advances in Neural Information Processing Systems 26
+  page: '351-359'
+  note: 'citecount: 00156'
+  URL: http://papers.nips.cc/paper/4882-dropout-training-as-adaptive-regularization.pdf
+
+- id: duchi_adaptive_2011
+  type: article-journal
+  author:
+  - family: Duchi
+    given: John
+  - family: Hazan
+    given: Elad
+  - family: Singer
+    given: Yoram
+  issued:
+  - year: '2011'
+  accessed:
+  - year: '2016'
+    month: '7'
+    day: '31'
+  title: Adaptive Subgradient Methods for Online Learning and Stochastic Optimization
+  container-title: Journal of Machine Learning Research
+  page: '2121-2159'
+  volume: '12'
+  issue: Jul
+  note: 'citecount: 01743'
+  URL: http://www.jmlr.org/papers/v12/duchi11a.html
+  ISSN: ISSN 1533-7928
+
+- id: bishop_training_1995
+  type: article-journal
+  author:
+  - family: Bishop
+    given: Chris M
+  issued:
+  - year: '1995'
+  title: Training with noise is equivalent to Tikhonov regularization
+  container-title: Neural computation
+  page: '108-116'
+  volume: '7'
+  issue: '1'
+  note: 'citecount: 00545'
 ...
