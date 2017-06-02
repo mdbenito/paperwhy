@@ -10,7 +10,14 @@
   </hide-preamble>
 
   <doc-data|<doc-title|Why and when can deep \U but not shallow \U networks
-  avoid the curse of dimensionality: a review>>
+  avoid the curse of dimensionality: a review>|<doc-author|<author-data|<author-name|Poggio,
+  Tomaso>>>|<doc-author|<author-data|<author-name|Mhaskar,
+  Hrushikesh>>>|<doc-author|<author-data|<author-name|Rosasco,
+  Lorenzo>>>|<doc-author|<author-data|<author-name|Miranda,
+  Brando>>>|<doc-author|<author-data|<author-name|Liao,
+  Qianli>>>|<doc-running-author|Miguel de Benito Delgado>>
+
+  <tags|convnets|deep-learning|approximation-theory|compositionality>
 
   <strong|tl;dr:><\footnote>
     This paper is packed with results, comments and conjectures! I had to
@@ -26,6 +33,8 @@
   either to physical grounds<\footnote>
     See <cite|lin_why_2016>.
   </footnote> or biological ones.
+
+  <hrule>
 
   Guarantees of the approximation properties of NNs are typically proven for
   general classes of functions, say <math|C<rsup|m><around*|(|X|)>,X\<subseteq\>\<bbb-R\><rsup|n>>
@@ -350,6 +359,7 @@
 <\initial>
   <\collection>
     <associate|info-flag|detailed>
+    <associate|preamble|false>
   </collection>
 </initial>
 

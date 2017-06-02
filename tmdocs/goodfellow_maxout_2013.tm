@@ -5,18 +5,14 @@
 <\body>
   <\hide-preamble>
     \;
-
-    <assign|quotation|<\macro|body>
-      <\padded>
-        <\indent-both|<value|quote-left-indentation>|<value|quote-right-indentation>>
-          <surround|<yes-indent>||<em|<arg|body>>>
-        </indent-both>
-      </padded>
-    </macro>>
   </hide-preamble>
 
-  <doc-data|<doc-title|Maxout Networks>|<doc-author|<author-data|<author-name|Miguel
-  de Benito Delgado>>>>
+  <doc-data|<doc-title|Maxout Networks>|<doc-author|<author-data|<author-name|Goodfellow,
+  Ian J.>>>|<doc-author|<author-data|<author-name|Warde-Farley,
+  David>>>|<doc-author|<author-data|<author-name|Mirza,
+  Mehdi>>>|<doc-author|<author-data|<author-name|Courville,
+  Aaron>>>|<doc-author|<author-data|<author-name|Bengio,
+  Yoshua>>>|<doc-running-author|Miguel de Benito Delgado>>
 
   <strong|tl;dr:> this paper introduced an activation function for deep
   convolutional networks which specifically benefits from regularization with
@@ -286,7 +282,7 @@
       he_identity_2016
     </associate>
     <\associate|figure>
-      <tuple|normal|From <locus|<id|%1470AAC98-140E32A38>|<link|hyperlink|<id|%1470AAC98-140E32A38>|<url|//cs231n.github.io>>|CS231n>
+      <tuple|normal|From <locus|<id|%150DBD9C8-1398AD6A0>|<link|hyperlink|<id|%150DBD9C8-1398AD6A0>|<url|//cs231n.github.io>>|CS231n>
       at Stanford.|<pageref|auto-1>>
 
       <\tuple|normal>

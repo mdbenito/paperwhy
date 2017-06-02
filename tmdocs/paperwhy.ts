@@ -25,8 +25,6 @@
 
   <assign|math-font|math-stix>
 
-  <assign|by-text|<macro|A review by>>
-
   <\active*>
     <\src-comment>
       Macro definitions.
@@ -44,6 +42,17 @@
   </macro>>
 
   <assign|dfn|<macro|body|<strong|<with|font-shape|italic|<arg|body>>>>>
+
+  <assign|doc-title|<macro|x|<\surround|<vspace*|0.5fn>|<vspace|0.5fn>>
+    <doc-title-block|<strong|A review of><new-line><font-magnify|1.682|<with|math-font-series|bold|font-series|bold|<arg|x>>>>
+  </surround>>>
+
+  <assign|render-tag*|<macro|x|<arg|x>>>
+
+  <assign|extra-tag*|<macro|x|, <render-tag*|<arg|x>>>>
+
+  <assign|tags|<xmacro|args|<style-with|src-compact|none|<htab|5mm><with|font-series|bold|Tags:
+  ><render-tag*|<arg|args|0>><map-args|extra-tag*|concat|args|1>>>>
 </body>
 
 <initial|<\collection>

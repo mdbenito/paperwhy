@@ -37,14 +37,13 @@ authors, etc.
 
 ## Structure of a post
 
-Each markdown file has a header, the **frontmatter**, with
-([easy-hugo for emacs]() copies it from `archetypes/default.md`):
+Each markdown file has a header, the **frontmatter**, with:
 
 ```
 author: Your full name here
 authors: ["Repeat your full name here, I have to fix this"]
-tags: [""]
-
+date: YYYY-mm-dd
+tags: ["tags", "should-have", "no-whitespace", "use-dashes" ]
 paper_authors: ["surname, name", "surname, name"]
 paper_key: "bibtex_citekey"
 ```
@@ -53,8 +52,29 @@ Even though they can be extracted from the bibliography file, it is
 necessary to copy the authors to `paper_authors`. This is required
 for the "Papers by..." pages.
 
-The name of the file is in principle arbitrary, but we might want to
-use the bibtex citekey and drop the variable in the frontmatter.
+The name of the file should coincide with the bibtex
+citekey. Eventually we will drop the additional variable in the
+frontmatter.
+
+### Editing the markdown
+
+Simple but tedious: use markdown directly with,
+e.g. [easy-hugo for emacs](https://github.com/masasam/emacs-easy-hugo). This
+makes browsing the posts easy and copies a frontmatter template from
+`archetypes/default.md`.
+
+Much better:
+
+**Use [TeXmacs](http://www.texmacs.org)** with
+our [markdown converter](https://mdbenito.bitbucket.org). Almost
+everything that Hugo supports can be converted from TeXmacs, including
+all kinds of text, lists, images, links and blackfriday extensions
+like footnotes and ~~striked through text~~. Hugo shortcodes like the
+default figures and our citation system are supported (just add
+regular TeXmacs figures and cites using the bibliography file
+`tmdocs/paperwhy.bib`, as well as automatic generation of the
+frontmatter from the doc-data in the document and a special <\tags>
+macro defined in `tmdocs/paperwhy.ts`. See the examples in `tmdoc`.
 
 **Citations** in the markdown are done with
 a [Hugo shortcode](gohugo.io/extras/shortcodes/) as follows:
