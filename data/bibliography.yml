@@ -811,4 +811,31 @@ references:
     dropout, or max pool. Our model improves significantly on previous all-convolutional
     networks on the CIFAR10, CIFAR100, and ImageNet classification benchmarks.
   URL: http://arxiv.org/abs/1611.04231
+
+- id: sutskever_importance_2013
+  type: paper-conference
+  author:
+  - family: Sutskever
+    given: Ilya
+  - family: Martens
+    given: James
+  - family: Dahl
+    given: George
+  - family: Hinton
+    given: Geoffrey E.
+  issued:
+  - year: '2013'
+    month: '2'
+  accessed:
+  - year: '2017'
+    month: '6'
+    day: '1'
+  title: On the importance of initialization and momentum in deep learning
+  container-title: PMLR
+  page: '1139-1147'
+  note: 'citecount: 00593'
+  abstract: Deep and recurrent neural networks (DNNs and RNNs respectively) are powerful
+    models that were considered to be almost impossible to train using stochastic
+    gradient descent with momentum. In this pa...
+  URL: http://proceedings.mlr.press/v28/sutskever13.html
 ...

@@ -14,8 +14,8 @@ paper_key: hinton_improving_2012
 This paper introduced the now pervasive **dropout** regularisation
 technique. The basic idea is that
 
->**On each presentation of each training case, each hidden unit is
->randomly omitted from the network with a probability of 0.5** (…)
+> **On each presentation of each training case, each hidden unit is
+> randomly omitted from the network with a probability of 0.5** (…)
 
 The intuition behind this is that silencing random networks at each
 iteration (about 50% of them), effectively training so many different
@@ -29,27 +29,31 @@ enable high learning rates: the authors renormalized the weights for
 each neuron individually if a threshold for their (individual) $L^2$
 norm was surpassed:
 
->Using a constraint rather than a penalty prevents weights from
->growing very large no matter how large the proposed weight-update
->is. **This makes it possible to start with a very large learning rate
->which decays during learning**
+> Using a constraint rather than a penalty prevents weights from
+> growing very large no matter how large the proposed weight-update
+> is. **This makes it possible to start with a very large learning rate
+> which decays during learning**
 
-In ![Figure 5](missing image) one can see that with dropout, features
-of the first layer for MNIST are sharper and can be more easily
-interpreted as strokes than without it, where features appear blurred
-and more indistinct. This illustrates the **key insight** that we
-mentioned above:
+In Figure 5 of the paper:
 
->** \[dropout\] encourages each individual hidden unit to learn a
->useful feature without relying on specific other hidden units to
->correct its mistakes**.
+{{< figure src="/img/hinton_improving_2012-fig5.jpg"
+           title="Visualization of features learned by first layer hidden units for (a) backprop and (b) dropout on the MNIST dataset." >}}
+
+one can see that with dropout, features of the first layer are sharper
+and can be more easily interpreted as strokes than without it, where
+features appear blurred and more indistinct. This illustrates the
+**key insight** that we mentioned above:
+
+> **\[dropout\] encourages each individual hidden unit to learn a
+> useful feature without relying on specific other hidden units to
+> correct its mistakes**.
 
 Because for each training example or mini-batch the network trained is
 a different one, dropout is a form of **extreme bagging**:
 
->in which **each model is trained on a single case and each parameter
->of the model is very strongly regularized by sharing it with the
->corresponding parameter in all the other models**.
+> in which **each model is trained on a single case and each parameter
+> of the model is very strongly regularized by sharing it with the
+> corresponding parameter in all the other models**.
 
 This turns out to be a very strong regulariser, which vastly improves
 the standard $L^p$ penalty terms (probably also because of the
@@ -70,29 +74,28 @@ it is very cheap
 The authors propose to approximate the expected output at test time
 by using the
 
->**"mean network" that contains all of the hidden units but with their
->outgoing weights halved to compensate for the fact that twice as many
->of them are active.**
+> **"mean network" that contains all of the hidden units but with their
+> outgoing weights halved to compensate for the fact that twice as many
+> of them are active.**
 
 Notice that because of the non-linearities and multiple layers, one
 cannot simply compute the expected output of one neuron as a weighted
-sum over all possible combinations of (dropped) inputs (see {{< cite
-baldi_understanding_2013 >}} for more on this topic and some explicit
-computations). However, there exist some theoretical guarantees **for
-toy networks** that weighting at test time approximates the “expected
-network” (not in this paper).
+sum over all possible combinations of (dropped) inputs.[^5] However,
+there exist some theoretical guarantees **for toy networks** that
+weighting at test time approximates the “expected network” (not in
+this paper).
 
->In networks with a single hidden layer of $N$ units and a “softmax”
->output layer for computing the probabilities of the class labels,
->using the mean network is exactly equivalent to taking the geometric
->mean of the probability distributions over labels predicted by all
->$2N$ possible networks. Assuming the dropout networks do not all make
->identical predictions, the prediction of the mean network is
->guaranteed to assign a higher log probability to the correct answer
->than the mean of the log probabilities assigned by the individual
->dropout networks (2). Similarly, for regression with linear output
->units, the squared error of the mean network is always better than
->the average of the squared errors of the dropout networks.
+> In networks with a single hidden layer of $N$ units and a “softmax”
+> output layer for computing the probabilities of the class labels,
+> using the mean network is exactly equivalent to taking the geometric
+> mean of the probability distributions over labels predicted by all
+> $2N$ possible networks. Assuming the dropout networks do not all make
+> identical predictions, the prediction of the mean network is
+> guaranteed to assign a higher log probability to the correct answer
+> than the mean of the log probabilities assigned by the individual
+> dropout networks (2). Similarly, for regression with linear output
+> units, the squared error of the mean network is always better than
+> the average of the squared errors of the dropout networks.
 
 
 Finally, there is the possiblity of adapting dropout probabilities *"by
@@ -110,7 +113,7 @@ results.[^1]
 
 ### Examples
 
-* MNIST: several fully connected networks, with momentum,
+* MNIST: several fully connected networks, with momentum,[^3]
   exponentially decaying but large initial learning rates and 3-4
   layers. $p=0.5$ dropout probability for the hidden layers plus 0.2
   dropout for the input layer. Also: finetuning of Deep Belief Nets
@@ -122,9 +125,13 @@ results.[^1]
 
 * Reuters Corpus Volume I (RCV1-v2)
 
-* CIFAR10 and ImageNet: using convnets, pooling, ReLU activations,
+* CIFAR10 and ImageNet: using convnets, pooling, ReLU activations,[^4]
   normalization of activations by regions ("local response
-  normalization"), soft-max loss, Gaussian initialization (!),
+  normalization"), softmax loss, Gaussian initialization.[^6]
 
 [^1]: But Karphathy claims in CS231n, lecture 6, that this is not actually done in practice...
 [^2]: Recall that in Bayesian averaging one has an arbitrary posterior distribution over the models so that Monte Carlo methods have to be used to sample from it.
+[^3]: {{< cite sutskever_importance_2013 >}}.
+[^4]: {{< cite hinton_improving_2012 >}}.
+[^5]: See {{< cite baldi_understanding_2013 >}} for more on this topic and some explicit computations.
+[^6]: Now we know Gaussian init is bad! Cite...
