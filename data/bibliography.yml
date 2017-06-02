@@ -741,7 +741,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 26
   page: '351-359'
   note: 'citecount: 00156'
-  URL: http://papers.nips.cc/paper/4882-dropout-training-as-adaptive-regularization.pdf
+  URL: http://papers.nips.cc/paper/4882-dropout-training-as-adaptive-regularization
 
 - id: duchi_adaptive_2011
   type: article-journal
@@ -780,4 +780,35 @@ references:
   volume: '7'
   issue: '1'
   note: 'citecount: 00545'
+
+- id: hardt_identity_2016
+  type: article-journal
+  author:
+  - family: Hardt
+    given: Moritz
+  - family: Ma
+    given: Tengyu
+  issued:
+  - year: '2016'
+    month: '11'
+  title: Identity matters in Deep Learning
+  container-title: arXiv:1611.04231 \[cs, stat\]
+  note: 'citecount: 00001 arXiv: 1611.04231'
+  abstract: An emerging design principle in deep learning is that each layer of a
+    deep artificial neural network should be able to easily express the identity transformation.
+    This idea not only motivated various normalization techniques, such as \\emph{batch
+    normalization}, but was also key to the immense success of \\emph{residual networks}.
+    In this work, we put the principle of \\emph{identity parameterization} on a more
+    solid theoretical footing alongside further empirical progress. We first give
+    a strikingly simple proof that arbitrarily deep linear residual networks have
+    no spurious local optima. The same result for linear feed-forward networks in
+    their standard parameterization is substantially more delicate. Second, we show
+    that residual networks with ReLu activations have universal finite-sample expressivity
+    in the sense that the network can represent any function of its sample provided
+    that the model has more parameters than the sample size. Directly inspired by
+    our theory, we experiment with a radically simple residual architecture consisting
+    of only residual convolutional layers and ReLu activations, but no batch normalization,
+    dropout, or max pool. Our model improves significantly on previous all-convolutional
+    networks on the CIFAR10, CIFAR100, and ImageNet classification benchmarks.
+  URL: http://arxiv.org/abs/1611.04231
 ...
