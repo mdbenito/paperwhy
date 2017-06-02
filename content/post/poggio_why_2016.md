@@ -3,7 +3,7 @@ title: "Why and when can deep – but not shallow – networks avoid the curse o
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-05-29
-tags: ["convnets", "deep-learning", "approximation theory", "compositionality" ]
+tags: ["convnets", "deep-learning", "approximation-theory", "compositionality" ]
 paper_authors: ["Poggio, Tomaso", "Mhaskar, Hrushikesh", "Rosasco, Lorenzo", "Miranda, Brando", "Liao, Qianli"]
 paper_key: "poggio_why_2016"
 ---
