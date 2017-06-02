@@ -14,6 +14,8 @@
   Aaron>>>|<doc-author|<author-data|<author-name|Bengio,
   Yoshua>>>|<doc-running-author|Miguel de Benito Delgado>>
 
+  <tags|activations|dropout|convnets|maxout|pooling>
+
   <strong|tl;dr:> this paper introduced an activation function for deep
   convolutional networks which specifically benefits from regularization with
   dropout<\footnote>
@@ -236,6 +238,7 @@
     deep-networks>
     <associate|global-title|Maxout Networks>
     <associate|math-font|math-stix>
+    <associate|preamble|false>
   </collection>
 </initial>
 
@@ -282,7 +285,7 @@
       he_identity_2016
     </associate>
     <\associate|figure>
-      <tuple|normal|From <locus|<id|%150DBD9C8-1398AD6A0>|<link|hyperlink|<id|%150DBD9C8-1398AD6A0>|<url|//cs231n.github.io>>|CS231n>
+      <tuple|normal|From <locus|<id|%1558D45F8-1376CF8F0>|<link|hyperlink|<id|%1558D45F8-1376CF8F0>|<url|//cs231n.github.io>>|CS231n>
       at Stanford.|<pageref|auto-1>>
 
       <\tuple|normal>

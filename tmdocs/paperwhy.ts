@@ -43,8 +43,8 @@
 
   <assign|dfn|<macro|body|<strong|<with|font-shape|italic|<arg|body>>>>>
 
-  <assign|doc-title|<macro|x|<\surround|<vspace*|0.5fn>|<vspace|0.5fn>>
-    <doc-title-block|<strong|A review of><new-line><font-magnify|1.682|<with|math-font-series|bold|font-series|bold|<arg|x>>>>
+  <assign|doc-title|<macro|x|<\surround|<vspace*|0.5fn>|>
+    <doc-title-block|<strong|A review of><new-line><vspace*|1fn><font-magnify|1.682|<with|math-font-series|bold|font-series|bold|<arg|x>>>>
   </surround>>>
 
   <assign|render-tag*|<macro|x|<arg|x>>>

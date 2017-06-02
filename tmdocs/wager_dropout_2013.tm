@@ -8,8 +8,12 @@
   </hide-preamble>
 
   <doc-data|<doc-title|Dropout training as adaptive
-  regularization>|<doc-author|<author-data|<author-name|Miguel de Benito
-  Delgado>>>>
+  regularization>|<doc-author|<author-data|<author-name|Wager,
+  Stefan>>>|<doc-author|<author-data|<author-name|Wang,
+  Sida>>>|<doc-author|<author-data|<author-name|Liang,
+  Percy>>>|<doc-running-author|Miguel de Benito Delgado>>
+
+  <tags|dropout|regularization|adagrad|semi-supervised>
 
   <strong|tl;dr:> dropout (of features) for GLMs is a noising procedure
   equivalent to Tykhonov regularization. A first order approximation of the
@@ -372,8 +376,11 @@
   </bibliography>
 </body>
 
-<initial|<\collection>
-</collection>>
+<\initial>
+  <\collection>
+    <associate|preamble|false>
+  </collection>
+</initial>
 
 <\references>
   <\collection>
