@@ -59,8 +59,8 @@ differentiable with respect to each $x_n$. The gradient is:
 
 $$ \nabla\_x l (w ; x, t) = - 2 Ct\_n w \max (1 - w^{\top} xt, 0) $$
 
-Using this idea the author won the Facial Expression Recognition
-challenge at ICML 2013:
+Using this idea the author won the
+[Facial Expression Recognition challenge](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge) at ICML 2013:
 
 > (…) using a simple Convolutional Neural Network with linear
 > one-vs-all SVM at the top. Stochastic gradient descent with momentum
