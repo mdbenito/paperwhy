@@ -18,10 +18,11 @@ $$ h = h\_m \circ h\_{m - 1} \circ \ldots \circ h\_1 . $$
 Depth provides effective, parsimonious representations of features and
 nonlinearities provide better rates of approximation (known from
 representation theory). Even more, shallow repesentations of some
-functions are necessarily more complex than deeper ones. But
-optimization is hard with many layers: conventional DNNs show
-increasingly poorer performance at the same task with growing depth,
-even though they can approximate a strictly larger set of functions.
+functions are necessarily more complex than deeper ones (*no
+flattening theorems*). But optimization is hard with many layers:
+conventional DNNs show increasingly poorer performance at the same
+task with growing depth, even though they can approximate a strictly
+larger set of functions.
 
 Deep Residual Networks overcome this limitation by introductig
 skip-paths connecting the input of layer $j$ to the output of layer $j+1$:

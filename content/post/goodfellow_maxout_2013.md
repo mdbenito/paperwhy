@@ -18,6 +18,8 @@ units. Although sparsity of representation is lost wrt. ReLUs,
 backpropagation of errors is improved by not clamping to 0, resulting
 in significant performance gains.
 
+---
+
 Recall the intuition behind dropout: for each training batch, it masks
 out around 50% of the units, thus training a different model / network
 of the $2^N$ possible (albeit *all having shared parameters*), where

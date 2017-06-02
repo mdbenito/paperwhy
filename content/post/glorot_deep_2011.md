@@ -14,6 +14,8 @@ labeled training data, but do in unsupervised settings. Use
 regularisation on weights / activations. $L_1$ might promote sparsity,
 ReLUs already do and this seems good if the data itself is.
 
+---
+
 This seminal paper settled the **introduction of ReLUs**[^1] into the
 neural network community (they had already been used in other
 contexts, e.g. in RBMs.[^2]

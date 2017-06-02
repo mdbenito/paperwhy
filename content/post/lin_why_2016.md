@@ -3,11 +3,22 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-05-13
 title:  Why does deep and cheap learning work so well?
-tags: ["deep-learning", "foundations"]
+tags: ["deep-learning", "no-flattening"]
 
 paper_authors: ["Lin, Henry W.", "Tegmark, Max"]
 paper_date: 2016-09-29
 paper_key: lin_why_2016
+---
+
+**tl;dr**: There is (hard to judge) physical motivation for the
+success of shallow networks as approximators of Hamiltonians. Proof
+that fixed size networks can approximate polynomials arbitrarily well
+and implication for typical Hamiltonians. Proof that the inference
+(reconstruction of initial parameters) of hierarchical / sequential
+*Markovian* processes (argued to be pervasive in nature) is learnable
+by deep architectures but not by shallower ones (**no-flattening
+theorem**).
+
 ---
 
 This paper addresses two fundamental questions for deep networks. That
@@ -16,14 +27,6 @@ of **efficiency**: why do networks with relatively so few parameters
 do deeper architectures perform better in some tasks? and is it
 possible to perform as well with shallower ones?
 
-**tl;dr**: (Hard to judge) physical motivation for the success of
-shallow networks as approximators of Hamiltonians. Proof that fixed
-size networks can approximate polynomials arbitrarily well and
-implication for typical Hamiltonians. Proof that the inference
-(reconstruction of initial parameters) of hierarchical / sequential
-*Markovian* processes (argued to be pervasive in nature) is learnable
-by deep architectures but not by shallower ones (**no-flattening
-theorem**).
 
 ### Efficiency 
 

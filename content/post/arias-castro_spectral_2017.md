@@ -10,7 +10,7 @@ paper_key: arias-castro_spectral_2017
 
 *Actually appeared in 2011.*
 
-This paper develops an algorithm in manifold clustering[^1],
+**tl;dr** This paper develops an algorithm in manifold clustering[^1],
 _**C**onnected **C**omponent **E**xtraction_, which attempts to
 resolve the issue of intersecting manifolds. The idea is to use a
 local version of PCA at each point to determine the "principal" or
@@ -18,6 +18,8 @@ local version of PCA at each point to determine the "principal" or
 weights for neighboring points. Then these weights are used to build a
 graph and _**S**pectral **G**raph **P**artitioning_[^2] is applied to
 compute its connected componets.
+
+---
 
 Because the goal is to resolve intersections, it is necessary to
 assume that the input data is distributed around smooth, smoothly

@@ -3,7 +3,7 @@ title: "Why and when can deep – but not shallow – networks avoid the curse o
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-05-29
-tags: ["convnets", "deep-learning", "approximation", "compositionality", "foundations"]
+tags: ["convnets", "deep-learning", "approximation theory", "compositionality" ]
 paper_authors: ["Poggio, Tomaso", "Mhaskar, Hrushikesh", "Rosasco, Lorenzo", "Miranda, Brando", "Liao, Qianli"]
 paper_key: "poggio_why_2016"
 ---
@@ -18,6 +18,8 @@ insight into how they approximate (hierarchical) Lipschitz functions is
 provided . It is conjectured that many target functions relevant to current 
 machine learning problems are in these classes due either to physical grounds 
 ({{< cite lin_why_2016 >}}) or biological ones.
+
+---
 
 Guarantees of the approximation properties of NNs are typically proven for 
 general classes of functions, say $C^m (X), X \subseteq \mathbb{R}^n$ or 

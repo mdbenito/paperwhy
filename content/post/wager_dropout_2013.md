@@ -10,7 +10,6 @@ paper_key: "wager_dropout_2013"
 
 ---
 
-
 **tl;dr:** dropout (of features) for GLMs is a noising procedure equivalent to 
 Tykhonov regularization. A first order approximation of the regularizer 
 actually scales the parameters with the Fisher information matrix, adapting the 
@@ -132,24 +131,24 @@ assuming the design matrix has been normalized to $\Sigma \_{i  j} x^2\_{i  j}
     <td style="text-align: center; padding-left: 0em; padding-right: 0em"><table style="display: inline; vertical-align: -2.2em">
       <tbody><tr>
         <td style="text-align: right"></td>
-        <td style="text-align: center; text-align: center" bgcolor="#dfdfdf">Linear regression</td>
-        <td style="text-align: center; text-align: center" bgcolor="#dfdfdf">Logistic regression</td>
-        <td style="text-align: center; text-align: center" bgcolor="#dfdfdf">GLM</td>
+        <td style="text-align: center" bgcolor="#dfdfdf">Linear regression</td>
+        <td style="text-align: center" bgcolor="#dfdfdf">Logistic regression</td>
+        <td style="text-align: center" bgcolor="#dfdfdf">GLM</td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">$L^2$-penalty</td>
-        <td style="text-align: center">$\| \beta \|^2_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2_2$ </td>
+        <td style="text-align: center">$\| \beta \|^2\_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2\_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2\_2$ </td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">Additive noise</td>
-        <td style="text-align: center; border-right: 1px solid">  $\| \beta \|^2_2$ </td>
-        <td style="text-align: center; border-top: 1px solid; border-left: 1px solid"> $\| \beta \|^2_2  \sum_i p_i  (1 -
-    p_i)$ </td>
-        <td style="text-align: center; border-top: 1px solid; border-right: 1px solid"> $\| \beta \|^2_2 \operatorname{tr} (V (\beta))$ </td>
+        <td style="text-align: center; border-right: 1px solid">  $\| \beta \|^2\_2$ </td>
+        <td style="text-align: center; border-top: 1px solid; border-left: 1px solid"> $\| \beta \|^2\_2  \sum\_i p\_i  (1 -
+    p\_i)$ </td>
+        <td style="text-align: center; border-top: 1px solid; border-right: 1px solid"> $\| \beta \|^2\_2 \operatorname{tr} (V (\beta))$ </td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">Dropout noise</td>
-        <td style="text-align: center; border-right: 1px solid"> $\| \beta \|^2_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid; border-left: 1px solid"> $\sum_{i, j} p_i  (1 - p_i) x_{i j}^2 \beta_j^2$ </td>
+        <td style="text-align: center; border-right: 1px solid"> $\| \beta \|^2\_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid; border-left: 1px solid"> $\sum\_{i, j} p\_i  (1 - p\_i) x\_{i j}^2 \beta\_j^2$ </td>
         <td style="text-align: center; border-bottom: 1px solid; border-right: 1px solid"> $\beta^{\top} \operatorname{diag} (X^{\top} V (\beta)
     X) \beta$ </td>
       </tr></tbody>
@@ -218,18 +217,18 @@ picture for intuition:
 
 {{< figure src="/img/wager_dropout_2013-figA2.jpg" title="Comparison of two $L^2$ regularizers." >}}
 
->(page 11 in the Appendix)In both cases, the black solid ellipses are
->level surfaces of the likelihood and the blue dashed curves are level
->surfaces of the regularizer; the optimum of the regularized objective
->is denoted by OPT. The left panel shows a classic spherical $L^2$
->regular izer $\| \beta \|\_{2}^2$, whereas the right panel has an
->$L^2$ regularizer $\beta^{\top} \operatorname{diag}(\mathcal{I})
->\beta$ that has been adapted to the shape of the likelihood
->($\mathcal{I}$ is the Fisher information matrix). The second
->regularizer is still aligned with the axes, but the relative
->importance of each axis is now scaled using the curvature of the
->likelihood function. As argued [above], dropout training is
->comparable to the setup depicted in the right panel.
+> (page 11 in the Appendix)In both cases, the black solid ellipses are
+> level surfaces of the likelihood and the blue dashed curves are level
+> surfaces of the regularizer; the optimum of the regularized objective
+> is denoted by OPT. The left panel shows a classic spherical $L^2$
+> regular izer $\| \beta \|\_{2}^2$, whereas the right panel has an
+> $L^2$ regularizer $\beta^{\top} \operatorname{diag}(\mathcal{I})
+> \beta$ that has been adapted to the shape of the likelihood
+> ($\mathcal{I}$ is the Fisher information matrix). The second
+> regularizer is still aligned with the axes, but the relative
+> importance of each axis is now scaled using the curvature of the
+> likelihood function. As argued [above], dropout training is
+> comparable to the setup depicted in the right panel.
 
 ### Relation to AdaGrad
 
@@ -294,7 +293,7 @@ authors' approach
 [^10]: See {{< cite hinton_improving_2012 >}}.
 [^11]: See {{< cite baldi_understanding_2013 >}}, {{< cite baldi_dropout_2014 >}}.
 [^1]:    See {{< cite duchi_adaptive_2011 >}}.
-[^2]: Recall that in a GLM one uses a so-called **link function** $h$ to relate a linear predictor $x \beta$ with the posterior $p (y|x)$ by means of the relationship $\mathbb{E} [y|x] = h^{- 1} (x \beta)$. In our notation, $h = A'$. To fix ideas think of logistic regression, where $p (y|x) = (1 + \mathrm{e}^{- x \beta})^{- 1}$. In this case we assume $y \in \{ 0, 1 \}$, the log likelihood is $p (\boldsymbol{y}|\boldsymbol{x}) = \prod\_{i} p\_{i}^{y\_{i}}  (1 -p\_{i})^{1 - y\_{i}}$, with $p\_{i} := (1 + \mathrm{e}^{- x\_{i} \beta})^{- 1}$ and the negative log likelihood is the **cross entropy loss**: $\log p (y|x) = - \sum\_{i} y\_{i} \log p\_{i} + (1 - y\_{i}) \log (1 -p\_{i})$.
+[^2]: Recall that in a GLM one uses a so-called **link function** $h$ to relate a linear predictor $x \beta$ with the posterior $p (y|x)$ by means of the relationship $\mathbb{E} [y|x] = h^{- 1} (x \beta)$. In our notation, $h = A'$. To fix ideas think of logistic regression, where $p (y|x) = (1 + \mathrm{e}^{- x \beta})^{- 1}$. In this case we assume $y \in \{ 0, 1 \}$, the log likelihood is $p (\boldsymbol{y}|\boldsymbol{x}) = \prod\_{i} p\_{i}^{y\_{i}} (1 -p\_{i})^{1 - y\_{i}}$, with $p\_{i} := (1 + \mathrm{e}^{- x\_{i} \beta})^{- 1}$ and the negative log likelihood is the **cross entropy loss**: $\log p (y|x) = - \sum\_{i} y\_{i} \log p\_{i} + (1 - y\_{i}) \log (1 -p\_{i})$.
 [^3]: Indeed $A (\tilde{x} \beta) - A (x \beta) = A' (x \beta)  (\tilde{x} \beta - x \beta)+ \frac{1}{2} A'' (x \beta)  (\tilde{x} \beta - x \beta)^2 + \text{h.o.t.}$ and taking expectations: $\mathbb{E}\_{\xi} [A (\tilde{x} \beta)] - A (x \beta) = A' (x \beta) (\mathbb{E} [\tilde{x} \beta] - x \beta) + \frac{1}{2} A'' (x \beta)\mathbb{E} (\tilde{x} \beta - x \beta)^2 + \text{h.o.t}$.
 [^4]: There is a handwavy discussion in the paper on the error $| R - R^q |$ which is not worth discussing here. Suffice to say: it works "well" in practice.
 [^5]: Here $\odot$ stands for the entrywise or [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)).

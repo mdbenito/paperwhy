@@ -16,6 +16,8 @@ features need not be collected. The main weaknesses are multiple
 non-discoverable hyperparameters, a blind random search for
 optimization, and a not so easily actionable output of the algorithm.
 
+---
+
 Consider sparse regression with a number of features/predictors $p$
 greater than the number of datapoints $n$. In this setting it is vital
 to extract features relevant to the regression and compute using the
