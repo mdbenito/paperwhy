@@ -9,6 +9,14 @@ paper_authors: ["Bartlett, Peter"]
 paper_key: bartlett_representational_2017
 ---
 
+**tl;dr:** Sufficiently regular functions (roughly: having Lipschitz,
+invertible derivatives) can be represented as compositions of
+increasingly small perturbations of the identity. Furthermore,
+critical points of the quadratic loss for these target functions are
+proven to be always minima, thus ensuring loss-reducing gradient
+descent steps. This makes this class of functions "easily"
+approximable by Deep Residual Networks.
+
 {{< youtube UlnYEWXoxOY >}}
 
 Deep networks are deep compositions of non-linear functions 
@@ -24,12 +32,13 @@ conventional DNNs show increasingly poorer performance at the same
 task with growing depth, even though they can approximate a strictly
 larger set of functions.
 
-Deep Residual Networks overcome this limitation by introductig
-skip-paths connecting the input of layer $j$ to the output of layer $j+1$:
+**D**eep **R**esidual **N**etworks[^3] overcome this limitation by
+introductig skip-paths connecting the input of layer $j$ to the output
+of layer $j+1$:
 
 \\[ f\_{j + 1} (x\_j) = w\_{j + 1} \sigma (w\_j x\_j) + x\_j, \\]
 
-where $\sigma$ is typicall a ReLU.
+where $\sigma$ is typically a ReLU.[^4]
 
 **Why?** First consider the following fact about linear maps:
 
@@ -136,4 +145,9 @@ $h$ with Lipschitz derivative and so on)
 
 
 [^1]: {{< cite hardt_identity_2016 >}}.
+
 [^2]: Recall that the minimizer of the risk with quadratic loss is the $L^2$ projection, i.e. the conditional expectation $h^{\ast} (x) =\mathbb{E} [Y|X = x]$.
+
+[^3]: {{< cite he_deep_2016 >}}.
+
+[^4]: {{< cite glorot_deep_2011 >}}.
