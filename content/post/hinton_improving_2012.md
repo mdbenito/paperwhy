@@ -129,9 +129,15 @@ results.[^1]
   normalization of activations by regions ("local response
   normalization"), softmax loss, Gaussian initialization.[^6]
 
+
 [^1]: But Karphathy claims in CS231n, lecture 6, that this is not actually done in practice...
+
 [^2]: Recall that in Bayesian averaging one has an arbitrary posterior distribution over the models so that Monte Carlo methods have to be used to sample from it.
+
 [^3]: {{< cite sutskever_importance_2013 >}}.
+
 [^4]: {{< cite hinton_improving_2012 >}}.
+
 [^5]: See {{< cite baldi_understanding_2013 >}} for more on this topic and some explicit computations.
+
 [^6]: Now we know Gaussian init is bad! Cite...

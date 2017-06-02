@@ -265,9 +265,15 @@ computation. Just read it.
 
 
 [^1]: This paper is packed with results, comments and conjectures! I had to omit many details to keep this post at a reasonable length.
+
 [^2]: For approximation to continuous functions by shallow networks, {{< cite pinkus_approximation_1999 >}} (§6), cites results by Maiorov on the upper and lower bounds on the approximation quality which are exponential on the number of inputs and the “bad functions” guilty of the lower bound actually form a set of “large measure” so this is not just a worst-case scenario. As a matter of fact: "*examples of specific functions that cannot be represented efficiently by shallow networks have been given very recently by Telgarsky [25] and by Shamir [26]. [The authors] provide in theorem 5 another example (…) for which there is a gap between shallow and deep networks.*"
+
 [^3]: See {{< cite lin_why_2016 >}}.
+
 [^4]: Did that make any sense?
+
 [^5]: Sloppily: Assume $P, P\_{i}$ approximate $h, h\_{i }$ within $\varepsilon$, then compute $\| h (h\_{i}, h\_{j}) - P (P\_{i}, P\_{j}) \|\_{\infty} \leqslant \| h(h\_{i}, h\_{j}) - h (P\_{i}, P\_{j}) \|\_{\infty} + \| h (P\_{i}, P\_{j}) - P(P\_{i}, P\_{j}) \|\_{\infty} \leqslant L \| (h\_{i}, h\_{j}) - (P\_{i},P\_{j}) \| + c \varepsilon \lesssim \varepsilon$.
+
 [^6]: I added this last bit with $C =\mathcal{O} (N)$ for better consistency with the main result. It is the exponent what matters in the definition.
+
 [^7]: {{< cite lin_why_2016 >}}.

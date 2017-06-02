@@ -290,14 +290,24 @@ authors' approach
 
 
 
-[^10]: See {{< cite hinton_improving_2012 >}}.
-[^11]: See {{< cite baldi_understanding_2013 >}}, {{< cite baldi_dropout_2014 >}}.
-[^1]:    See {{< cite duchi_adaptive_2011 >}}.
+[^1]: See {{< cite duchi_adaptive_2011 >}}.
+
 [^2]: Recall that in a GLM one uses a so-called **link function** $h$ to relate a linear predictor $x \beta$ with the posterior $p (y|x)$ by means of the relationship $\mathbb{E} [y|x] = h^{- 1} (x \beta)$. In our notation, $h = A'$. To fix ideas think of logistic regression, where $p (y|x) = (1 + \mathrm{e}^{- x \beta})^{- 1}$. In this case we assume $y \in \{ 0, 1 \}$, the log likelihood is $p (\boldsymbol{y}|\boldsymbol{x}) = \prod\_{i} p\_{i}^{y\_{i}} (1 -p\_{i})^{1 - y\_{i}}$, with $p\_{i} := (1 + \mathrm{e}^{- x\_{i} \beta})^{- 1}$ and the negative log likelihood is the **cross entropy loss**: $\log p (y|x) = - \sum\_{i} y\_{i} \log p\_{i} + (1 - y\_{i}) \log (1 -p\_{i})$.
+
 [^3]: Indeed $A (\tilde{x} \beta) - A (x \beta) = A' (x \beta)  (\tilde{x} \beta - x \beta)+ \frac{1}{2} A'' (x \beta)  (\tilde{x} \beta - x \beta)^2 + \text{h.o.t.}$ and taking expectations: $\mathbb{E}\_{\xi} [A (\tilde{x} \beta)] - A (x \beta) = A' (x \beta) (\mathbb{E} [\tilde{x} \beta] - x \beta) + \frac{1}{2} A'' (x \beta)\mathbb{E} (\tilde{x} \beta - x \beta)^2 + \text{h.o.t}$.
+
 [^4]: There is a handwavy discussion in the paper on the error $| R - R^q |$ which is not worth discussing here. Suffice to say: it works "well" in practice.
+
 [^5]: Here $\odot$ stands for the entrywise or [Hadamard product](https://en.wikipedia.org/wiki/Hadamard_product_(matrices)).
+
 [^6]: See {{< cite bishop_training_1995 >}} for more on additive noise leading to ridge regression.
+
 [^7]: Notice that we could use any quadratic form to redefine the norm in which weights are measured. There are surely many other interesting possibilities!
+
 [^8]: See {{< cite duchi_adaptive_2011 >}}.
+
 [^9]: This looks like a nice connection to second order methods: warp the update step with information on the target function or warp feature space with information on the data to "improve" it (*very* handwavily put…)
+
+[^10]: See {{< cite hinton_improving_2012 >}}.
+
+[^11]: See {{< cite baldi_understanding_2013 >}}, {{< cite baldi_dropout_2014 >}}.
