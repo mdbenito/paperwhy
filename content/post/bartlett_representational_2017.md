@@ -3,7 +3,7 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-05-02
 title: Representational and optimization properties of Deep Residual Networks
-tags: ["deep-learning", "deep-residual-networks", "optimization", "approximation"]
+tags: ["deep-learning", "deep-residual-networks", "optimization", "approximation-theory"]
 
 paper_authors: ["Bartlett, Peter"]
 paper_key: bartlett_representational_2017
