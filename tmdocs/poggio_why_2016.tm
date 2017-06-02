@@ -23,7 +23,9 @@
   For the latter insight into how they approximate (hierarchical) Lipschitz
   functions is provided . It is conjectured that many target functions
   relevant to current machine learning problems are in these classes due
-  either to physical grounds (<cite|lin_why_2016>) or biological ones.
+  either to physical grounds<\footnote>
+    See <cite|lin_why_2016>.
+  </footnote> or biological ones.
 
   Guarantees of the approximation properties of NNs are typically proven for
   general classes of functions, say <math|C<rsup|m><around*|(|X|)>,X\<subseteq\>\<bbb-R\><rsup|n>>
@@ -354,7 +356,7 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|?>>
-    <associate|auto-2|<tuple|4|?>>
+    <associate|auto-2|<tuple|5|?>>
     <associate|auto-3|<tuple|2|?>>
     <associate|auto-4|<tuple|5|?>>
     <associate|auto-5|<tuple|6|?>>
@@ -368,12 +370,14 @@
     <associate|footnote-4|<tuple|4|?>>
     <associate|footnote-5|<tuple|5|?>>
     <associate|footnote-6|<tuple|6|?>>
+    <associate|footnote-7|<tuple|7|?>>
     <associate|footnr-1|<tuple|1|?>>
     <associate|footnr-2|<tuple|2|?>>
     <associate|footnr-3|<tuple|3|?>>
     <associate|footnr-4|<tuple|4|?>>
     <associate|footnr-5|<tuple|5|?>>
     <associate|footnr-6|<tuple|6|?>>
+    <associate|footnr-7|<tuple|7|?>>
     <associate|thm:dag-functions|<tuple|5|?>>
     <associate|thm:main-result|<tuple|3|?>>
   </collection>
