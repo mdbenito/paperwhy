@@ -15,7 +15,8 @@
     </macro>>
   </hide-preamble>
 
-  <doc-data|<doc-title|Maxout Networks>>
+  <doc-data|<doc-title|Maxout Networks>|<doc-author|<author-data|<author-name|Miguel
+  de Benito Delgado>>>>
 
   <strong|tl;dr:> this paper introduced an activation function for deep
   convolutional networks which specifically benefits from regularization with
@@ -27,6 +28,8 @@
   more accurate than with fully non-linear units. Although sparsity of
   representation is lost wrt. ReLUs, backpropagation of errors is improved by
   not clamping to 0, resulting in significant performance gains.
+
+  <hrule>
 
   Recall the intuition behind dropout: for each training batch, it masks out
   around 50% of the units, thus training a different model / network of the
@@ -283,7 +286,7 @@
       he_identity_2016
     </associate>
     <\associate|figure>
-      <tuple|normal|From <locus|<id|%10E89CE18-13D9C0BB0>|<link|hyperlink|<id|%10E89CE18-13D9C0BB0>|<url|//cs231n.github.io>>|CS231n>
+      <tuple|normal|From <locus|<id|%1470AAC98-140E32A38>|<link|hyperlink|<id|%1470AAC98-140E32A38>|<url|//cs231n.github.io>>|CS231n>
       at Stanford.|<pageref|auto-1>>
 
       <\tuple|normal>
