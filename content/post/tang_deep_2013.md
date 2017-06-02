@@ -9,7 +9,7 @@ paper_authors: ["Tang, Yichuan"]
 paper_key: tang_deep_2013
 ---
 
-The author proposes to replace a **linear SVM** for the softmax atop
+The author substitutes a **linear SVM** for the softmax atop
 some architectures, then **backpropagate the error of the primal
 problem to the whole network** . This idea had already been proposed
 in the literature but with a standard hinge loss instead of the
@@ -17,62 +17,64 @@ $L^2$-loss that the author uses.[^1] Because an $L^2$ loss penalizes
 mistakes more heavily than the standard hinge loss the author believes
 that:
 
->_the performance gain is largely due to the superior regularization
->effects of the SVM loss function, rather than an advantage from
->better parameter optimization._
+> the performance gain is largely due to the superior regularization
+> effects of the SVM loss function, rather than an advantage from
+> better parameter optimization.
 
 Two natural questions pop up:
 
-1.  Will using an SVM instead of a softmax help networks which already
-    are heavily regularized? Note for instance that dropout seems
-    **not** to have been used for the paper.
+1. Will using an SVM instead of a softmax help networks which already
+   are heavily regularized? Note for instance that dropout[^3] seems
+   **not** to have been used for the paper (but lots of Gaussian
+   noise are added, which is a form of Tykhonov regularization[^4]
+   and we know that dropout can act as an $L^2$ regularizer.[^5]
 
-2.  If the softmax seems to be an integral part of the reason why deep
-    learning works so well (Lin & Tegmark, 2016)[^2], how is it that
-    an SVM works in some situations?
+2. The softmax seems to be an important part of the reason why deep
+   learning works so well is some situations.[^2] Will an SVM work
+   in the same ones and why?
 
-As to the implementation details, a _one-vs rest_ multi-class SVM is
+As to the implementation details, a *one-vs rest* multi-class SVM is
 directly substituted for the softmax layer:
 
->_For $K$ class problems, $K$ linear SVMs will be trained
->independently, where the data from the other classes form the
->negative cases._
+> For $K$ class problems, $K$ linear SVMs will be trained
+> independently, where the data from the other classes form the
+> negative cases.
 
 Then the class with respect to which a given sample has maximal margin
 is taken to be the correct one. Note that this has the immediate
 disadvantage wrt. softmax, characteristic of SVMs, that the values
 obtained cannot be interpreted as probabilities anymore since the
-outputs $a_k (x) = w^{\top} x, k \in [K]$ of the SVM are not
+outputs $a\_k (x) = w^{\top} x, k \in [K]$ of the SVM are not
 normalized.  How does learning proceed? By backpropagating the error
 of the (unconstrained, primal) SVM's objective:
 
 $$ l (w ; \mathrm{x}, \mathrm{t}) = \underset{w}{\min} \frac{1}{2} | w
-   |^2 + C \sum_{n = 1}^N \max (1 - w^{\top} x_n t_n, 0)^2, $$
+   |^2 + C \sum\_{n = 1}^N \max (1 - w^{\top} x\_n t\_n, 0)^2, $$
 
-where $(x_n, t_n) \in \mathbb{R}^d \times \{ - 1, 1 \}$ are the
+where $(x\_n, t\_n) \in \mathbb{R}^d \times \{ - 1, 1 \}$ are the
 outputs from the last layer and the training labels respectively and
 $w$ are the weights for the SVM. Note the square after the maximum:
 because the arguments of the max are linear, the whole function is
 differentiable with respect to each $x_n$. The gradient is:
 
-$$ \nabla_x l (w ; x, t) = - 2 Ct_n w \max (1 - w^{\top} xt, 0) $$
+$$ \nabla\_x l (w ; x, t) = - 2 Ct\_n w \max (1 - w^{\top} xt, 0) $$
 
 Using this idea the author won the Facial Expression Recognition
 challenge at ICML 2013:
 
->_(…) using a simple Convolutional Neural Network with linear
->one-vs-all SVM at the top. Stochastic gradient descent with momentum
->is used for training and several models are averaged to slightly
->improve the generalization capabilities._
+> (…) using a simple Convolutional Neural Network with linear
+> one-vs-all SVM at the top. Stochastic gradient descent with momentum
+> is used for training and several models are averaged to slightly
+> improve the generalization capabilities.
 
 The details of the architecture are not clear, but the author reports
 
->_(…) using an 8 split/fold cross validation, with a image mirroring
->layer, similarity transformation layer, two convolutional
->filtering + pooling stages, followed by a fully connected layer with
->3072 hidden penultimate hidden units. The hidden layers are all of
->the rectified linear type. other hyperparameters such as weight decay
->are selected using cross validation._
+> (…) using an 8 split/fold cross validation, with a image mirroring
+> layer, similarity transformation layer, two convolutional
+> filtering + pooling stages, followed by a fully connected layer with
+> 3072 hidden penultimate hidden units. The hidden layers are all of
+> the rectified linear type. other hyperparameters such as weight decay
+> are selected using cross validation.
 
 MNIST is another dataset where good results are obtained: first PCA
 down the data to 70 dimensions, then a shallow 512-512 network with an
@@ -81,8 +83,8 @@ with SGD with minibatch updates. More interestingly, a stronger
 regularization than that provided by the $L^2$-SVM alone was needed
 here:
 
->_To prevent overfitting and critical to achieving good results, a lot
->of Gaussian noise is added to the input._
+> To prevent overfitting and critical to achieving good results, a lot
+> of Gaussian noise is added to the input.
 
 With this setup, the network with $L^2$-SVM performed around 12%
 better than with softmax. It is however noteworthy that no other
@@ -92,8 +94,8 @@ We now come to the more interesting question of why the method
 works. Is it a form of regularization or is the network easier to
 optimize? To test this
 
->_looked at the two final models' loss under its own objective
->functions as well as the other objective. [Table 3]_
+> looked at the two final models' loss under its own objective
+> functions as well as the other objective. [Table 3]
 
 <table style="width: 100%">
   <tbody><tr>
@@ -139,12 +141,19 @@ optimize? To test this
 Note how lower cross entropy actually had a higher error. Perhaps more
 interestingly the author
 
->_also initialized a ConvNet+Softmax model with the weights of the
->[ConvNet+SVM] that had 11.9% error. As further training is performed,
->the network's error rate gradually increased towards 14%._
+> also initialized a ConvNet+Softmax model with the weights of the
+> [ConvNet+SVM] that had 11.9% error. As further training is performed,
+> the network's error rate gradually increased towards 14%.
 
 Which suggests that the $L^2$-SVM provides a better objective,
 probably through its regularization property.
 
 [^1]: Some other prior work had been to train convnet (un)supervised, then use the output as input features for a SVM (but then training of the convnet is decoupled from the SVM's objective function); train multiple stacked SVMs recursively (without joint fine-tuning).
-[^2]: Lin, H. W. & Tegmark, M. Why does deep and cheap learning work so well? _arXiv:1608.08225 [cond-mat, stat]_ (2016).
+
+[^2]: {{< cite lin_why_2016 >}}.
+
+[^3]: {{< cite hinton_improving_2012 >}}.
+
+[^4]: {{< cite bishop_training_1995 >}}.
+
+[^5]: {{< cite wager_dropout_2013 >}}.
