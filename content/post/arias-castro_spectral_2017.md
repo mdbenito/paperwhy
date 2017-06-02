@@ -3,7 +3,7 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-04-25
 title: Spectral Clustering based on Local PCA
-tags: ["manifold-clustering", "clustering", "pca", "unsupervised"]
+tags: ["manifold-clustering", "spectral-clustering", "clustering", "pca", "unsupervised"]
 paper_authors: ["Arias-Castro, Ery", "Lerman, Gilad", "Zhang, Teng"]
 paper_key: arias-castro_spectral_2017
 ---

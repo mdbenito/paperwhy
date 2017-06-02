@@ -3,7 +3,7 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: 2017-04-29
 title: Improving neural networks by preventing co-adaptation of feature detectors
-tags: ["deep-learning", "foundations", "bagging"]
+tags: ["deep-learning", "dropout"]
 
 paper_authors: ["Hinton, Geoffrey E.", "Srivastava, Nitish", "Krizhevsky, Alex", "Sutskever, Ilya", "Salakhutdinov, Ruslan. R"]
 paper_date: 2012-07-03
