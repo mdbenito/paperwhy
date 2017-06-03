@@ -875,4 +875,81 @@ references:
     upon the best published result on ImageNet classification: reaching 4.9% top-5
     validation error (and 4.8% test error), exceeding the accuracy of human raters.'
   URL: http://arxiv.org/abs/1502.03167
+
+- id: su_differential_2016
+  type: article-journal
+  author:
+  - family: Su
+    given: Weijie
+  - family: Boyd
+    given: Stephen
+  - family: Candès
+    given: Emmanuel J.
+  issued:
+  - year: '2016'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '31'
+  title: 'A differential equation for modeling Nesterov’s accelerated gradient method:
+    Theory and insights'
+  title-short: A Differential Equation for Modeling Nesterov’s Accelerated Gradient
+    Method
+  container-title: Journal of Machine Learning Research
+  page: '1-43'
+  volume: '17'
+  issue: '153'
+  note: 'citecount: 00083 arXiv: 1503.01243'
+  URL: http://jmlr.org/papers/v17/15-084.html
+
+- id: nesterov_introductory_2004
+  type: book
+  author:
+  - family: Nesterov
+    given: Yurii
+  issued:
+  - year: '2004'
+  accessed:
+  - year: '2017'
+    month: '6'
+    day: '3'
+  title: Introductory Lectures on Convex Optimization - A Basic Course
+  collection-title: Applied Optimization
+  collection-number: '87'
+  publisher: Springer
+  note: 'citecount: 02412'
+  abstract: It was in the middle of the 1980s, when the seminal paper by Kar­ markar
+    opened a new epoch in nonlinear optimization. The importance of this paper,...
+  URL: http://www.springer.com/de/book/9781402075537
+  ISBN: '978-1-4613-4691-3'
+
+- id: jordan_gradient-based_2017
+  type: no-type
+  author:
+  - family: Jordan
+    given: Michael
+  issued:
+  - year: '2017'
+    month: '5'
+  accessed:
+  - year: '2017'
+    month: '5'
+    day: '31'
+  title: 'On Gradient-Based Optimization: Accelerated, Distributed, Asynchronous
+    and Stochastic'
+  title-short: On Gradient-Based Optimization
+  publisher-place: Simons Institute
+  genre: Talk
+  note: 'citecount: 00000 youtube: https://youtu.be/VE2ITg\_hGnI duration: 3725
+    seconds'
+  abstract: 'Many new theoretical challenges have arisen in the area of gradient-based
+    optimization for large-scale statistical data analysis, driven by the needs of
+    applications and the opportunities provided by new hardware and software platforms.
+    I discuss several recent results in this area, including: (1) a new framework
+    for understanding Nesterov acceleration, obtained by taking a continuous-time,
+    Lagrangian/Hamiltonian perspective, (2) a general theory of asynchronous optimization
+    in multi-processor systems, (3) a computationally-efficient approach to variance
+    reduction, and (4) a primal-dual methodology for gradient-based optimization that
+    targets communication bottlenecks in distributed systems.'
+  URL: https://simons.berkeley.edu/talks/michael-jordan-2017-5-2
 ...
