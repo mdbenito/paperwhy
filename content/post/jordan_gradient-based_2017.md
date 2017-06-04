@@ -1,4 +1,5 @@
 ---
+draft: true
 title: "On gradient-based optimization: accelerated, stochastic, asynchronous, distributed"
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
