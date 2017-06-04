@@ -922,12 +922,14 @@ footer small {
     justify-content: space-between
 }
 
+/* This highlights the whole item when clicking
 .posts li .p-wrap:active {
     background: #ff8952
 }
+*/
 
 .posts li .p-wrap:hover {
-    background: #ff8952;
+    /* background: #ff8952;     Too distracting */
     padding-left: 3em;
     padding-right: 3em;
 
@@ -966,6 +968,7 @@ footer small {
 .posts li .p-wrap .post-authors {
 
 }
+
 .posts li .p-wrap .paper-date {
     font-weight: lighter;
     font-size: 70%
@@ -1061,7 +1064,7 @@ footer small {
     position: relative;
     top: 1.1em;
     background: #fff;
-    font-family: 'Liberation Sans', Helvetica, 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 85%;
     text-align: center;
     font-weight: 400;
@@ -1094,9 +1097,9 @@ footer small {
 
 .single-wrap blockquote {
     font-size: 90%;
-    font-family: "Open Sans",sans-serif;
-    font-weight: lighter;
-    color: #999;
+    font-family: "Open Sans", sans-serif;
+    /* font-weight: lighter; */
+    color: #555;
     border-left: 4px solid #e0e1e6;
     padding-left: 1em;
     margin: 1em
@@ -1316,8 +1319,8 @@ a.paper-author:hover {
 }
 
 .posts a.paper-author:hover {
-    border:0;
-    background:none
+    border-radius: 3px
+    /* background:none */
 }
 
 .posted-by {
