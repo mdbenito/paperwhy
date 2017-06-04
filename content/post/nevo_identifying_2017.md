@@ -51,10 +51,11 @@ on the quality of approximation.
 
 The **method** is as follows: Start with a reduced range of orders
 $\mathcal{M}$, then apply simulated annealing to explore the space of
-models. The transition from one model to another is done by changing the
-state (in/out) of just one predictor at a time. Which one is taken is
-determined by probabilities $p^in,p^out$ depending on scores $\gamma$
-for each predictor. These are used in computing a threshold $q$ for the
+models. The transition from one model to another is done by changing
+the state (in/out) of just one predictor at a time. Which one is taken
+is determined by probabilities $p^{\operatorname{in}},
+p^{\operatorname{out}}$ depending on scores $\gamma$ for each
+predictor. These are used in computing a threshold $q$ for the
 Metropolis-Hastings criterion. See p.7. in the paper for the details
 
 **Examples**:
