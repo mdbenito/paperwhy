@@ -53,6 +53,12 @@
 
   <assign|tags|<xmacro|args|<style-with|src-compact|none|<htab|5mm><with|font-series|bold|Tags:
   ><render-tag*|<arg|args|0>><map-args|extra-tag*|concat|args|1>>>>
+
+  <assign|hugo|<\macro|shortcode|param>
+    <verbatim-code|<\surround|{{\<less\> | \<gtr\>}}>
+      <arg|shortcode> <arg|param>
+    </surround>>
+  </macro>>
 </body>
 
 <initial|<\collection>
