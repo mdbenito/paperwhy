@@ -23,21 +23,31 @@
   ongoing series <hlink|Computational Challenges in Machine
   Learning|https://simons.berkeley.edu/workshops/machinelearning2017-3>.
 
+  <hugo|youtube|VE2ITg_hGnI>
+
   <subsection*|Part 1: Variational, Hamiltonian and Symplectic Perspectives
   on Acceleration>
 
   For convex functions, Nesterov accelerated gradient descent method attains
   the optimal rate of <math|\<cal-O\><around*|(|1/k<rsup|2>|)>>.<\footnote>
-    Since we are in a convex setting, there is a global minimum: if you know
-    it, then you attain it in one step. Besides the trivial case, if one has
-    higher order derivatives, then higher order methods provide faster
-    convergence rates and so on. For this reason a definition of optimality
-    in the sense of an oracle <todo|was introduced>: the oracle is only
-    allowed to look at gradients under some constraint, in particular it has
-    no access to the gradient at every point. It is under this restriction
-    that Nesterov's gradient descent achieves optimality.
-  </footnote><\footnote>
-    See <cite|nesterov_introductory_2004>.
+    Since we are in a smooth convex setting, there is a global minimum: if
+    you know it, then you trivially attain it in one step. Besides this
+    useless case, if one has higher order derivatives, then higher order
+    methods provide faster convergence rates and so on. For this reason one
+    needs to restrict the definition of optimality in some sense. The concept
+    of an oracle was introduced with this purpose: An oracle is an entity
+    which \Panswers\Q questions of an optimization scheme about the function
+    to be optimized (e.g. what is the value of <math|\<nabla\>f> at
+    <math|x<rsub|k>>?), within the model of the problem (i.e. it represents
+    the things known to the method). This leads to the definition of the
+    class of <dfn|smooth first order methods> as those which only have access
+    to gradient infromation and produce iterates of the form
+    <math|x<rsub|k>\<in\>x<rsub|0>+span<around*|{|\<nabla\>f<around*|(|x<rsub|0>|)>,\<ldots\>,\<nabla\>f<around*|(|x<rsub|k-1>|)>|}>>.
+    It is under this restriction that Nesterov's gradient descent achieves
+    the optimal rate of <math|\<cal-O\><around*|(|1/k<rsup|2>|)>>. See e.g.
+    <cite-detail|nesterov_introductory_2004|Ch. 1> for more on oracles and
+    Ÿ2.1.2 for the previous statements, originally proved in
+    <cite|nesterov_method_1983>.
   </footnote>
 
   <\equation>
@@ -97,7 +107,7 @@
   second one <math|-\<mathe\><rsup|\<beta\><rsub|t>>*f<around*|(|x|)>> as the
   potential energy whose well we are going down. The choice of <math|h> will
   depend on the geometry of the problem, i.e. on the space where minimization
-  happens. <todo|(more...?)>
+  happens.
 
   The scaling functions <math|\<alpha\><rsub|t>,\<beta\><rsub|t>,\<gamma\><rsub|t>>
   are in fact fixed by certain <dfn|ideal scaling conditions> reducing them
@@ -132,11 +142,11 @@
   </quotation>
 
   The first result is a rate in continuous time:<\footnote>
-    Proved in one line with an adequate Lyapunov function. Note however that
-    reparametrizing the equation can change the rate, so this is not
-    groundbreaking news for the continuous equation. It is the passage to the
-    discrete setting and the conditions under which the rate can or cannot be
-    achieved that matter. <todo|?>
+    The proof is a one-liner choosing and adequate Lyapunov function. Note
+    however that (as explained later) by reparametrizing the equation one can
+    change the rate, so this is not groundbreaking news for the continuous
+    setting. It is the passage to the discrete setting and the conditions
+    under which the rate can or cannot be achieved that matter.
   </footnote>
 
   <\quotation>
@@ -191,29 +201,30 @@
 
   The answer is that indeed, the whole range of
   <math|\<alpha\><rsub|t>,\<beta\><rsub|t>,\<gamma\><rsub|t>> has not been
-  exhausted and \Pwe could recover other algorithms by exploring [it]\Q.
+  exhausted and \P<em|we could recover other algorithms by exploring [it]>\Q.
 
   <subsubsection*|Discretizing the E-L equation (1)>
 
-  (While preserving stability and the convergence rate). As usual, reduce to
-  1st order system and apply e.g. an Euler scheme to obtain an algorithm.
-  Problem: it is not stable! (and it lost the rate)
+  (While preserving stability and the convergence rate). The first thing one
+  thinks of is to reduce the 2nd order equation to a 1st order system and
+  apply e.g. an Euler scheme to obtain an algorithm. The problem is that the
+  method is not stable! (and it lost the rate)
 
   <big-figure|<image|../static/img/jordan_gradient_2017-slide29.jpg|1par|||>|Instability
   of conventional methods for the master ODE.>
 
-  Try Runge-Kutta, whatever: they all lose stability and the rate.
-
-  Two approaches: \Preverse-engineer Nesterov estimate sequence technique\Q
-  interpreting them as a discretization method or symplectic integration (see
-  below). For the first one it is possible to recover oracle rates by
-  increasing the assumptions on <math|f>:
+  Then one can try Runge-Kutta or whatever: they all lose stability and the
+  rate. Jordan's group saw two approaches for solving this problem:
+  \Preverse-engineer the Nesterov estimate sequence technique\Q interpreting
+  it as a discretization method or use symplectic integration (see below).
+  For the first one it is possible to recover oracle rates by increasing the
+  assumptions on <math|f>:
 
   <\quotation>
     <\theorem>
       Assume <math|h> is uniformly convex and introduce an auxiliary sequence
-      <math|y<rsub|k>> into the \Pnaive\Q Euler discretization. Assuming a
-      certain condition on <math|\<nabla\>f<around*|(|y<rsub|k>|)>>:
+      <math|y<rsub|k>> into the \Pnaive\Q Euler discretization. Assuming
+      higher regularity on <math|f<around*|(|y<rsub|k>|)>>:
 
       <\equation*>
         f<around*|(|y<rsub|k>|)>-f<around*|(|x<rsup|\<star\>>|)>\<leqslant\>\<cal-O\><around*|(|<frac|1|\<varepsilon\>*k<rsup|p>>|)>.
@@ -221,35 +232,60 @@
     </theorem>
   </quotation>
 
-  <subsubsection*|Discretizing the E-L equation: symplectic integration>
+  But one typically does not want to have to assume these additional
+  conditions on <math|\<nabla\>f> (Lipschitz <math|p-1> derivatives).
 
-  A way of performing integration in time which conserves quantities like
-  energy, momentum, etc. by switching to a (time-dependent) Hamiltonian
-  framework. Take the Legendre transform (a.k.a. Fenchel conjugate) of the
-  velocity and time to obtain momentum and energy respectively. The
-  Hamiltionian has the form <eqref|eq:lagrangian> modulo constants and signs.
-  Solve Hamilton's equations in phase space. For the discretization, look at
-  and conserve a certain local volume tensor / differential form along the
-  path of integration. This achieves faster rates. <todo|elaborate / see
-  Harrer et al. Geometric Functional...>
+  <subsubsection*|Discretizing the E-L equation (2): symplectic integration>
+
+  <hlink|Symplectic integration|https://en.wikipedia.org/wiki/Symplectic_integrator>
+  is a numerical integration technique which conserves quantities like energy
+  and momentum in a (time-dependent) Hamiltonian framework.<\footnote>
+    Symplectic intregrators are also used in the <dfn|<hlink|hybrid
+    Montecarlo method|https://en.wikipedia.org/wiki/Hybrid_Monte_Carlo>>, an
+    MCMC technique where the transition between states is governed by
+    Hamiltonian dynamics.
+  </footnote> By taking the Legendre transform (a.k.a. Fenchel conjugate) of
+  the velocity and time one obtains momentum and energy respectively and can
+  write a Hamiltionian which basically mimics the Lagrangian we had (it has
+  the form <eqref|eq:lagrangian> modulo constants and signs). Then one solves
+  Hamilton's equations in phase space with a discretization which looks at
+  and conserves a certain local volume tensor / differential form along the
+  path of integration.
+
+  Why is this interesting in our setting? The discretization seen for the
+  Lagrangian formulation suffers from high sensitivity to step size and a
+  momentum build-up which hurts performance near the optimum. The Hamiltonian
+  perspective produces equivalent equations whose symplectic integration
+  should alleviate these issues and achieve faster rates without further
+  assumptions : conservation of momentum seems to be the key.
+
+  <big-figure|<image|../static/img/jordan_gradient_2017-slide42.jpg|1par|||>|Comparing
+  Lagrangian and Symplectic integrators.>
 
   <subsubsection*|Ongoing / future / related work>
 
-  Non-convex setting: the framework described can be applied as well.
-  Stochastic setting: there will probably also exist an \Poptimal way to
-  diffuse\Q in SDEs derived from some Focker-Planck type equation.
+  Two possible venues for exploration are:
 
-  Symplectic intregrators are used in <em|hybrid Montecarlo>, where one
-  writes a Hamiltonian, etc.
+  <\itemize-dot>
+    <item>Non-convex setting: the framework described can be applied as well.
+
+    <item>Stochastic equations: there will probably also exist an \Poptimal
+    way to diffuse\Q in SDEs derived from some Focker-Planck type equation.
+  </itemize-dot>
 
   <\bibliography|bib|tm-ieeetr|paperwhy.bib>
-    <\bib-list|2>
+    <\bib-list|3>
       <bibitem*|1><label|bib-nesterov_introductory_2004>Y.<nbsp>Nesterov,
       <with|font-shape|italic|Introductory Lectures on Convex Optimization -
       A Basic Course>.<newblock> No.<nbsp>87<localize| in >Applied
-      Optimization, Springer, 2004.<newblock> Citecount: 02412.<newblock>
+      Optimization, Springer, 2004.<newblock>
 
-      <bibitem*|2><label|bib-su_differential_2016>W.<nbsp>Su,
+      <bibitem*|2><label|bib-nesterov_method_1983>Y.<nbsp>Nesterov, ``A
+      method of solving a convex programming problem with convergence rate
+      <math|\<cal-O\>(1/k<rsup|2>)>,'' <with|font-shape|italic|Soviet
+      Mathematics Doklady>, vol.<nbsp>27, pp.<nbsp>372\U376, 1983.
+
+      <bibitem*|3><label|bib-su_differential_2016>W.<nbsp>Su,
       S.<nbsp>Boyd<localize|, and >E.<nbsp>J.<nbsp>Candès, ``A differential
       equation for modeling Nesterov's accelerated gradient method: Theory
       and insights,'' <with|font-shape|italic|Journal of Machine Learning
@@ -269,10 +305,12 @@
     <associate|auto-3|<tuple|2|?>>
     <associate|auto-4|<tuple|1|?>>
     <associate|auto-5|<tuple|3|?>>
-    <associate|auto-6|<tuple|3|?>>
-    <associate|auto-7|<tuple|3|?>>
+    <associate|auto-6|<tuple|2|?>>
+    <associate|auto-7|<tuple|2|?>>
+    <associate|auto-8|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
     <associate|bib-nesterov_introductory_2004|<tuple|1|?>>
-    <associate|bib-su_differential_2016|<tuple|2|?>>
+    <associate|bib-nesterov_method_1983|<tuple|2|?>>
+    <associate|bib-su_differential_2016|<tuple|3|?>>
     <associate|eq:lagrangian|<tuple|3|?>>
     <associate|eq:master-ode|<tuple|5|?>>
     <associate|eq:minimization-paths|<tuple|4|?>>
@@ -296,6 +334,8 @@
     <\associate|bib>
       nesterov_introductory_2004
 
+      nesterov_method_1983
+
       su_differential_2016
     </associate>
     <\associate|figure>
@@ -316,8 +356,8 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <with|par-left|<quote|2tab>|Discretizing the E-L equation: symplectic
-      integration <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|Discretizing the E-L equation (2):
+      symplectic integration <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
       <with|par-left|<quote|2tab>|Ongoing / future / related work

@@ -952,4 +952,18 @@ references:
     reduction, and (4) a primal-dual methodology for gradient-based optimization that
     targets communication bottlenecks in distributed systems.'
   URL: https://simons.berkeley.edu/talks/michael-jordan-2017-5-2
+
+- id: nesterov_method_1983
+  type: article-journal
+  author:
+  - family: Nesterov
+    given: Yurii
+  issued:
+  - year: '1983'
+  title: A method of solving a convex programming problem with convergence rate \$O(1/k\^2)\$
+  container-title: Soviet Mathematics Doklady
+  page: '372-376'
+  volume: '27'
+  note: 'citecount: 00000'
+  URL: http://www.core.ucl.ac.be/~nesterov/Research/Papers/DAN83.pdf
 ...

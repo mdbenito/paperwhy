@@ -1,43 +1,44 @@
 ---
-draft: true
+
 title: "On gradient-based optimization: accelerated, stochastic, asynchronous, distributed"
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
-date: 2017-06-03
+date: "2017-06-04"
 tags: ["optimization", "accelerated-gradient-descent", "talks"]
 paper_authors: ["Jordan, Michael I."]
 paper_key: "jordan_gradient-based_2017"
 ---
 
-Today's post is about another great talk given at the Simons Institute
-for the Theory of Computing in the context of their currently ongoing
-series
-[Computational Challenges in Machine Learning](https://simons.berkeley.edu/workshops/machinelearning2017-3).
+
+Today's post is about another great talk given at the Simons Institute for the 
+Theory of Computing in the context of their currently ongoing series 
+[Computational Challenges in Machine 
+Learning](https://simons.berkeley.edu/workshops/machinelearning2017-3).
 
 {{< youtube VE2ITg_hGnI >}}
 
 ### Part 1: Variational, Hamiltonian and Symplectic Perspectives on Acceleration
 
 For convex functions, Nesterov accelerated gradient descent method attains the 
-optimal rate of $\mathcal{O} (1 / k^2)$.[^1], [^2]
+optimal rate of $\mathcal{O} (1 / k^2)$.[^1]
 
-\\[\begin{equation}
+\begin{equation}
   \label{eq:nesterov}\tag{1} \left\{\begin{array}{lll}
     y\_{k + 1} & = & x\_{k} - \beta \nabla f (x\_{k})\\
     x\_{k + 1} & = & (1 - \lambda \_{k}) y\_{k + 1} + \lambda \_{k} y\_{k} .
   \end{array}\right.
-\end{equation}\\]
+\end{equation}
 
 Note that this is not actually gradient descent since the momentum will make 
 the trajectory deviate from the "steepest slope" at some point.
 
-This reminds of [leap-frog integration](https://en.wikipedia.org/wiki/Leapfrog_integration).
-
-Gradient descent is a discretization of gradient flow
+This reminds of [leap-frog 
+integration](https://en.wikipedia.org/wiki/Leapfrog_integration). Gradient 
+descent is a discretization of gradient flow:
 
 \\[ \dot{X}\_{t} = - \nabla f (X\_{t}) . \\]
 
-Nesterov's method is the discretisation of the ODE[^3]
+Nesterov's method is the discretisation of the ODE[^2]
 
 \begin{equation}
   \label{eq:su-boyd-candes-ode}\tag{2} \ddot{X}\_{t} + \frac{3}{t} 
@@ -71,7 +72,7 @@ takes $h (x) = x^2 / 2$, then $D\_{h} (\ldots) = \frac{1}{2}  \| \dot{x} \|^2$
 is the kinetic energy so we always interpret this term as such and the second 
 one $- \mathrm{e}^{\beta \_{t}} f (x)$ as the potential energy whose well we 
 are going down. The choice of $h$ will depend on the geometry of the problem, 
-i.e. on the space where minimization happens. (more...?)
+i.e. on the space where minimization happens.
 
 The scaling functions $\alpha \_{t}, \beta \_{t}, \gamma \_{t}$ are in fact 
 fixed by certain **ideal scaling conditions** reducing them to **one** 
@@ -86,7 +87,7 @@ point $X\_{0}$
   \dot{X}\_{t}, t) \mathrm{d} t
 \end{equation}
 
-is called the non-homogenous **master ODE**:[^4]
+is called the non-homogenous **master ODE**:[^3]
 
 \begin{equation}
   \label{eq:master-ode}\tag{5} \ddot{X}\_{t} + (\mathrm{e}^{\alpha \_{t}} -
@@ -101,11 +102,11 @@ The claim is that
 > in continuous time.
 
 
-The first result is a rate in continuous time:[^5]
+The first result is a rate in continuous time:[^4]
 
 > **Theorem 1:** Under ideal scaling, the E-L equation (5) has convergence rate
-> \\[ f (X\_{t}) - f (x^{\star}) \leqslant \mathcal{O} (\mathrm{e}^{- \beta
->    \_{t}}) \\]
+\\[ f (X\_{t}) - f (x^{\star}) \leqslant \mathcal{O} (\mathrm{e}^{- \beta
+   \_{t}}) \\]
 > to the optimum $x^{\star}$.
 
 
@@ -136,62 +137,78 @@ solution path*.
 Note that this is not a property of gradient flow: reparametrization changes 
 the path. In general it will be different from the one obtained from (4).
 
-**Question (audience, "Nahdi"?)** Is it possible to introduce new
-parameters into the master ODE (or change the current ones) to
-interpolate in some way between Nesterov-like methods and gradient
-flow?
+audience, "Nahdi"?Is it possible to introduce new parameters into the master 
+ODE (or change the current ones) to interpolate in some way between 
+Nesterov-like methods and gradient flow?
+
+
 
 The answer is that indeed, the whole range of $\alpha \_{t}, \beta \_{t}, 
-\gamma \_{t}$ has not been exhausted and "we could recover other algorithms by 
-exploring [it]".
+\gamma \_{t}$ has not been exhausted and "*we could recover other algorithms by 
+exploring [it]*".
 
 #### Discretizing the E-L equation (1)
 
-(While preserving stability and the convergence rate). As usual, reduce to 1st 
-order system and apply e.g. an Euler scheme to obtain an algorithm. Problem: it 
-is not stable! (and it lost the rate)
+(While preserving stability and the convergence rate). The first thing one 
+thinks of is to reduce the 2nd order equation to a 1st order system and apply 
+e.g. an Euler scheme to obtain an algorithm. The problem is that the method is 
+not stable! (and it lost the rate)
 
 {{< figure src="/img/jordan_gradient_2017-slide29.jpg"
-           title="Instability of conventional methods for the master ODE." >}}
+title="Instability of conventional methods for the master ODE." >}}
 
-Try Runge-Kutta, whatever: they all lose stability and the rate.
-
-Two approaches: "reverse-engineer Nesterov estimate sequence
-technique" interpreting them as a discretization method or symplectic
-integration (see below). For the first one it is possible to recover
-oracle rates by increasing the assumptions on $f$:
+Then one can try Runge-Kutta or whatever: they all lose stability and the 
+rate. Jordan's group saw two approaches for solving this problem: 
+"reverse-engineer the Nesterov estimate sequence technique" interpreting it as 
+a discretization method or use symplectic integration (see below). For the 
+first one it is possible to recover oracle rates by increasing the assumptions 
+on $f$:
 
 > **Theorem 2:** Assume $h$ is uniformly convex and introduce an auxiliary 
-> sequence $y\_{k}$ into the "naive" Euler discretization. Assuming a certain 
-> condition on $\nabla f (y\_{k})$:
-> \\[ f (y\_{k}) - f (x^{\star}) \leqslant \mathcal{O} \left(
->   \frac{1}{\varepsilon k^p} \right) . \\]
+> sequence $y\_{k}$ into the "naive" Euler discretization. Assuming higher 
+> regularity on $f (y\_{k})$:
+\\[ f (y\_{k}) - f (x^{\star}) \leqslant \mathcal{O} \left(
+   \frac{1}{\varepsilon k^p} \right) . \\]
 
-#### Discretizing the E-L equation: symplectic integration
 
-A way of performing integration in time which conserves quantities like 
-energy, momentum, etc. by switching to a (time-dependent) Hamiltonian 
-framework. Take the Legendre transform (a.k.a. Fenchel conjugate) of the 
-velocity and time to obtain momentum and energy respectively. The Hamiltionian 
-has the form (3) modulo constants and signs. Solve Hamilton's equations in 
-phase space. For the discretization, look at and conserve a certain local 
-volume tensor / differential form along the path of integration. This achieves 
-faster rates. elaborate / see Harrer et al. Geometric Functional...
+
+But one typically does not want to have to assume these additional conditions 
+on $\nabla f$ (Lipschitz $p - 1$ derivatives).
+
+#### Discretizing the E-L equation (2): symplectic integration
+
+[Symplectic integration](https://en.wikipedia.org/wiki/Symplectic_integrator) 
+is a numerical integration technique which conserves quantities like energy and 
+momentum in a (time-dependent) Hamiltonian framework.[^5] By taking the 
+Legendre transform (a.k.a. Fenchel conjugate) of the velocity and time one 
+obtains momentum and energy respectively and can write a Hamiltionian which 
+basically mimics the Lagrangian we had (it has the form (3) modulo constants 
+and signs). Then one solves Hamilton's equations in phase space with a 
+discretization which looks at and conserves a certain local volume tensor / 
+differential form along the path of integration.
+
+Why is this interesting in our setting? The discretization seen for the 
+Lagrangian formulation suffers from high sensitivity to step size and a 
+momentum build-up which hurts performance near the optimum. The Hamiltonian 
+perspective produces equivalent equations whose symplectic integration should 
+alleviate these issues and achieve faster rates without further assumptions : 
+conservation of momentum seems to be the key.
+
+{{< figure src="/img/jordan_gradient_2017-slide42.jpg"
+title="Comparing Lagrangian and Symplectic integrators." >}}
 
 #### Ongoing / future / related work
 
-Non-convex setting: the framework described can be applied as well. Stochastic 
-setting: there will probably also exist an "optimal way to diffuse" in SDEs 
-derived from some Focker-Planck type equation.
+Two possible venues for exploration are:
 
-Symplectic intregrators are used in *hybrid Montecarlo*, where one writes a 
-Hamiltonian, etc.
-
+* Non-convex setting: the framework described can be applied as well.
+* Stochastic equations: there will probably also exist an "optimal way to 
+  diffuse" in SDEs derived from some Focker-Planck type equation.
 
 
 
-[^1]: Since we are in a convex setting, there is a global minimum: if you know it, then you attain it in one step. Besides the trivial case, if one has higher order derivatives, then higher order methods provide faster convergence rates and so on. For this reason a definition of optimality in the sense of an oracle was introduced: the oracle is only allowed to look at gradients under some constraint, in particular it has no access to the gradient at every point. It is under this restriction that Nesterov's gradient descent achieves optimality.
-[^2]: See {{< cite nesterov_introductory_2004 >}}.
-[^3]: {{< cite su_differential_2016 >}} write a finite differences equation for (1), take limit as the stepsize goes to zero and find the continuous equation. 
-[^4]: Note that this has roughly the form of a damped oscillator with the additional "geometric term" involving the Hessian of the distance generating function, evaluated at "$X$ plus velocity" (yieldieng the acceleration).
-[^5]: Proved in one line with an adequate Lyapunov function. Note however that reparametrizing the equation can change the rate, so this is not groundbreaking news for the continuous equation. It is the passage to the discrete setting and the conditions under which the rate can or cannot be achieved that matter. ?
+[^1]: Since we are in a smooth convex setting, there is a global minimum: if you know it, then you trivially attain it in one step. Besides this useless case, if one has higher order derivatives, then higher order methods provide faster convergence rates and so on. For this reason one needs to restrict the definition of optimality in some sense. The concept of an oracle was introduced with this purpose: An oracle is an entity which "answers" questions of an optimization scheme about the function to be optimized (e.g. what is the value of $\nabla f$ at $x\_{k}$?), within the model of the problem (i.e. it represents the things known to the method). This leads to the definition of the class of **smooth first order methods** as those which only have access to gradient infromation and produce iterates of the form $x\_{k} \in x\_{0} +\operatorname{span} \{ \nabla f (x\_{0}), \ldots, \nabla f (x\_{k - 1}) \}$. It is under this restriction that Nesterov's gradient descent achieves the optimal rate of $\mathcal{O} (1 / k^2)$. See e.g. {{< cite nesterov_introductory_2004 >}} (Ch. 1) for more on oracles and Section 2.1.2 for the previous statements, originally proved in {{< cite nesterov_method_1983 >}}.
+[^2]: {{< cite su_differential_2016 >}} write a finite differences equation for (1), take limit as the stepsize goes to zero and find the continuous equation. 
+[^3]: Note that this has roughly the form of a damped oscillator with the additional "geometric term" involving the Hessian of the distance generating function, evaluated at "$X$ plus velocity" (yieldieng the acceleration).
+[^4]: The proof is a one-liner choosing and adequate Lyapunov function. Note however that (as explained later) by reparametrizing the equation one can change the rate, so this is not groundbreaking news for the continuous setting. It is the passage to the discrete setting and the conditions under which the rate can or cannot be achieved that matter.
+[^5]: Symplectic intregrators are also used in the **[hybrid Montecarlo method](https://en.wikipedia.org/wiki/Hybrid_Monte_Carlo)**, an MCMC technique where the transition between states is governed by Hamiltonian dynamics.
