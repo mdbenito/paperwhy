@@ -23,10 +23,11 @@ For convex functions, Nesterov accelerated gradient descent method attains the
 optimal rate of $\mathcal{O} (1 / k^2)$.[^1]
 
 \begin{equation}
-  \label{eq:nesterov}\tag{1} \left\{\begin{array}{lll}
-    y\_{k + 1} & = & x\_{k} - \beta \nabla f (x\_{k})\\
+  \label{eq:nesterov}\tag{1}
+  \begin{cases}
+    y\_{k + 1} & = & x\_{k} - \beta \nabla f (x\_{k}) \\\\\\
     x\_{k + 1} & = & (1 - \lambda \_{k}) y\_{k + 1} + \lambda \_{k} y\_{k} .
-  \end{array}\right.
+  \end{cases}
 \end{equation}
 
 Note that this is not actually gradient descent since the momentum will make 
