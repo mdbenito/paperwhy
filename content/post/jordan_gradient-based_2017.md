@@ -7,6 +7,7 @@ date: "2017-06-04"
 tags: ["optimization", "accelerated-gradient-descent", "talks"]
 paper_authors: ["Jordan, Michael I."]
 paper_key: "jordan_gradient-based_2017"
+
 ---
 
 
@@ -23,33 +24,28 @@ For convex functions, Nesterov accelerated gradient descent method attains the
 optimal rate of $\mathcal{O} (1 / k^2)$.[^1]
 
 \begin{equation}
-  \label{eq:nesterov}\tag{1}
-  \begin{cases}
-    y\_{k + 1} & = & x\_{k} - \beta \nabla f (x\_{k}) \\\\\\
+  \label{eq:nesterov}\tag{1} \left\\{\begin{array}{lll}
+    y\_{k + 1} & = & x\_{k} - \beta \nabla f (x\_{k})\\\\\\
     x\_{k + 1} & = & (1 - \lambda \_{k}) y\_{k + 1} + \lambda \_{k} y\_{k} .
-  \end{cases}
+  \end{array}\right.
 \end{equation}
 
 Note that this is not actually gradient descent since the momentum will make 
 the trajectory deviate from the "steepest slope" at some point.
 
-This reminds of [leap-frog 
-integration](https://en.wikipedia.org/wiki/Leapfrog_integration). Gradient 
-descent is a discretization of gradient flow:
+Gradient descent is a discretization of gradient flow:
 
 \\[ \dot{X}\_{t} = - \nabla f (X\_{t}) . \\]
 
 Nesterov's method is the discretisation of the ODE[^2]
 
 \begin{equation}
-  \label{eq:su-boyd-candes-ode}\tag{2} \ddot{X}\_{t} + \frac{3}{t} 
+  \label{eq:su-boyd-candes-ode}\tag{2} \ddot{X}\_{t} + \frac{3}{t}
   \dot{X}\_{t} + \nabla f (X\_{t}) = 0.
 \end{equation}
 
-> These ODEs are obtained by taking continuous time limits. Is there a deeper 
-> generative mechanism?
-
-
+> **Question 1:** These ODEs are obtained by taking continuous time limits. Is 
+> there a deeper generative mechanism?
 
 #### The Lagrangian point of view
 
@@ -102,15 +98,12 @@ The claim is that
 > this is going to generate (essentially) all known accelerated gradient methods 
 > in continuous time.
 
-
 The first result is a rate in continuous time:[^4]
 
-> **Theorem 1:** Under ideal scaling, the E-L equation (5) has convergence rate
-\\[ f (X\_{t}) - f (x^{\star}) \leqslant \mathcal{O} (\mathrm{e}^{- \beta
-   \_{t}}) \\]
+> **Theorem 2:** Under ideal scaling, the E-L equation (5) has convergence rate
+> \\[ f (X\_{t}) - f (x^{\star}) \leqslant \mathcal{O} (\mathrm{e}^{- \beta
+>    \_{t}}) \\]
 > to the optimum $x^{\star}$.
-
-
 
 **In discrete time**, for general smooth convex problems it is known that this 
 rate cannot be attained, although for uniformly convex ones it can. So, what is 
@@ -134,19 +127,16 @@ solution path*.
 > particular path and acceleration is just changing the speed at which you move 
 > along it.
 
-
 Note that this is not a property of gradient flow: reparametrization changes 
 the path. In general it will be different from the one obtained from (4).
 
-audience, "Nahdi"?Is it possible to introduce new parameters into the master 
-ODE (or change the current ones) to interpolate in some way between 
-Nesterov-like methods and gradient flow?
-
-
+**Question:**  *(audience, "Nahdi"?)* Is it possible to introduce new 
+parameters into the master ODE (or change the current ones) to interpolate in 
+some way between Nesterov-like methods and gradient flow?
 
 The answer is that indeed, the whole range of $\alpha \_{t}, \beta \_{t}, 
-\gamma \_{t}$ has not been exhausted and "*we could recover other algorithms by 
-exploring [it]*".
+\gamma \_{t}$ has not been exhausted and "*we could recover other algorithms 
+by exploring [it]*".
 
 #### Discretizing the E-L equation (1)
 
@@ -155,23 +145,21 @@ thinks of is to reduce the 2nd order equation to a 1st order system and apply
 e.g. an Euler scheme to obtain an algorithm. The problem is that the method is 
 not stable! (and it lost the rate)
 
-{{< figure src="/img/jordan_gradient_2017-slide29.jpg"
+{{< figure src="/img/jordan_gradient_2017-slide29.jpg" 
 title="Instability of conventional methods for the master ODE." >}}
 
 Then one can try Runge-Kutta or whatever: they all lose stability and the 
 rate. Jordan's group saw two approaches for solving this problem: 
-"reverse-engineer the Nesterov estimate sequence technique" interpreting it as 
-a discretization method or use symplectic integration (see below). For the 
+"reverse-engineer the Nesterov estimate sequence technique" interpreting it 
+as a discretization method or use symplectic integration (see below). For the 
 first one it is possible to recover oracle rates by increasing the assumptions 
 on $f$:
 
-> **Theorem 2:** Assume $h$ is uniformly convex and introduce an auxiliary 
+> **Theorem 3:** Assume $h$ is uniformly convex and introduce an auxiliary 
 > sequence $y\_{k}$ into the "naive" Euler discretization. Assuming higher 
 > regularity on $f (y\_{k})$:
-\\[ f (y\_{k}) - f (x^{\star}) \leqslant \mathcal{O} \left(
-   \frac{1}{\varepsilon k^p} \right) . \\]
-
-
+> \\[ f (y\_{k}) - f (x^{\star}) \leqslant \mathcal{O} \left(
+>    \frac{1}{\varepsilon k^p} \right) . \\]
 
 But one typically does not want to have to assume these additional conditions 
 on $\nabla f$ (Lipschitz $p - 1$ derivatives).
@@ -195,7 +183,7 @@ perspective produces equivalent equations whose symplectic integration should
 alleviate these issues and achieve faster rates without further assumptions : 
 conservation of momentum seems to be the key.
 
-{{< figure src="/img/jordan_gradient_2017-slide42.jpg"
+{{< figure src="/img/jordan_gradient_2017-slide42.jpg" 
 title="Comparing Lagrangian and Symplectic integrators." >}}
 
 #### Ongoing / future / related work
@@ -207,8 +195,7 @@ Two possible venues for exploration are:
   diffuse" in SDEs derived from some Focker-Planck type equation.
 
 
-
-[^1]: Since we are in a smooth convex setting, there is a global minimum: if you know it, then you trivially attain it in one step. Besides this useless case, if one has higher order derivatives, then higher order methods provide faster convergence rates and so on. For this reason one needs to restrict the definition of optimality in some sense. The concept of an oracle was introduced with this purpose: An oracle is an entity which "answers" questions of an optimization scheme about the function to be optimized (e.g. what is the value of $\nabla f$ at $x\_{k}$?), within the model of the problem (i.e. it represents the things known to the method). This leads to the definition of the class of **smooth first order methods** as those which only have access to gradient infromation and produce iterates of the form $x\_{k} \in x\_{0} +\operatorname{span} \{ \nabla f (x\_{0}), \ldots, \nabla f (x\_{k - 1}) \}$. It is under this restriction that Nesterov's gradient descent achieves the optimal rate of $\mathcal{O} (1 / k^2)$. See e.g. {{< cite nesterov_introductory_2004 >}} (Ch. 1) for more on oracles and Section 2.1.2 for the previous statements, originally proved in {{< cite nesterov_method_1983 >}}.
+[^1]: Since we are in a smooth convex setting, there is a global minimum: if you know it, then you trivially attain it in one step. Besides this useless case, if one has higher order derivatives, then higher order methods provide faster convergence rates and so on. For this reason one needs to restrict the definition of optimality in some sense. The concept of an oracle was introduced with this purpose: An oracle is an entity which "answers" questions of an optimization scheme about the function to be optimized (e.g. what is the value of $\nabla f$ at $x\_{k}$?), within the model of the problem (i.e. it represents the things known to the method). This leads to the definition of the class of **smooth first order methods** as those which only have access to gradient infromation and produce iterates of the form $x\_{k} \in x\_{0} +\operatorname{span} \{ \nabla f (x\_{0}), \ldots, \nabla f (x\_{k - 1}) \}$. It is under this restriction that Nesterov's gradient descent achieves the optimal rate of $\mathcal{O} (1 / k^2)$. See e.g. {{< cite nesterov_introductory_2004 >}} (Ch. 1) for more on oracles and §2.1.2 for the previous statements, originally proved in {{< cite nesterov_method_1983 >}}.
 [^2]: {{< cite su_differential_2016 >}} write a finite differences equation for (1), take limit as the stepsize goes to zero and find the continuous equation. 
 [^3]: Note that this has roughly the form of a damped oscillator with the additional "geometric term" involving the Hessian of the distance generating function, evaluated at "$X$ plus velocity" (yieldieng the acceleration).
 [^4]: The proof is a one-liner choosing and adequate Lyapunov function. Note however that (as explained later) by reparametrizing the equation one can change the rate, so this is not groundbreaking news for the continuous setting. It is the passage to the discrete setting and the conditions under which the rate can or cannot be achieved that matter.

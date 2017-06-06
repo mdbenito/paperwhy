@@ -16,7 +16,7 @@
     \;
   </doc-data|<doc-running-author|Miguel de Benito Delgado>>
 
-  <tags|optimization|accelerated-gradient-descent|talk>
+  <tags|optimization|accelerated-gradient-descent|talks>
 
   Today's post is about another great talk given at the <name|Simons
   Institute for the Theory of Computing> in the context of their currently
@@ -57,7 +57,6 @@
   Note that this is not actually gradient descent since the momentum will
   make the trajectory deviate from the \Psteepest slope\Q at some point.
 
-  This reminds of <hlink|leap-frog integration|https://en.wikipedia.org/wiki/Leapfrog_integration>.
   Gradient descent is a discretization of gradient flow:
 
   <\equation*>
@@ -341,6 +340,9 @@
     <\associate|figure>
       <tuple|normal|Instability of conventional methods for the master
       ODE.|<pageref|auto-4>>
+
+      <tuple|normal|Comparing Lagrangian and Symplectic
+      integrators.|<pageref|auto-6>>
     </associate>
     <\associate|toc>
       <with|par-left|<quote|1tab>|Part 1: Variational, Hamiltonian and
@@ -362,11 +364,11 @@
 
       <with|par-left|<quote|2tab>|Ongoing / future / related work
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-6>>
+      <no-break><pageref|auto-7>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7><vspace|0.5fn>
+      <no-break><pageref|auto-8><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
