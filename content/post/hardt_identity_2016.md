@@ -6,7 +6,7 @@ authors: ["Miguel de Benito Delgado"]
 date: "2017-06-07"
 tags: ["deep-learning", "representation"]
 paper_authors: ["Hardt, Moritz", "Ma, Tengyu"]
-paper_key: "hardt_identity_2017"
+paper_key: "hardt_identity_2016"
 
 ---
 
