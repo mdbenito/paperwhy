@@ -8,7 +8,7 @@
   Moritz>>>|<doc-author|<author-data|<author-name|Ma,
   Tengyu>>>|<doc-running-author|Miguel de Benito Delgado>>
 
-  <tags|deep-learning|representation>
+  <tags|deep-learning|deep-residual-networks>
 
   <strong|tl;dr:> vanilla residual networks are very good approximators of
   functions which can be represented as linear perturbations of the identity.

@@ -4,7 +4,7 @@ title: "Identity matters in Deep Learning"
 author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: "2017-06-07"
-tags: ["deep-learning", "representation"]
+tags: ["deep-learning", "deep-residual-networks"]
 paper_authors: ["Hardt, Moritz", "Ma, Tengyu"]
 paper_key: "hardt_identity_2016"
 
