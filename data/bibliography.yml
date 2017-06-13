@@ -1009,4 +1009,131 @@ references:
     nonlinear networks, as long as they operate in a special regime known as the edge
     of chaos.'
   URL: http://arxiv.org/abs/1312.6120
+
+- id: montufar_number_2014
+  type: chapter
+  author:
+  - family: Montufar
+    given: Guido F
+  - family: Pascanu
+    given: Razvan
+  - family: Cho
+    given: Kyunghyun
+  - family: Bengio
+    given: Yoshua
+  editor:
+  - family: Ghahramani
+    given: Z.
+  - family: Welling
+    given: M.
+  - family: Cortes
+    given: C.
+  - family: Lawrence
+    given: N. D.
+  - family: Weinberger
+    given: K. Q.
+  issued:
+  - year: '2014'
+  title: On the Number of Linear Regions of Deep Neural Networks
+  container-title: Advances in Neural Information Processing Systems 27
+  publisher: Curran Associates, Inc.
+  page: '2924-2932'
+  note: 'citecount: 00130'
+  URL: http://papers.nips.cc/paper/5422-on-the-number-of-linear-regions-of-deep-neural-networks.pdf
+
+- id: bruna_community_2017
+  type: article-journal
+  author:
+  - family: Bruna
+    given: Joan
+  - family: Li
+    given: Xiang
+  issued:
+  - year: '2017'
+    month: '5'
+  accessed:
+  - year: '2017'
+    month: '6'
+    day: '11'
+  title: Community Detection with Graph Neural Networks
+  container-title: arXiv:1705.08415 \[stat\]
+  note: 'citecount: 00000 arXiv: 1705.08415'
+  abstract: We study data-driven methods for community detection in graphs. This estimation
+    problem is typically formulated in terms of the spectrum of certain operators,
+    as well as via posterior inference under certain probabilistic graphical models.
+    Focusing on random graph families such as the Stochastic Block Model, recent research
+    has unified these two approaches, and identified both statistical and computational
+    signal-to-noise detection thresholds. We embed the resulting class of algorithms
+    within a generic family of graph neural networks and show that they can reach
+    those detection thresholds in a purely data-driven manner, without access to the
+    underlying generative models and with no parameter assumptions. The resulting
+    model is also tested on real datasets, requiring less computational steps and
+    performing significantly better than rigid parametric models.
+  keyword: ml, ml/nn, networks/communities, networks/sbm, wf:will\_assess
+  URL: http://arxiv.org/abs/1705.08415
+
+- id: tresp_learning_2015
+  type: article-journal
+  author:
+  - family: Tresp
+    given: Volker
+  - family: Esteban
+    given: Cristóbal
+  - family: Yang
+    given: Yinchong
+  - family: Baier
+    given: Stephan
+  - family: Krompaß
+    given: Denis
+  issued:
+  - year: '2015'
+    month: '11'
+  accessed:
+  - year: '2017'
+    month: '6'
+    day: '11'
+  title: Learning with Memory Embeddings
+  container-title: arXiv:1511.07972 \[cs\]
+  note: 'citecount: 00004 arXiv: 1511.07972'
+  abstract: Embedding learning, a.k.a. representation learning, has been shown to
+    be able to model large-scale semantic knowledge graphs. A key concept is a mapping
+    of the knowledge graph to a tensor representation whose entries are predicted
+    by models using latent representations of generalized entities. Latent variable
+    models are well suited to deal with the high dimensionality and sparsity of typical
+    knowledge graphs. In recent publications the embedding models were extended to
+    also consider time evolutions, time patterns and subsymbolic representations.
+    In this paper we map embedding models, which were developed purely as solutions
+    to technical problems for modelling temporal knowledge graphs, to various cognitive
+    memory functions, in particular to semantic and concept memory, episodic memory,
+    sensory memory, short-term memory, and working memory. We discuss learning, query
+    answering, the path from sensory input to semantic decoding, and the relationship
+    between episodic memory and semantic memory. We introduce a number of hypotheses
+    on human memory that can be derived from the developed mathematical models.
+  keyword: 23, infomodelling, ml/embeddings/tensor, wf:will\_assess
+  URL: http://arxiv.org/abs/1511.07972
+
+- id: bousquet_advanced_2004
+  type: book
+  editor:
+  - family: Bousquet
+    given: Olivier
+  - family: Luxburg
+    given: Ulrike
+    dropping-particle: von
+  - family: Rätsch
+    given: Gunnar
+  issued:
+  - year: '2004'
+  accessed:
+  - year: '2016'
+    month: '7'
+    day: '25'
+  title: Advanced Lectures on Machine Learning
+  collection-title: Lecture Notes in Computer Science
+  publisher: Springer Berlin Heidelberg
+  publisher-place: Berlin, Heidelberg
+  volume: '3176'
+  note: 'citecount: 00036'
+  URL: http://link.springer.com/10.1007/b100712
+  ISBN: 978-3-540-23122-6 978-3-540-28650-9
 ...
