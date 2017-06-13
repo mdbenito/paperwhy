@@ -8,10 +8,17 @@ of recent research in machine learning has become almost
 impossible. By routinely reviewing and reporting papers we help
 ourselves and hopefully someone else.
 
-## Setup
+## Requirements and setup
 
-In order to preview the site you need to download and
-install [Hugo](gohugo.io). From the source of the repo type
+* [pandoc](http://pandoc.org/) with `pandoc-citeproc` to generate the
+  bibliography.
+* [Hugo](gohugo.io) to generate the site. This is only
+  local. Deployment is done with bitbucket pipelines.
+* Optional: [TeXmacs](www.texmacs.org) with
+  the [markdown converter](bitbucket.org/mdbenito/tm2md) to write the
+  posts in a sensible editor with typesetting.
+
+In order to preview the site, from the source of the repo type
 
 ```
 hugo server
@@ -19,23 +26,58 @@ hugo server
 
 and open a browser to [localhost:1313](//localhost:1313).
 
-## Adding a new post
+All original content is (optionally) written as TeXmacs files inside
+`tmdocs/`, then exported to markdown using our
+TeXmacs2Markdown [converter](https://bitbucket.org/mdbenito/tm2md). If
+this hasn't been pushed to TeXmacs' trunk it can be easily installed
+following the instructions at the projects page. Directly writing
+markdown is of course also possible, see below.
 
-Paths here are relative to the root of the code.
 
-1. Add an entry to the Zotero database for the paper and any papers
-   that you are going to cite in the post.
-2. Export the database to bibtex, then convert it to yaml with
+## Adding a new post using TeXmacs
+
+Paths are relative to the root of the code.
+ 
+1. Write the original document in `tmdocs/`. The naming convention is
+   to use the bibtex citekey for the paper as basename, e.g.
+   `turing_chemical_1952.tm`. There is a TeXmacs style file with some
+   default settings. See also below for how to set things up to get
+   metadata automatically exported to markdown.
+1. Save any images inside `static/img/`.
+1. Add an entry to the [Zotero database]() for the paper and any
+   others that you are going to cite in the post. Export the database
+   to bibtex as `tmdocs/paperwhy.bib` and cite as usual inside the
+   TeXmacs document.
+1. Convert the bibtex to yaml with
    `pandoc-citeproc -y bibtexfile > data/bibliography.yml`.
-3. Posts are stored in `content/post/` as markdown files.
+1. Export your posts as markdown into `content/post/`.
+1. **Two things need manual fixing in the markdown for now:** the
+   `paper_key` field and paths to images, which need to be corrected
+   to `/img/whatever`.
 
 The **extra** field in Zotero (**notes** in the bibtex) can hold
 further fields. For now only `code: http://urltowhatever` (for any
-sourcecode published with the paper) is used in the templates to
+source code published with the paper) is used in the templates to
 automatically add a link to it next to the one to the original paper,
 authors, etc.
 
-## Structure of a post
+### Supported Hugo features for TeXmacs documents
+
+* Paper authors: use the doc-data author tags as if adding a regular
+  author to the document.
+* Post author: use the running-author macro.
+* Tags: use the \tags macro.
+* Shortcodes: use the \hugo-shortcode macro. To do: use xargs to
+  accept a variable number of arguments.
+* Bibliography: Add the bibliography file and cite as usual.
+* Almost everything that Hugo supports can be converted from TeXmacs,
+  including all kinds of text, lists, images, links and blackfriday
+  extensions like footnotes and ~~striked through text~~.
+* Furthermore, much of TeXmacs' non-dynamic markup is recognized and
+  exported. In particular, labels and references, numbered
+  environments, and figures should work out of the box.
+
+## Structure of a markdown post
 
 Each markdown file has a header, the **frontmatter**, with:
 
@@ -56,25 +98,12 @@ The name of the file should coincide with the bibtex
 citekey. Eventually we will drop the additional variable in the
 frontmatter.
 
-### Editing the markdown
+## Editing the markdown directly
 
 Simple but tedious: use markdown directly with,
 e.g. [easy-hugo for emacs](https://github.com/masasam/emacs-easy-hugo). This
 makes browsing the posts easy and copies a frontmatter template from
 `archetypes/default.md`.
-
-Much better:
-
-**Use [TeXmacs](http://www.texmacs.org)** with
-our [markdown converter](https://mdbenito.bitbucket.org). Almost
-everything that Hugo supports can be converted from TeXmacs, including
-all kinds of text, lists, images, links and blackfriday extensions
-like footnotes and ~~striked through text~~. Hugo shortcodes like the
-default figures and our citation system are supported (just add
-regular TeXmacs figures and cites using the bibliography file
-`tmdocs/paperwhy.bib`, as well as automatic generation of the
-frontmatter from the doc-data in the document and a special <\tags>
-macro defined in `tmdocs/paperwhy.ts`. See the examples in `tmdoc`.
 
 **Citations** in the markdown are done with
 a [Hugo shortcode](gohugo.io/extras/shortcodes/) as follows:
@@ -133,4 +162,4 @@ container for hugo has version 0.19
 * MathJax
 * jQuery
 * icomoon
-* ...
+* And of course **TeXmacs** :)
