@@ -7,7 +7,7 @@
   regularization>|<doc-author|<author-data|<author-name|Bishop, Chris
   M.>>>|<doc-running-author|Miguel de Benito Delgado>>
 
-  <tags|regularization|input noise>
+  <tags|regularization|input-noise>
 
   <strong|tl;dr:> Adding noise to training inputs changes the risk function.
   A Taylor expansion shows that up to a term quadratic in the noise
