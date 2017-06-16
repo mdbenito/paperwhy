@@ -1,17 +1,17 @@
-FROM alpine:latest
+FROM alpine:3.6
 MAINTAINER Miguel de Benito <m.debenito.d@gmail.com>
 
 ENV HUGO_VERSION=0.22
 
-RUN apk add --no-cache wget ca-certificates nodejs python2 python2-dev py-pip bash git
+RUN apk add --no-cache wget ca-certificates nodejs nodejs-npm python2 python2-dev py-pip bash git
 
 # Install hugo
 # Borrowed from https://github.com/jojomi/docker-hugo/blob/master/Dockerfile
 RUN cd /tmp/ && \
-    wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
+    wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
     tar xzf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
     rm -r hugo_${HUGO_VERSION}_Linux-64bit.tar.gz && \
-    mv hugo*/hugo* /usr/bin/hugo
+    mv hugo /usr/bin/hugo
 
 RUN apk del wget ca-certificates
 
