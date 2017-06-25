@@ -45,7 +45,7 @@
     <math|x<rsub|k>\<in\>x<rsub|0>+span<around*|{|\<nabla\>f<around*|(|x<rsub|0>|)>,\<ldots\>,\<nabla\>f<around*|(|x<rsub|k-1>|)>|}>>.
     It is under this restriction that Nesterov's gradient descent achieves
     the optimal rate of <math|\<cal-O\><around*|(|1/k<rsup|2>|)>>. See e.g.
-    <cite-detail|nesterov_introductory_2004|Ch. 1> for more on oracles and
+    <cite|nesterov_introductory_2004> Chapter 1 for more on oracles and
     Ÿ2.1.2 for the previous statements, originally proved in
     <cite|nesterov_method_1983>.
   </footnote>
@@ -125,7 +125,7 @@
   is called the non-homogenous <dfn|master ODE>:<\footnote>
     Note that this has roughly the form of a damped oscillator with the
     additional \Pgeometric term\Q involving the Hessian of the distance
-    generating function, evaluated at \P<math|X> plus velocity\Q (yieldieng
+    generating function, evaluated at \P<math|X> plus velocity\Q (yielding
     the acceleration).
   </footnote>
 
