@@ -136,19 +136,19 @@ assuming the design matrix has been normalized to $\Sigma \_{i  j} x^2\_{i  j}
         <td style="text-align: center" bgcolor="#dfdfdf">GLM</td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">$L^2$-penalty</td>
-        <td style="text-align: center">$\| \beta \|^2\_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2\_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2\_2$ </td>
+        <td style="text-align: center">$\| \beta \|^2_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid"> $\| \beta \|^2_2$ </td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">Additive noise</td>
-        <td style="text-align: center; border-right: 1px solid">  $\| \beta \|^2\_2$ </td>
-        <td style="text-align: center; border-top: 1px solid; border-left: 1px solid"> $\| \beta \|^2\_2  \sum\_i p\_i  (1 -
-    p\_i)$ </td>
-        <td style="text-align: center; border-top: 1px solid; border-right: 1px solid"> $\| \beta \|^2\_2 \operatorname{tr} (V (\beta))$ </td>
+        <td style="text-align: center; border-right: 1px solid">  $\| \beta \|^2_2$ </td>
+        <td style="text-align: center; border-top: 1px solid; border-left: 1px solid"> $\| \beta \|^2_2  \sum_i p_i  (1 -
+    p_i)$ </td>
+        <td style="text-align: center; border-top: 1px solid; border-right: 1px solid"> $\| \beta \|^2_2 \operatorname{tr} (V (\beta))$ </td>
       </tr><tr>
         <td style="text-align: right" bgcolor="#dfdfdf">Dropout noise</td>
-        <td style="text-align: center; border-right: 1px solid"> $\| \beta \|^2\_2$ </td>
-        <td style="text-align: center; border-bottom: 1px solid; border-left: 1px solid"> $\sum\_{i, j} p\_i  (1 - p\_i) x\_{i j}^2 \beta\_j^2$ </td>
+        <td style="text-align: center; border-right: 1px solid"> $\| \beta \|^2_2$ </td>
+        <td style="text-align: center; border-bottom: 1px solid; border-left: 1px solid"> $\sum_{i, j} p_i  (1 - p_i) x_{i j}^2 \beta_j^2$ </td>
         <td style="text-align: center; border-bottom: 1px solid; border-right: 1px solid"> $\beta^{\top} \operatorname{diag} (X^{\top} V (\beta)
     X) \beta$ </td>
       </tr></tbody>
