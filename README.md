@@ -1,7 +1,7 @@
 # Paperwhy
 
-This is PaperWhy. Our sisyphean endeavour not to drown in the
-immense Machine Learning literature.
+This is PaperWhy. Our sisyphean endeavour not to drown in the immense
+Machine Learning literature.
 
 With thousands of papers every month, keeping up with and making sense
 of recent research in machine learning has become almost
@@ -12,11 +12,11 @@ ourselves and hopefully someone else.
 
 * [pandoc](http://pandoc.org/) with `pandoc-citeproc` to generate the
   bibliography.
-* [Hugo](gohugo.io) to generate the site. This is only
+* [Hugo](https://gohugo.io) to generate the site. This is only
   local. Deployment is done with bitbucket pipelines.
-* Optional: [TeXmacs](www.texmacs.org) with
-  the [markdown converter](bitbucket.org/mdbenito/tm2md) to write the
-  posts in a sensible editor with typesetting.
+* Optional: [TeXmacs](http://www.texmacs.org) with
+  the [markdown converter](https://bitbucket.org/mdbenito/tm2md) to
+  write the posts in a sensible editor with typesetting.
 
 In order to preview the site, from the source of the repo type
 
