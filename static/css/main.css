@@ -906,6 +906,7 @@ footer small {
 .posts li {
     display: inline-block;
     width: 100%;
+    padding: 0em 2em;
     border-bottom: 1px dotted #fa5305;
     position:relative
 }
@@ -915,11 +916,11 @@ footer small {
 }
 
 .posts li .p-wrap {
-    padding: 2em;
+    padding: 0.2em 0;
     background: #ffffff;
     transition: all .15s ease-in;
-    display: flex;
-    justify-content: space-between
+    /* display: flex; */
+    /* justify-content: space-between */
 }
 
 /* This highlights the whole item when clicking
@@ -930,12 +931,13 @@ footer small {
 
 .posts li .p-wrap:hover {
     /* background: #ff8952;     Too distracting */
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 
-    background-image: url(../icons/circle-right.svg);
-    background-repeat: no-repeat;
-    background-position: 0 50%
+    /* Too distracting as well */
+    /* background-image: url(../icons/circle-right.svg); */
+    /* background-repeat: no-repeat; */
+    /* background-position: 0 50% */
 }
 
 .posts li .p-wrap:hover::after {
@@ -956,29 +958,28 @@ footer small {
 }
 
 .posts li .p-wrap p {
-    display: inline-block;
-    margin: 0
+    display: block;
+    margin: 0;
+    padding: 0
 }
 
 .posts li .p-wrap .post-title {
     /* font-weight: bolder */
-    font-size: 105%
+    /* font-size: 105% */
+    padding-bottom:0em
 }
 
 .posts li .p-wrap .post-authors {
-
 }
 
 .posts li .p-wrap .paper-date {
     font-weight: lighter;
-    font-size: 70%
+    font-size: 90%
 }
 
-
 .posts li time {
-    font-size: 60%;
-    color: #c0c0c0;
-    padding-right: 1em;
+    font-size: 50%;
+    color: #d0d0d0;
 
 /*    
     padding-top: 2em;
@@ -992,7 +993,7 @@ footer small {
    
     position:absolute;
     bottom:0.6em;
-    left:0.6em
+    right:1.6em
 }
 
 @media (max-width: 942px) {
