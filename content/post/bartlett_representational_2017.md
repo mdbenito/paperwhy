@@ -97,7 +97,8 @@ units of DRNs of the form
 with the perturbations "becoming flatter and flatter" with $i$. This
 means that DRNs allow for compositional representation of functions
 where terms are increasingly "flat" as one goes deeper. Note however
-that this is only proved for functions which are .
+that this is only proved for functions which are invertible and
+differentiable, with Lipshitz derivative and inverse.
 
 The functions $h\_i$ of the theorem can be explicitly constructed via
 adequate scalings $a\_1, \dots, a\_m \in \mathbb{R}$ such that:
