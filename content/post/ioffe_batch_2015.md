@@ -48,7 +48,7 @@ in other words, the *subnetwork* experiences covariate shift. One says that the
 (full) network suffers **internal covariate shift**.
 
 So even if we do the usual normalization of the training data (the input to 
-$f\_{1}$) and all the weights to have 0 mean and unit variance, the 
+$f\_{1}$) and initialise all the weights to have 0 mean and unit variance, the 
 distributions $f\_{1} (X), (f\_{2} \circ f\_{1}) (X), \ldots$ will shift as 
 training progresses. This is bad enough for learning itself, but it will have 
 further negative impact in networks using saturating activations like sigmoids, 

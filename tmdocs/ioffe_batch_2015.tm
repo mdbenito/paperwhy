@@ -1,4 +1,4 @@
-<TeXmacs|1.99.4>
+<TeXmacs|1.99.5>
 
 <style|<tuple|generic|paperwhy>>
 
@@ -75,8 +75,8 @@
   that the (full) network suffers <dfn|internal covariate shift>.
 
   So even if we do the usual normalization of the training data (the input to
-  <math|f<rsub|1>>) and all the weights to have 0 mean and unit variance, the
-  distributions <math|f<rsub|1><around*|(|X|)>,<around*|(|f<rsub|2>\<circ\>f<rsub|1>|)><around*|(|X|)>,\<ldots\>>
+  <math|f<rsub|1>>) and initialise all the weights to have 0 mean and unit
+  variance, the distributions <math|f<rsub|1><around*|(|X|)>,<around*|(|f<rsub|2>\<circ\>f<rsub|1>|)><around*|(|X|)>,\<ldots\>>
   will shift as training progresses. This is bad enough for learning itself,
   but it will have further negative impact in networks using saturating
   activations like sigmoids, since it will tend to move them into saturating
