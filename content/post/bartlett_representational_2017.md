@@ -29,9 +29,9 @@ Deep networks are deep compositions of non-linear functions
 
 Depth provides effective, parsimonious representations of features and
 nonlinearities provide better rates of approximation (known from
-representation theory).[^5] Even more, shallow representations of some
+representation theory). Even more, shallow representations of some
 functions are necessarily more complex than deeper ones (*no
-flattening theorems*).[^6] But optimization is hard with many layers:
+flattening theorems*).[^5] But optimization is hard with many layers:
 conventional DNNs show increasingly poorer performance at the same
 task with growing depth, even though they can approximate a strictly
 larger set of functions.
@@ -157,6 +157,4 @@ $h$ with Lipschitz derivative and so on).
 
 [^4]: {{< cite glorot_deep_2011 >}}.
 
-[^5]: See e.g. {{< cite >}}.
-
-[^6]: See e.g. {{< cite >}}.
+[^5]: See e.g. {{< cite lin_why_2016 >}}.

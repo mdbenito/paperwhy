@@ -1,4 +1,4 @@
-<TeXmacs|1.99.4>
+<TeXmacs|1.99.5>
 
 <style|<tuple|generic|paperwhy>>
 
@@ -201,9 +201,10 @@
 
   <subsection|Extensions>
 
-  For an extension of these results to the non-linear case (which as of this
-  writing is reported to be work in progress), be sure to check out
-  Bartlett's talk: <cite|bartlett_representational_2017>.
+  For further work in the non-linear case (which as of this writing is
+  reported to be work in progress) where the model is no longer to be assumed
+  correct but instead only (mild) regularity assumptions are made, be sure to
+  check out Bartlett's talk <cite|bartlett_representational_2017>.
 
   <\bibliography|bib|tm-ieeetr|paperwhy.bib>
     <\bib-list|7>
@@ -304,6 +305,12 @@
       he_identity_2016
 
       sutskever_importance_2013
+
+      bartlett_representational_2017
+    </associate>
+    <\associate|figure>
+      <tuple|normal|Convergence plots of best model for CIFAR10 (left) and
+      CIFAR (100) right.|<pageref|auto-4>>
     </associate>
     <\associate|toc>
       <with|par-left|<quote|1tab>|1<space|2spc>Identity parametrizations
@@ -318,9 +325,13 @@
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
+      <with|par-left|<quote|1tab>|4<space|2spc>Extensions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5>>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <no-break><pageref|auto-6><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

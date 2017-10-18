@@ -130,9 +130,10 @@ dropout or additional data processing.
 
 ### Extensions
 
-For an extension of these results to the non-linear case (which as of this 
-writing is reported to be work in progress), be sure to check out Bartlett's 
-talk: {{< cite bartlett_representational_2017 >}}.
+For further work in the non-linear case (which as of this writing is reported 
+to be work in progress) where the model is no longer to be assumed correct but 
+instead only (mild) regularity assumptions are made, be sure to check out 
+Bartlett's talk {{< cite bartlett_representational_2017 >}}.
 
 
 [^1]: See {{< cite ioffe_batch_2015 >}}.
