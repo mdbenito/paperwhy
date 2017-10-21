@@ -10,9 +10,9 @@
   </hide-preamble>
 
   <\doc-data|<doc-title|Extrapolation and learning
-  equations>|<doc-author|<author-data|<author-name|Georg,
-  Martius>>>|<doc-author|<author-data|<author-name|Christoph H.,
-  Lamport>>>|<doc-running-author|Miguel de Benito Delgado>>
+  equations>|<doc-author|<author-data|<author-name|Martius,
+  Georg>>>|<doc-author|<author-data|<author-name|Lamport, Christoph
+  H.>>>|<doc-running-author|Miguel de Benito Delgado>>
     \;
   </doc-data|<doc-running-author|Miguel de Benito Delgado>>
 
@@ -295,20 +295,20 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|template.tm>>
-    <associate|auto-2|<tuple|1|?|template.tm>>
-    <associate|auto-3|<tuple|1|?|template.tm>>
-    <associate|auto-4|<tuple|2|?|template.tm>>
-    <associate|auto-5|<tuple|2|?|template.tm>>
-    <associate|auto-6|<tuple|2|?|template.tm>>
-    <associate|auto-7|<tuple|2|?|template.tm>>
-    <associate|auto-8|<tuple|3|?|template.tm>>
-    <associate|auto-9|<tuple|3|?|template.tm>>
-    <associate|bib-hastie_extended_2017|<tuple|1|?|template.tm>>
-    <associate|footnote-1|<tuple|1|?|template.tm>>
-    <associate|footnote-2|<tuple|2|?|template.tm>>
-    <associate|footnr-1|<tuple|1|?|template.tm>>
-    <associate|footnr-2|<tuple|2|?|template.tm>>
+    <associate|auto-1|<tuple|1|?>>
+    <associate|auto-2|<tuple|1|?>>
+    <associate|auto-3|<tuple|1|?>>
+    <associate|auto-4|<tuple|2|?>>
+    <associate|auto-5|<tuple|2|?>>
+    <associate|auto-6|<tuple|2|?>>
+    <associate|auto-7|<tuple|2|?>>
+    <associate|auto-8|<tuple|3|?>>
+    <associate|auto-9|<tuple|3|?>>
+    <associate|bib-hastie_extended_2017|<tuple|1|?>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnote-2|<tuple|2|?>>
+    <associate|footnr-1|<tuple|1|?>>
+    <associate|footnr-2|<tuple|2|?>>
   </collection>
 </references>
 
@@ -317,14 +317,40 @@
     <\associate|bib>
       hastie_extended_2017
     </associate>
+    <\associate|figure>
+      <tuple|normal|The network architecture|<pageref|auto-2>>
+
+      <tuple|normal|Double pendulum data and extrapolation results for Multi
+      Layer Perceptron, Support Vector Regression and Equation
+      Learner.|<pageref|auto-6>>
+
+      <tuple|normal|The speaker tries to answer a peculiar
+      question.|<pageref|auto-8>>
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|The
       model> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|0.5fn>
 
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Training
+      and model selection> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|Some ideas
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Experiments>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Recent
+      extensions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-7><vspace|0.5fn>
+
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      <no-break><pageref|auto-9><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

@@ -4,7 +4,7 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: "2017-10-21"
 tags: ["intuitive physics", "neural networks", "model selection", "sparsity"]
-paper_authors: ["Georg, Martius", "Christoph H., Lamport"]
+paper_authors: ["Martius, Georg", "Lamport, Christoph H."]
 paper_key: "martius_extrapolation_2016"
 ---
 
