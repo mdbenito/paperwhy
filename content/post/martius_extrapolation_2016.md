@@ -89,6 +89,13 @@ might lead to polynomials of very high degree, which are uncommon in physical
 models (but shouldn't this be sorted out by the optimization / model 
 selection?).
 
+The last layer is simply a linear mapping onto the output vector
+$y^L$. Each vector of inputs $x \in \mathbb{R}^d$ represents a
+measurement in phase space. After training, the solution is read from
+the structure of the network itself: each output $y^L\_{k}$ is
+"followed backward" to obtain one equation, with weights being the
+coefficients of the operations defined by each unit.
+
 ## Training and model selection
 
 The objective function is complemented by an $L\_{1}$ penalty to induce 
@@ -127,8 +134,8 @@ threshold). This is a way of embedding both measures into a common space ($\{
 1, \ldots, K \}$) for joint optimization.
 
 Because these values might correspond to (possibly poor) local optima subject 
-to the initial values of the parameters, multiple runs are used to “estimate 
-error bars”.
+to the initial values of the parameters, multiple runs are used to "estimate 
+error bars".
 
 ### Some ideas
 
@@ -187,7 +194,7 @@ interesting to read about this and any other findings in the
 forthcoming paper!
 
 Results of course vastly improve in examples involving quotients. This paves 
-the road for further inclusions, like arbitrary exponentiation or logarithms.
+the road for further extensions, like arbitrary exponentiation or logarithms.
 
 
 [^1]: Division, square roots and logarithms are explicitly left for later work since their domains of definition are strict subsets of $\mathbb{R}$, thus requiring special handling, e.g. via cut-offs. More on this in the last section.
