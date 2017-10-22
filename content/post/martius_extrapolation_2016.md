@@ -19,8 +19,8 @@ equations for several examples like a compound pendulum or the forward
 kinematics of a robotic arm. Crucially, this approach provides good 
 *extrapolation* performance to unexplored input regimes. For model selection 
 (i.e. hyperparameter choice), competing solutions are scored based both on 
-validation performance and crucially, computed model complexity, measured in 
-number of terms in the equations.
+validation performance and computed model complexity, measured in number
+of terms in the equations.
 
 ---
 
@@ -114,13 +114,13 @@ requires that sampling from training data be representative of the full data
 distribution, but precisely one of the desired abilities of this model is that 
 it extrapolate (generalize) beyond its input to data ranges not represented 
 in the training data. Therefore the authors propose a two-goal objective to 
-choose the best architecture among a set $\{ \phi \_{k} \}\_{k = 1}^K$:adequate
+choose the best architecture among a set $\\{ \phi \_{k} \\}\_{k = 1}^K$:
 
 \\[ \underset{k = 1, \ldots, K}{\operatorname{argmin}}  [(r^v (\phi \_{k}))^2 
 +
    (r^s (\phi \_{k}))^2], \\]
 
-where $r^v, r^s : \{ \phi \_{k} \}\_{k = 1} \rightarrow \{ 1, \ldots, K \}$ 
+where $r^v, r^s : \\{ \phi \_{k} \\}\_{k = 1} \rightarrow \{ 1, \ldots, K \}$ 
 sort (rank) all $K$ models respectively by validation accuracy and and 
 complexity (measured as the number of units with activation above a given 
 threshold). This is a way of embedding both measures into a common space ($\{ 
@@ -180,6 +180,11 @@ following slide displays their regularized division unit.
 
 {{< figure src="/img/martius_deep_2017-slide1.jpg"
            title="The speaker tries to answer a peculiar question." >}}
+
+Potential optimization issues arising from this regularization
+clamping the local gradients to 0 were not discussed. It will be very
+interesting to read about this and any other findings in the
+forthcoming paper!
 
 Results of course vastly improve in examples involving quotients. This paves 
 the road for further inclusions, like arbitrary exponentiation or logarithms.

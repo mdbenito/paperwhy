@@ -30,8 +30,8 @@
   arm. Crucially, this approach provides good
   <with|font-shape|italic|extrapolation> performance to unexplored input
   regimes. For model selection (i.e. hyperparameter choice), competing
-  solutions are scored based both on validation performance and crucially,
-  computed model complexity, measured in number of terms in the equations.
+  solutions are scored based both on validation performance and computed
+  model complexity, measured in number of terms in the equations.
 
   <hrule>
 
@@ -108,6 +108,13 @@
   degree, which are uncommon in physical models (but shouldn't this be sorted
   out by the optimization / model selection?).
 
+  The last layer is simply a linear mapping onto the output vector
+  <math|y<rsup|L>>. Each vector of inputs <math|x\<in\>\<bbb-R\><rsup|d>>
+  represents a measurement in phase space. After training, the solution is
+  read from the structure of the network itself: each output
+  <math|y<rsup|L><rsub|k>> is \Pfollowed backward\Q to obtain one equation,
+  with weights being the coefficients of the operations defined by each unit.
+
   <section*|Training and model selection>
 
   The objective function is complemented by an <math|L<rsub|1>> penalty to
@@ -138,7 +145,7 @@
   desired abilities of this model is that it extrapolate (generalize) beyond
   its input to data ranges not represented in the training data. Therefore
   the authors propose a two-goal objective to choose the best architecture
-  among a set <math|<around*|{|\<phi\><rsub|k>|}><rsub|k=1><rsup|K>>:adequate
+  among a set <math|<around*|{|\<phi\><rsub|k>|}><rsub|k=1><rsup|K>>:
 
   <\equation*>
     <below|argmin|k=1,\<ldots\>,K> <around*|[|<around*|(|r<rsup|v><around*|(|\<phi\><rsub|k>|)>|)><rsup|2>+<around*|(|r<rsup|s><around*|(|\<phi\><rsub|k>|)>|)><rsup|2>|]>,
@@ -189,7 +196,8 @@
   also that the hypothesis space <math|\<cal-H\>> needs to intersect
   <math|\<cal-C\>> or performance can be quite poor (e.g. if trying to
   integrate functions without an antiderivative or in an example with a
-  rolling cart attached to a wall through a spring).
+  rolling cart attached to a wall through a spring and having a pendulum
+  hanging).
 
   <big-figure|<image|../static/img/martius_extrapolation_2016-fig3.jpg|1par|||>|Double
   pendulum data and extrapolation results for Multi Layer Perceptron, Support
@@ -209,10 +217,14 @@
   unit.
 
   <big-figure|<image|../static/img/martius_deep_2017-slide1.jpg|1par|||>|The
-  speaker tries to answer a peculiar question.>
+  speaker tries to answer a peculiar question...>
+
+  Potential optimization issues arising from this regularization clamping the
+  local gradients to 0 were not discussed. It will be very interesting to
+  read about this and any other findings in the forthcoming paper!
 
   Results of course vastly improve in examples involving quotients. This
-  paves the road for further inclusions, like arbitrary exponentiation or
+  paves the road for further extensions, like arbitrary exponentiation or
   logarithms.
 
   <\bibliography|bib|tm-plain|paperwhy.bib>
