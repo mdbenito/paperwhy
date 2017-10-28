@@ -1,4 +1,201 @@
 
+@article{zagoruyko_diracnets:_2017,
+	title = {{DiracNets}: {Training} {Very} {Deep} {Neural} {Networks} {Without} {Skip}-{Connections}},
+	shorttitle = {{DiracNets}},
+	url = {http://arxiv.org/abs/1706.00388},
+	abstract = {Deep neural networks with skip-connections, such as ResNet, show excellent performance in various image classification benchmarks. It is though observed that the initial motivation behind them - training deeper networks - does not actually hold true, and the benefits come from increased capacity, rather than from depth. Motivated by this, and inspired from ResNet, we propose a simple Dirac weight parameterization, which allows us to train very deep plain networks without skip-connections, and achieve nearly the same performance. This parameterization has a minor computational cost at training time and no cost at all at inference. We're able to achieve 95.5\% accuracy on CIFAR-10 with 34-layer deep plain network, surpassing 1001-layer deep ResNet, and approaching Wide ResNet. Our parameterization also mostly eliminates the need of careful initialization in residual and non-residual networks. The code and models for our experiments are available at https://github.com/szagoruyko/diracnets},
+	journal = {arXiv:1706.00388 [cs]},
+	author = {Zagoruyko, Sergey and Komodakis, Nikos},
+	month = jun,
+	year = {2017},
+	note = {arXiv: 1706.00388},
+	file = {Zagoruyko and Komodakis - 2017 - DiracNets Training Very Deep Neural Networks With.pdf:/home/miguel/Zotero/storage/U769HHCV/Zagoruyko and Komodakis - 2017 - DiracNets Training Very Deep Neural Networks With.pdf:application/pdf}
+}
+
+@incollection{dauphin_identifying_2014,
+	title = {Identifying and attacking the saddle point problem in high-dimensional non-convex optimization},
+	url = {http://papers.nips.cc/paper/5486-identifying-and-attacking-the-saddle-point-problem-in-high-dimensional-non-convex-optimization.pdf},
+	language = {en},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 27},
+	publisher = {Curran Associates, Inc.},
+	author = {Dauphin, Yann N and Pascanu, Razvan and Gulcehre, Caglar and Cho, Kyunghyun and Ganguli, Surya and Bengio, Yoshua},
+	editor = {Ghahramani, Z. and Welling, M. and Cortes, C. and Lawrence, N. D. and Weinberger, K. Q.},
+	year = {2014},
+	note = {citecount: 00221
+arXiv: 1405.4604},
+	pages = {2933--2941},
+	file = {Dauphin et al. - 2014 - Identifying and attacking the saddle point problem.pdf:/home/miguel/Zotero/storage/XSK654W7/Dauphin et al. - 2014 - Identifying and attacking the saddle point problem.pdf:application/pdf;Supplementary Material\: Attacking the saddle point problem.pdf:/home/miguel/Zotero/storage/4T9X892N/Supplementary Material Attacking the saddle point problem.pdf:application/pdf}
+}
+
+@article{goodfellow_qualitatively_2014,
+	title = {Qualitatively characterizing neural network optimization problems},
+	url = {http://arxiv.org/abs/1412.6544},
+	abstract = {Training neural networks involves solving large-scale non-convex optimization problems. This task has long been believed to be extremely difficult, with fear of local minima and other obstacles motivating a variety of schemes to improve optimization, such as unsupervised pretraining. However, modern neural networks are able to achieve negligible training error on complex tasks, using only direct training with stochastic gradient descent. We introduce a simple analysis technique to look for evidence that such networks are overcoming local optima. We find that, in fact, on a straight path from initialization to solution, a variety of state of the art neural networks never encounter any significant obstacles.},
+	urldate = {2015-03-31},
+	journal = {arXiv:1412.6544 [cs, stat]},
+	author = {Goodfellow, Ian J. and Vinyals, Oriol and Saxe, Andrew M.},
+	month = dec,
+	year = {2014},
+	note = {citecount: 00032 
+arXiv: 1412.6544},
+	keywords = {priority, queue},
+	pages = {11},
+	file = {Goodfellow and Vinyals - 2014 - Qualitatively characterizing neural network optimi.pdf:/home/miguel/Zotero/storage/3TZXHAKD/Goodfellow and Vinyals - 2014 - Qualitatively characterizing neural network optimi.pdf:application/pdf}
+}
+
+@article{he_identity_2016,
+	title = {Identity {Mappings} in {Deep} {Residual} {Networks}},
+	url = {http://arxiv.org/abs/1603.05027},
+	abstract = {Deep residual networks have emerged as a family of extremely deep architectures showing compelling accuracy and nice convergence behaviors. In this paper, we analyze the propagation formulations behind the residual building blocks, which suggest that the forward and backward signals can be directly propagated from one block to any other block, when using identity mappings as the skip connections and after-addition activation. A series of ablation experiments support the importance of these identity mappings. This motivates us to propose a new residual unit, which makes training easier and improves generalization. We report improved results using a 1001-layer ResNet on CIFAR-10 (4.62\% error) and CIFAR-100, and a 200-layer ResNet on ImageNet. Code is available at: https://github.com/KaimingHe/resnet-1k-layers},
+	language = {en},
+	urldate = {2017-05-02},
+	journal = {arXiv:1603.05027 [cs]},
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	month = mar,
+	year = {2016},
+	note = {citecount: 00287 
+arXiv: 1603.05027},
+	keywords = {queue, priority},
+	pages = {15},
+	file = {He et al. - 2016 - Identity Mappings in Deep Residual Networks.pdf:/home/miguel/Zotero/storage/IP3MV4FK/He et al. - 2016 - Identity Mappings in Deep Residual Networks.pdf:application/pdf}
+}
+
+@inproceedings{he_deep_2016,
+	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
+	url = {http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html},
+	abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
+	language = {en},
+	urldate = {2017-05-02},
+	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+	year = {2016},
+	note = {citecount: 02451 
+Extended version with appendix from the Arxiv},
+	pages = {770--778},
+	file = {He et al. - 2016 - Deep Residual Learning for Image Recognition.pdf:/home/miguel/Zotero/storage/AW8V6EF4/He et al. - 2016 - Deep Residual Learning for Image Recognition.pdf:application/pdf;He et al. - 2016 - Deep Residual Learning for Image Recognition -- with appendix.pdf:/home/miguel/Zotero/storage/JZNFMFRC/He et al. - 2016 - Deep Residual Learning for Image Recognition -- with appendix.pdf:application/pdf}
+}
+
+@incollection{montufar_number_2014,
+	title = {On the {Number} of {Linear} {Regions} of {Deep} {Neural} {Networks}},
+	url = {http://papers.nips.cc/paper/5422-on-the-number-of-linear-regions-of-deep-neural-networks.pdf},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 27},
+	publisher = {Curran Associates, Inc.},
+	author = {Montufar, Guido F and Pascanu, Razvan and Cho, Kyunghyun and Bengio, Yoshua},
+	editor = {Ghahramani, Z. and Welling, M. and Cortes, C. and Lawrence, N. D. and Weinberger, K. Q.},
+	year = {2014},
+	note = {citecount: 00139},
+	pages = {2924--2932},
+	file = {Montufar et al. - 2014 - On the Number of Linear Regions of Deep Neural Net.pdf:/home/miguel/Zotero/storage/5Z5QTMIR/Montufar et al. - 2014 - On the Number of Linear Regions of Deep Neural Net.pdf:application/pdf;Montufar et al. - 2014 - On the Number of Linear Regions - Supplementary.pdf:/home/miguel/Zotero/storage/RN2SHB94/Montufar et al. - 2014 - On the Number of Linear Regions - Supplementary.pdf:application/pdf}
+}
+
+@article{hardt_identity_2016,
+	title = {Identity matters in {Deep} {Learning}},
+	url = {http://arxiv.org/abs/1611.04231},
+	abstract = {An emerging design principle in deep learning is that each layer of a deep artificial neural network should be able to easily express the identity transformation. This idea not only motivated various normalization techniques, such as {\textbackslash}emph\{batch normalization\}, but was also key to the immense success of {\textbackslash}emph\{residual networks\}. In this work, we put the principle of {\textbackslash}emph\{identity parameterization\} on a more solid theoretical footing alongside further empirical progress. We first give a strikingly simple proof that arbitrarily deep linear residual networks have no spurious local optima. The same result for linear feed-forward networks in their standard parameterization is substantially more delicate. Second, we show that residual networks with ReLu activations have universal finite-sample expressivity in the sense that the network can represent any function of its sample provided that the model has more parameters than the sample size. Directly inspired by our theory, we experiment with a radically simple residual architecture consisting of only residual convolutional layers and ReLu activations, but no batch normalization, dropout, or max pool. Our model improves significantly on previous all-convolutional networks on the CIFAR10, CIFAR100, and ImageNet classification benchmarks.},
+	journal = {arXiv:1611.04231 [cs, stat]},
+	author = {Hardt, Moritz and Ma, Tengyu},
+	month = nov,
+	year = {2016},
+	note = {citecount: 00015 
+arXiv: 1611.04231},
+	file = {Hardt and Ma - 2016 - Identity matters in Deep Learning.pdf:/home/miguel/Zotero/storage/9ZDX66AA/Hardt and Ma - 2016 - Identity matters in Deep Learning.pdf:application/pdf}
+}
+
+@article{bishop_training_1995,
+	title = {Training with noise is equivalent to {Tikhonov} regularization},
+	volume = {7},
+	url = {http://dl.acm.org/citation.cfm?id=211185},
+	doi = {10.1162/neco.1995.7.1.108},
+	language = {en},
+	number = {1},
+	journal = {Neural computation},
+	author = {Bishop, Chris M},
+	month = jan,
+	year = {1995},
+	note = {citecount: 00550},
+	pages = {108--116},
+	file = {Bishop - 1995 - Training with noise is equivalent to Tikhonov regu.pdf:/home/miguel/Zotero/storage/69WRWDPR/Bishop - 1995 - Training with noise is equivalent to Tikhonov regu.pdf:application/pdf}
+}
+
+@incollection{bengio_greedy_2007,
+	title = {Greedy layer-wise training of {Deep} {Networks}},
+	url = {http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf},
+	urldate = {2017-05-13},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 19},
+	publisher = {MIT Press},
+	author = {Bengio, Yoshua and Lamblin, Pascal and Popovici, Dan and Larochelle, Hugo},
+	editor = {Schölkopf, P. B. and Platt, J. C. and Hoffman, T.},
+	year = {2007},
+	note = {citecount: 02230},
+	pages = {153--160},
+	file = {Bengio et al. - 2007 - Appendix - Greedy Layer-Wise Training of Deep Networks.pdf:/home/miguel/Zotero/storage/N3DIA4BS/Bengio et al. - 2007 - Appendix - Greedy Layer-Wise Training of Deep Networks.pdf:application/pdf;Bengio et al. - 2007 - Greedy Layer-Wise Training of Deep Networks.pdf:/home/miguel/Zotero/storage/26GIPMPM/Bengio et al. - 2007 - Greedy Layer-Wise Training of Deep Networks.pdf:application/pdf;comments - greedy layer-wise.tm:/home/miguel/Zotero/storage/7UZJB74D/comments - greedy layer-wise.tm:text/plain}
+}
+
+@article{hinton_improving_2012,
+	title = {Improving neural networks by preventing co-adaptation of feature detectors},
+	url = {http://arxiv.org/abs/1207.0580},
+	abstract = {When a large feedforward neural network is trained on a small training set, it typically performs poorly on held-out test data. This "overfitting" is greatly reduced by randomly omitting half of the feature detectors on each training case. This prevents complex co-adaptations in which a feature detector is only helpful in the context of several other specific feature detectors. Instead, each neuron learns to detect a feature that is generally helpful for producing the correct answer given the combinatorially large variety of internal contexts in which it must operate. Random "dropout" gives big improvements on many benchmark tasks and sets new records for speech and object recognition.},
+	language = {en},
+	urldate = {2017-04-28},
+	journal = {arXiv:1207.0580 [cs]},
+	author = {Hinton, Geoffrey E. and Srivastava, Nitish and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan R.},
+	month = jul,
+	year = {2012},
+	note = {citecount: 01928 
+arXiv: 1207.0580},
+	pages = {18},
+	file = {Hinton et al. - 2012 - Improving neural networks by preventing co-adapta.pdf:/home/miguel/Zotero/storage/ABQ9S4VK/Hinton et al. - 2012 - Improving neural networks by preventing co-adapta.pdf:application/pdf;hinton_improving_2012.tm:/home/miguel/Zotero/storage/BJFSSF43/hinton_improving_2012.tm:text/plain}
+}
+
+@article{goodfellow_maxout_2013,
+	title = {Maxout {Networks}},
+	url = {http://arxiv.org/abs/1302.4389},
+	abstract = {We consider the problem of designing models to leverage a recently introduced approximate model averaging technique called dropout. We define a simple new model called maxout (so named because its output is the max of a set of inputs, and because it is a natural companion to dropout) designed to both facilitate optimization by dropout and improve the accuracy of dropout's fast approximate model averaging technique. We empirically verify that the model successfully accomplishes both of these tasks. We use maxout and dropout to demonstrate state of the art classification performance on four benchmark datasets: MNIST, CIFAR-10, CIFAR-100, and SVHN.},
+	language = {en},
+	urldate = {2017-04-18},
+	journal = {arXiv:1302.4389 [cs, stat]},
+	author = {Goodfellow, Ian J. and Warde-Farley, David and Mirza, Mehdi and Courville, Aaron and Bengio, Yoshua},
+	month = feb,
+	year = {2013},
+	note = {citecount: 00781 
+code: http://www-etud.iro.umontreal.ca/{\textasciitilde}goodfeli/maxout.html
+arxiv: 1302.4389},
+	pages = {9},
+	file = {Goodfellow et al. - 2013 - Maxout Networks.pdf:/home/miguel/Zotero/storage/BUUR8VEJ/Goodfellow et al. - 2013 - Maxout Networks.pdf:application/pdf}
+}
+
+@inproceedings{glorot_deep_2011,
+	address = {Florida, USA},
+	title = {Deep {Sparse} {Rectifier} {Neural} {Networks}},
+	volume = {15},
+	url = {http://www.jmlr.org/proceedings/papers/v15/},
+	abstract = {While logistic sigmoid neurons are more biologically plausible than hyperbolic tangent neurons, the latter work better for training multi-layer neural networks. This paper shows that rectifying neurons are an even better model of biological neurons and yield equal or better performance than hyperbolic tangent networks in spite of the hard non-linearity and non-differentiability at zero, creating sparse representations with true zeros which seem remarkably suitable for naturally sparse data. Even though they can take advantage of semi-supervised setups with extra-unlabeled data, deep rectifier networks can reach their best performance without requiring any unsupervised pre-training on purely supervised tasks with large labeled datasets. Hence, these results can be seen as a new milestone in the attempts at understanding the difficulty in training deep but purely supervised neural networks, and closing the performance gap between neural networks learnt with and without unsupervised pre-training.},
+	language = {en},
+	urldate = {2017-04-07},
+	booktitle = {Proceedings of the {Fourteenth} {International} {Conference} on {Artificial} {Intelligence} and {Statistics}  {April} 11-13, 2011, {Fort} {Lauderdale}, {FL}, {USA}},
+	author = {Glorot, Xavier and Bordes, Antoine and Bengio, Yoshua},
+	month = apr,
+	year = {2011},
+	note = {citecount: 00995},
+	pages = {315--323},
+	file = {comments-relu.tm:/home/miguel/Zotero/storage/EWHXSB74/comments-relu.tm:text/plain;Glorot et al. - 2011 - Deep Sparse Rectifier Neural Networks.pdf:/home/miguel/Zotero/storage/AT7I648E/Glorot et al. - 2011 - Deep Sparse Rectifier Neural Networks.pdf:application/pdf}
+}
+
+@article{poggio_why_2016,
+	title = {Why and {When} {Can} {Deep} -- but {Not} {Shallow} -- {Networks} {Avoid} the {Curse} of {Dimensionality}: a {Review}},
+	shorttitle = {Why and {When} {Can} {Deep} -- but {Not} {Shallow} -- {Networks} {Avoid} the {Curse} of {Dimensionality}},
+	url = {http://arxiv.org/abs/1611.00740},
+	abstract = {The paper characterizes classes of functions for which deep learning can be exponentially better than shallow learning. Deep convolutional networks are a special case of these conditions, though weight sharing is not the main reason for their exponential advantage.},
+	urldate = {2017-04-07},
+	journal = {arXiv:1611.00740 [cs]},
+	author = {Poggio, Tomaso and Mhaskar, Hrushikesh and Rosasco, Lorenzo and Miranda, Brando and Liao, Qianli},
+	month = nov,
+	year = {2016},
+	note = {citecount: 00004 
+arXiv: 1611.00740},
+	pages = {26},
+	file = {Poggio et al. - 2016 - Why and When Can Deep -- but Not Shallow -- Networ.pdf:/home/miguel/Zotero/storage/39X7RBW7/Poggio et al. - 2016 - Why and When Can Deep -- but Not Shallow -- Networ.pdf:application/pdf}
+}
+
 @article{lin_why_2016,
 	title = {Why does deep and cheap learning work so well?},
 	url = {http://arxiv.org/abs/1608.08225},
@@ -9,26 +206,128 @@
 	author = {Lin, Henry W. and Tegmark, Max},
 	month = aug,
 	year = {2016},
-	note = {citecount: 00019 
+	note = {citecount: 00022 
 arXiv: 1608.08225},
 	pages = {17},
-	file = {Lin and Tegmark - 2016 - Why does deep and cheap learning work so well.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/JD6HE5EB/Lin and Tegmark - 2016 - Why does deep and cheap learning work so well.pdf:application/pdf;tegmark-comments.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/A8V6DEBS/tegmark-comments.tm:text/plain}
+	file = {Lin and Tegmark - 2016 - Why does deep and cheap learning work so well.pdf:/home/miguel/Zotero/storage/SV79MM23/Lin and Tegmark - 2016 - Why does deep and cheap learning work so well.pdf:application/pdf;tegmark-comments.tm:/home/miguel/Zotero/storage/QD2MZHEG/tegmark-comments.tm:text/plain}
 }
 
-@article{biamonte_quantum_2017,
-	title = {Quantum machine learning},
-	volume = {549},
-	issn = {0028-0836, 1476-4687},
-	url = {http://www.nature.com/doifinder/10.1038/nature23474},
-	doi = {10.1038/nature23474},
-	number = {7671},
-	urldate = {2017-09-26},
-	journal = {Nature},
-	author = {Biamonte, Jacob and Wittek, Peter and Pancotti, Nicola and Rebentrost, Patrick and Wiebe, Nathan and Lloyd, Seth},
-	month = sep,
+@article{tang_deep_2013,
+	title = {Deep learning using linear {Support} {Vector} {Machines}},
+	url = {http://arxiv.org/abs/1306.0239},
+	abstract = {Recently, fully-connected and convolutional neural networks have been trained to achieve state-of-the-art performance on a wide variety of tasks such as speech recognition, image classification, natural language processing, and bioinformatics. For classification tasks, most of these "deep learning" models employ the softmax activation function for prediction and minimize cross-entropy loss. In this paper, we demonstrate a small but consistent advantage of replacing the softmax layer with a linear support vector machine. Learning minimizes a margin-based loss instead of the cross-entropy loss. While there have been various combinations of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply replacing softmax with linear SVMs gives significant gains on popular deep learning datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop's face expression recognition challenge.},
+	language = {en},
+	urldate = {2015-04-29},
+	journal = {arXiv:1306.0239 [cs, stat]},
+	author = {Tang, Yichuan},
+	month = jun,
+	year = {2013},
+	note = {citecount: 00169 
+arXiv: 1306.0239},
+	pages = {6},
+	file = {comments-deep-svm.tm:/home/miguel/Zotero/storage/MEX4MJBV/comments-deep-svm.tm:text/plain;Tang - 2013 - Deep Learning using Linear Support Vector Machines copy.pdf:/home/miguel/Zotero/storage/SUTB6QJD/Tang - 2013 - Deep Learning using Linear Support Vector Machines copy.pdf:application/pdf}
+}
+
+@incollection{baldi_understanding_2013,
+	title = {Understanding {Dropout}},
+	url = {http://papers.nips.cc/paper/4878-understanding-dropout.pdf},
+	abstract = {Dropout is a relatively new algorithm for training neural networks which relies on stochastically dropping out neurons during training in order to avoid the co-adaptation of feature detectors. We introduce a general formalism for studying dropout on either units or connections, with arbitrary probability values, and use it to analyze the averaging and regularizing properties of dropout in both linear and non-linear networks. For deep neural networks, the averaging properties of dropout are characterized by three recursive equations, including the approximation of expectations by normalized weighted geometric means. We provide estimates and bounds for these approximations and corroborate the results with simulations. We also show in simple cases how dropout performs stochastic gradient descent on a regularized error function.},
+	language = {en},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 26},
+	author = {Baldi, Pierre and Sadowski, Peter J},
+	editor = {Burges, C. J. C. and Bottou, L. and Welling, M. and Ghahramani, Z. and Weinberger, K. Q.},
+	year = {2013},
+	note = {citecount: 00067},
+	pages = {2814--2822},
+	file = {Baldi and Sadowski - 2013 - Understanding Dropout.pdf:/home/miguel/Zotero/storage/ZZEEDPWD/Baldi and Sadowski - 2013 - Understanding Dropout.pdf:application/pdf;comments-understanding-dropout.tm:/home/miguel/Zotero/storage/9B8ZSUH7/comments-understanding-dropout.tm:text/plain}
+}
+
+@incollection{wager_dropout_2013,
+	title = {Dropout training as adaptive regularization},
+	url = {http://papers.nips.cc/paper/4882-dropout-training-as-adaptive-regularization.pdf},
+	language = {en},
+	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 26},
+	publisher = {Curran Associates, Inc.},
+	author = {Wager, Stefan and Wang, Sida and Liang, Percy},
+	editor = {Burges, C. J. C. and Bottou, L. and Welling, M. and Ghahramani, Z. and Weinberger, K. Q.},
+	year = {2013},
+	note = {citecount: 00158},
+	pages = {351--359},
+	file = {Appendix.pdf:/home/miguel/Zotero/storage/H2CJBFQN/Appendix.pdf:application/pdf;Wager et al. - 2013 - Dropout training as adaptive regularization.pdf:/home/miguel/Zotero/storage/KJ65IZK9/Wager et al. - 2013 - Dropout training as adaptive regularization.pdf:application/pdf}
+}
+
+@article{ba_multiple_2014,
+	title = {Multiple {Object} {Recognition} with {Visual} {Attention}},
+	url = {http://arxiv.org/abs/1412.7755},
+	abstract = {We present an attention-based model for recognizing multiple objects in images. The proposed model is a deep recurrent neural network trained with reinforcement learning to attend to the most relevant regions of the input image. We show that the model learns to both localize and recognize multiple objects despite being given only class labels during training. We evaluate the model on the challenging task of transcribing house number sequences from Google Street View images and show that it is both more accurate than the state-of-the-art convolutional networks and uses fewer parameters and less computation.},
+	journal = {arXiv:1412.7755 [cs]},
+	author = {Ba, Jimmy and Mnih, Volodymyr and Kavukcuoglu, Koray},
+	month = dec,
+	year = {2014},
+	note = {citecount: 00167 
+arXiv: 1412.7755},
+	keywords = {queue, priority},
+	file = {Ba et al. - 2014 - Multiple Object Recognition with Visual Attention.pdf:/home/miguel/Zotero/storage/DGQ92QAX/Ba et al. - 2014 - Multiple Object Recognition with Visual Attention.pdf:application/pdf}
+}
+
+@article{helmbold_surprising_2016,
+	title = {Surprising properties of dropout in deep networks},
+	url = {http://arxiv.org/abs/1602.04484},
+	abstract = {We analyze dropout in deep networks with rectified linear units and the quadratic loss. Our results expose surprising differences between the behavior of dropout and more traditional regularizers like weight decay. For example, on some simple data sets dropout training produces negative weights even though the output is the sum of the inputs. This provides a counterpoint to the suggestion that dropout discourages co-adaptation of weights. We also show that the dropout penalty can grow exponentially in the depth of the network while the weight-decay penalty remains essentially linear, and that dropout is insensitive to various re-scalings of the input features, outputs, and network weights. This last insensitivity implies that there are no isolated local minima of the dropout training criterion. Our work uncovers new properties of dropout, extends our understanding of why dropout succeeds, and lays the foundation for further progress.},
+	journal = {arXiv:1602.04484 [cs, math, stat]},
+	author = {Helmbold, David P. and Long, Philip M.},
+	month = feb,
+	year = {2016},
+	note = {citecount: 00000 
+arXiv: 1602.04484},
+	keywords = {queue},
+	pages = {21},
+	file = {Helmbold and Long - 2016 - Surprising properties of dropout in deep networks.pdf:/home/miguel/Zotero/storage/PR85MA3Q/Helmbold and Long - 2016 - Surprising properties of dropout in deep networks.pdf:application/pdf}
+}
+
+@article{arias-castro_spectral_2017,
+	title = {Spectral {Clustering} based on local {PCA}},
+	volume = {18},
+	url = {http://jmlr.org/papers/v18/14-318.html},
+	number = {9},
+	urldate = {2017-04-12},
+	journal = {Journal of Machine Learning Research},
+	author = {Arias-Castro, Ery and Lerman, Gilad and Zhang, Teng},
 	year = {2017},
-	pages = {195--202},
-	file = {Biamonte et al_2017_Quantum machine learning.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/HNS2PRBD/Biamonte et al_2017_Quantum machine learning.pdf:application/pdf}
+	note = {citecount: 00025 
+code: http://sciences.ucf.edu/math/tengz},
+	pages = {1--57},
+	file = {Arias-Castro et al. - 2017 - Spectral Clustering Based on Local PCA.pdf:/home/miguel/Zotero/storage/HHKWMCJ6/Arias-Castro et al. - 2017 - Spectral Clustering Based on Local PCA.pdf:application/pdf;comments - arias-castro et al.tm:/home/miguel/Zotero/storage/QKCRZS38/comments - arias-castro et al.tm:text/plain}
+}
+
+@article{nevo_identifying_2017,
+	title = {Identifying a minimal class of models for high-dimensional data},
+	volume = {18},
+	url = {http://jmlr.org/papers/v18/16-172.html},
+	number = {24},
+	urldate = {2017-04-16},
+	journal = {Journal of Machine Learning Research},
+	author = {Nevo, Daniel and Ritov, Ya'acov},
+	year = {2017},
+	note = {citecount: 00000},
+	pages = {1--29},
+	file = {Nevo and Ritov - 2017 - Identifying a Minimal Class of Models for High--di.pdf:/home/miguel/Zotero/storage/23VFUGGP/Nevo and Ritov - 2017 - Identifying a Minimal Class of Models for High--di.pdf:application/pdf;nevo_identifying_2017.tm:/home/miguel/Zotero/storage/JHV225EH/nevo_identifying_2017.tm:text/plain}
+}
+
+@article{swirszcz_local_2016,
+	title = {Local minima in training of neural networks},
+	url = {http://arxiv.org/abs/1611.06310},
+	abstract = {There has been a lot of recent interest in trying to characterize the error surface of deep models. This stems from a long standing question. Given that deep networks are highly nonlinear systems optimized by local gradient methods, why do they not seem to be affected by bad local minima? It is widely believed that training of deep models using gradient methods works so well because the error surface either has no local minima, or if they exist they need to be close in value to the global minimum. It is known that such results hold under very strong assumptions which are not satisfied by real models. In this paper we present examples showing that for such theorem to be true additional assumptions on the data, initialization schemes and/or the model classes have to be made. We look at the particular case of finite size datasets. We demonstrate that in this scenario one can construct counter-examples (datasets or initialization schemes) when the network does become susceptible to bad local minima over the weight space.},
+	language = {en},
+	urldate = {2017-05-03},
+	journal = {arXiv:1611.06310 [cs, stat]},
+	author = {Swirszcz, Grzegorz and Czarnecki, Wojciech Marian and Pascanu, Razvan},
+	month = nov,
+	year = {2016},
+	note = {citecount: 00001 
+arXiv: 1611.06310},
+	pages = {12},
+	file = {Swirszcz et al. - 2016 - Local minima in training of neural networks.pdf:/home/miguel/Zotero/storage/Z5FZJKR8/Swirszcz et al. - 2016 - Local minima in training of neural networks.pdf:application/pdf}
 }
 
 @misc{bartlett_representational_2017,
@@ -43,312 +342,7 @@ arXiv: 1608.08225},
 	year = {2017},
 	note = {citecount: 00000 
 2681 seconds},
-	file = {Bartlett_2017_Representational and optimization properties of Deep Residual Networks.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/URXCD347/Bartlett_2017_Representational and optimization properties of Deep Residual Networks.tm:text/plain}
-}
-
-@article{gal_theoretically_2015,
-	title = {A {Theoretically} {Grounded} {Application} of {Dropout} in {Recurrent} {Neural} {Networks}},
-	url = {http://arxiv.org/abs/1512.05287},
-	abstract = {Recurrent neural networks (RNNs) stand at the forefront of many recent developments in deep learning. Yet a major difficulty with these models is their tendency to overfit, with dropout shown to fail when applied to recurrent layers. Recent results at the intersection of Bayesian modelling and deep learning offer a Bayesian interpretation of common deep learning techniques such as dropout. This grounding of dropout in approximate Bayesian inference suggests an extension of the theoretical results, offering insights into the use of dropout with RNN models. We apply this new variational inference based dropout technique in LSTM and GRU models, assessing it on language modelling and sentiment analysis tasks. The new approach outperforms existing techniques, and to the best of our knowledge improves on the single model state-of-the-art in language modelling with the Penn Treebank (73.4 test perplexity). This extends our arsenal of variational tools in deep learning.},
-	urldate = {2017-10-15},
-	journal = {arXiv:1512.05287 [stat]},
-	author = {Gal, Yarin and Ghahramani, Zoubin},
-	month = dec,
-	year = {2015},
-	note = {arXiv: 1512.05287},
-	file = {arXiv.org Snapshot:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/WUYXAD7R/1512.html:text/html;Gal et al_2015_A Theoretically Grounded Application of Dropout in Recurrent Neural Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/RSNRM5SE/Gal et al_2015_A Theoretically Grounded Application of Dropout in Recurrent Neural Networks.pdf:application/pdf}
-}
-
-@misc{eckersley_ai_2017,
-	title = {{AI} {Progress} {Measurement}},
-	url = {https://www.eff.org/ai/metrics},
-	abstract = {This pilot project collects problems and metrics/datasets from the AI research literature, and tracks progress on them. You can use this notebook to see how things are progressing in specific subfields or AI/ML as a whole, as a place to report new results you've obtained, as a place to look for problems that might benefit from having new datasets/metrics designed for them, or as a source to build on for data science projects. At EFF, we're ultimately most interested in how this data can influence our understanding of the likely implications of AI. To begin with, we're focused on gathering it.},
-	urldate = {2017-07-04},
-	journal = {Electronic Frontier Foundation},
-	author = {Eckersley, Peter and Nasser, Yomna},
-	month = jun,
-	year = {2017}
-}
-
-@inproceedings{he_deep_2016,
-	title = {Deep {Residual} {Learning} for {Image} {Recognition}},
-	url = {http://www.cv-foundation.org/openaccess/content_cvpr_2016/html/He_Deep_Residual_Learning_CVPR_2016_paper.html},
-	abstract = {Deeper neural networks are more difficult to train. We present a residual learning framework to ease the training of networks that are substantially deeper than those used previously. We explicitly reformulate the layers as learning residual functions with reference to the layer inputs, instead of learning unreferenced functions. We provide comprehensive empirical evidence showing that these residual networks are easier to optimize, and can gain accuracy from considerably increased depth. On the ImageNet dataset we evaluate residual nets with a depth of up to 152 layers---8x deeper than VGG nets but still having lower complexity. An ensemble of these residual nets achieves 3.57\% error on the ImageNet test set. This result won the 1st place on the ILSVRC 2015 classification task. We also present analysis on CIFAR-10 with 100 and 1000 layers. The depth of representations is of central importance for many visual recognition tasks. Solely due to our extremely deep representations, we obtain a 28\% relative improvement on the COCO object detection dataset. Deep residual nets are foundations of our submissions to ILSVRC \& COCO 2015 competitions, where we also won the 1st places on the tasks of ImageNet detection, ImageNet localization, COCO detection, and COCO segmentation.},
-	language = {en},
-	urldate = {2017-05-02},
-	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
-	year = {2016},
-	note = {citecount: 02156 
-Extended version with appendix from the Arxiv},
-	pages = {770--778},
-	file = {He et al. - 2015 - Deep Residual Learning - with appendix.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/URSIRXXI/He et al. - 2015 - Deep Residual Learning - with appendix.pdf:application/pdf;He et al. - 2016 - Deep Residual Learning for Image Recognition.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/XIS8MDIJ/He et al. - 2016 - Deep Residual Learning for Image Recognition.pdf:application/pdf}
-}
-
-@article{hinton_improving_2012,
-	title = {Improving neural networks by preventing co-adaptation of feature detectors},
-	url = {http://arxiv.org/abs/1207.0580},
-	abstract = {When a large feedforward neural network is trained on a small training set, it typically performs poorly on held-out test data. This "overfitting" is greatly reduced by randomly omitting half of the feature detectors on each training case. This prevents complex co-adaptations in which a feature detector is only helpful in the context of several other specific feature detectors. Instead, each neuron learns to detect a feature that is generally helpful for producing the correct answer given the combinatorially large variety of internal contexts in which it must operate. Random "dropout" gives big improvements on many benchmark tasks and sets new records for speech and object recognition.},
-	language = {en},
-	urldate = {2017-04-28},
-	journal = {arXiv:1207.0580 [cs]},
-	author = {Hinton, Geoffrey E. and Srivastava, Nitish and Krizhevsky, Alex and Sutskever, Ilya and Salakhutdinov, Ruslan R.},
-	month = jul,
-	year = {2012},
-	note = {citecount: 01870 
-arXiv: 1207.0580},
-	pages = {18},
-	file = {Hinton et al. - 2012 - Improving neural networks by preventing co-adapta.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/MPZEZ35X/Hinton et al. - 2012 - Improving neural networks by preventing co-adapta.pdf:application/pdf;hinton_improving_2012.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/9KCABFBP/hinton_improving_2012.tm:text/plain}
-}
-
-@article{vidal_subspace_2011,
-	title = {Subspace {Clustering}},
-	volume = {28},
-	issn = {1053-5888},
-	doi = {10.1109/MSP.2010.939739},
-	abstract = {Over the past few decades, significant progress has been made in clustering high-dimensional data sets distributed around a collection of linear and affine subspaces. This article presented a review of such progress, which included a number of existing subspace clustering algorithms together with an experimental evaluation on the motion segmentation and face clustering problems in computer vision.},
-	number = {2},
-	journal = {IEEE Signal Processing Magazine},
-	author = {Vidal, R.},
-	month = mar,
-	year = {2011},
-	note = {citecount: 00774},
-	pages = {52--68},
-	file = {Vidal - 2011 - Subspace Clustering.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/XWTS5Z7Z/Vidal - 2011 - Subspace Clustering.pdf:application/pdf}
-}
-
-@article{abarbanel_machine_2017,
-	title = {Machine {Learning}, {Deepest} {Learning}: {Statistical} {Data} {Assimilation} {Problems}},
-	shorttitle = {Machine {Learning}, {Deepest} {Learning}},
-	url = {http://arxiv.org/abs/1707.01415},
-	abstract = {We formulate a strong equivalence between machine learning, artificial intelligence methods and the formulation of statistical data assimilation as used widely in physical and biological sciences. The correspondence is that layer number in the artificial network setting is the analog of time in the data assimilation setting. Within the discussion of this equivalence we show that adding more layers (making the network deeper) is analogous to adding temporal resolution in a data assimilation framework. How one can find a candidate for the global minimum of the cost functions in the machine learning context using a method from data assimilation is discussed. Calculations on simple models from each side of the equivalence are reported. Also discussed is a framework in which the time or layer label is taken to be continuous, providing a differential equation, the Euler-Lagrange equation, which shows that the problem being solved is a two point boundary value problem familiar in the discussion of variational methods. The use of continuous layers is denoted "deepest learning". These problems respect a symplectic symmetry in continuous time/layer phase space. Both Lagrangian versions and Hamiltonian versions of these problems are presented. Their well-studied implementation in a discrete time/layer, while respected the symplectic structure, is addressed. The Hamiltonian version provides a direct rationale for back propagation as a solution method for the canonical momentum.},
-	urldate = {2017-07-28},
-	journal = {arXiv:1707.01415 [cs]},
-	author = {Abarbanel, Henry and Rozdeba, Paul and Shirman, Sasha},
-	month = jul,
-	year = {2017},
-	note = {arXiv: 1707.01415},
-	file = {Abarbanel et al_2017_Machine Learning, Deepest Learning.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/UU4PZJNB/Abarbanel et al_2017_Machine Learning, Deepest Learning.pdf:application/pdf}
-}
-
-@article{ba_layer_2016,
-	title = {Layer {Normalization}},
-	url = {http://arxiv.org/abs/1607.06450},
-	abstract = {Training state-of-the-art, deep neural networks is computationally expensive. One way to reduce the training time is to normalize the activities of the neurons. A recently introduced technique called batch normalization uses the distribution of the summed input to a neuron over a mini-batch of training cases to compute a mean and variance which are then used to normalize the summed input to that neuron on each training case. This significantly reduces the training time in feed-forward neural networks. However, the effect of batch normalization is dependent on the mini-batch size and it is not obvious how to apply it to recurrent neural networks. In this paper, we transpose batch normalization into layer normalization by computing the mean and variance used for normalization from all of the summed inputs to the neurons in a layer on a single training case. Like batch normalization, we also give each neuron its own adaptive bias and gain which are applied after the normalization but before the non-linearity. Unlike batch normalization, layer normalization performs exactly the same computation at training and test times. It is also straightforward to apply to recurrent neural networks by computing the normalization statistics separately at each time step. Layer normalization is very effective at stabilizing the hidden state dynamics in recurrent networks. Empirically, we show that layer normalization can substantially reduce the training time compared with previously published techniques.},
-	journal = {arXiv:1607.06450 [cs, stat]},
-	author = {Ba, Jimmy Lei and Kiros, Jamie Ryan and Hinton, Geoffrey E.},
-	month = jul,
-	year = {2016},
-	note = {citecount: 00080 
-arXiv: 1607.06450},
-	file = {Ba et al. - 2016 - Layer Normalization.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/748EV4VG/Ba et al. - 2016 - Layer Normalization.pdf:application/pdf}
-}
-
-@article{martius_extrapolation_2016,
-	title = {Extrapolation and learning equations},
-	url = {http://arxiv.org/abs/1610.02995},
-	abstract = {In classical machine learning, regression is treated as a black box process of identifying a suitable function from a hypothesis set without attempting to gain insight into the mechanism connecting inputs and outputs. In the natural sciences, however, finding an interpretable function for a phenomenon is the prime goal as it allows to understand and generalize results. This paper proposes a novel type of function learning network, called equation learner (EQL), that can learn analytical expressions and is able to extrapolate to unseen domains. It is implemented as an end-to-end differentiable feed-forward network and allows for efficient gradient based training. Due to sparsity regularization concise interpretable expressions can be obtained. Often the true underlying source expression is identified.},
-	journal = {arXiv:1610.02995 [cs]},
-	author = {Martius, Georg and Lampert, Christoph H.},
-	month = oct,
-	year = {2016},
-	note = {arXiv: 1610.02995},
-	file = {Martius and Lampert - 2016 - Extrapolation and learning equations.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/S6B2ZCX4/Martius and Lampert - 2016 - Extrapolation and learning equations.pdf:application/pdf}
-}
-
-@incollection{salimans_weight_2016,
-	title = {Weight {Normalization}: {A} {Simple} {Reparameterization} to {Accelerate} {Training} of {Deep} {Neural} {Networks}},
-	shorttitle = {Weight {Normalization}},
-	url = {http://papers.nips.cc/paper/6114-weight-normalization-a-simple-reparameterization-to-accelerate-training-of-deep-neural-networks.pdf},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 29},
-	publisher = {Curran Associates, Inc.},
-	author = {Salimans, Tim and Kingma, Diederik P},
-	editor = {Lee, D. D. and Sugiyama, M. and Luxburg, U. V. and Guyon, I. and Garnett, R.},
-	year = {2016},
-	note = {citecount: 00060},
-	pages = {901--909},
-	file = {Salimans and Kingma - 2016 - Weight Normalization A Simple Reparameterization .pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/P2M5XE34/Salimans and Kingma - 2016 - Weight Normalization A Simple Reparameterization .pdf:application/pdf;Salimans and Kingma - 2016 - Weight Normalization - Supplemental.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/TWTS9HG7/Salimans and Kingma - 2016 - Weight Normalization - Supplemental.pdf:application/pdf}
-}
-
-@incollection{montufar_number_2014,
-	title = {On the {Number} of {Linear} {Regions} of {Deep} {Neural} {Networks}},
-	url = {http://papers.nips.cc/paper/5422-on-the-number-of-linear-regions-of-deep-neural-networks.pdf},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 27},
-	publisher = {Curran Associates, Inc.},
-	author = {Montufar, Guido F and Pascanu, Razvan and Cho, Kyunghyun and Bengio, Yoshua},
-	editor = {Ghahramani, Z. and Welling, M. and Cortes, C. and Lawrence, N. D. and Weinberger, K. Q.},
-	year = {2014},
-	note = {citecount: 00130},
-	pages = {2924--2932},
-	file = {Montufar et al. - 2014 - On the Number of Linear Regions of Deep Neural Net.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/ET2JMA3Z/Montufar et al. - 2014 - On the Number of Linear Regions of Deep Neural Net.pdf:application/pdf;Montufar et al. - 2014 - On the Number of Linear Regions - Supplementary.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/9PXAJS2R/Montufar et al. - 2014 - On the Number of Linear Regions - Supplementary.pdf:application/pdf}
-}
-
-@article{hastie_extended_2017,
-	title = {Extended {Comparisons} of {Best} {Subset} {Selection}, {Forward} {Stepwise} {Selection}, and the {Lasso}},
-	url = {http://arxiv.org/abs/1707.08692},
-	abstract = {In exciting new work, Bertsimas et al. (2016) showed that the classical best subset selection problem in regression modeling can be formulated as a mixed integer optimization (MIO) problem. Using recent advances in MIO algorithms, they demonstrated that best subset selection can now be solved at much larger problem sizes that what was thought possible in the statistics community. They presented empirical comparisons of best subset selection with other popular variable selection procedures, in particular, the lasso and forward stepwise selection. Surprisingly (to us), their simulations suggested that best subset selection consistently outperformed both methods in terms of prediction accuracy. Here we present an expanded set of simulations to shed more light on these comparisons. The summary is roughly as follows: (a) neither best subset selection nor the lasso uniformly dominate the other, with best subset selection generally performing better in high signal-to-noise (SNR) ratio regimes, and the lasso better in low SNR regimes; (b) best subset selection and forward stepwise perform quite similarly throughout; (c) the relaxed lasso (actually, a simplified version of the original relaxed estimator defined in Meinshausen, 2007) is the overall winner, performing just about as well as the lasso in low SNR scenarios, and as well as best subset selection in high SNR scenarios.},
-	journal = {arXiv:1707.08692 [stat]},
-	author = {Hastie, Trevor and Tibshirani, Robert and Tibshirani, Ryan J.},
-	month = jul,
-	year = {2017},
-	note = {arXiv: 1707.08692},
-	file = {Hastie et al. - 2017 - Extended Comparisons of Best Subset Selection, For.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/RAJUFDVX/Hastie et al. - 2017 - Extended Comparisons of Best Subset Selection, For.pdf:application/pdf}
-}
-
-@article{minhas_influence_2017,
-	title = {Influence {Networks} in {International} {Relations}},
-	url = {http://arxiv.org/abs/1706.09072},
-	abstract = {Measuring influence and determining what drives it are persistent questions in political science and in network analysis more generally. Herein we focus on the domain of international relations. Our major substantive question is: How can we determine what characteristics make an actor influential? To address the topic of influence, we build on a multilinear tensor regression framework (MLTR) that captures influence relationships using a tensor generalization of a vector autoregression model. Influence relationships in that approach are captured in a pair of n x n matrices and provide measurements of how the network actions of one actor may influence the future actions of another. A limitation of the MLTR and earlier latent space approaches is that there are no direct mechanisms through which to explain why a certain actor is more or less influential than others. Our new framework, social influence regression, provides a way to statistically model the influence of one actor on another as a function of characteristics of the actors. Thus we can move beyond just estimating that an actor influences another to understanding why. To highlight the utility of this approach, we apply it to studying monthly-level conflictual events between countries as measured through the Integrated Crisis Early Warning System (ICEWS) event data project.},
-	urldate = {2017-07-10},
-	journal = {arXiv:1706.09072 [physics, stat]},
-	author = {Minhas, Shahryar and Hoff, Peter D. and Ward, Michael D.},
-	month = jun,
-	year = {2017},
-	note = {arXiv: 1706.09072},
-	file = {Minhas et al_2017_Influence Networks in International Relations.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/2HWUHRT2/Minhas et al_2017_Influence Networks in International Relations.pdf:application/pdf}
-}
-
-@book{nesterov_introductory_2004,
-	series = {Applied {Optimization}},
-	title = {Introductory {Lectures} on {Convex} {Optimization} - {A} {Basic} {Course}},
-	isbn = {978-1-4613-4691-3},
-	url = {http://www.springer.com/de/book/9781402075537},
-	abstract = {It was in the middle of the 1980s, when the seminal paper by Kar­ markar opened a new epoch in nonlinear optimization. The importance of this paper,...},
-	language = {en},
-	number = {87},
-	urldate = {2017-06-03},
-	publisher = {Springer},
-	author = {Nesterov, Yurii},
-	year = {2004},
-	note = {citecount: 02412},
-	file = {Nesterov - 2004 - Introductory Lectures on Convex Optimization - A B.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/8S2XQA3I/Nesterov - 2004 - Introductory Lectures on Convex Optimization - A B.pdf:application/pdf}
-}
-
-@inproceedings{szegedy_going_2015,
-	title = {Going deeper with convolutions},
-	doi = {10.1109/CVPR.2015.7298594},
-	abstract = {We propose a deep convolutional neural network architecture codenamed Inception that achieves the new state of the art for classification and detection in the ImageNet Large-Scale Visual Recognition Challenge 2014 (ILSVRC14). The main hallmark of this architecture is the improved utilization of the computing resources inside the network. By a carefully crafted design, we increased the depth and width of the network while keeping the computational budget constant. To optimize quality, the architectural decisions were based on the Hebbian principle and the intuition of multi-scale processing. One particular incarnation used in our submission for ILSVRC14 is called GoogLeNet, a 22 layers deep network, the quality of which is assessed in the context of classification and detection.},
-	booktitle = {2015 {IEEE} {Conference} on {Computer} {Vision} and {Pattern} {Recognition} ({CVPR})},
-	author = {Szegedy, Christian and Liu, Wei and Jia, Yangqing and Sermanet, Pierre and Reed, Scott and Anguelov, Dragomir and Erhan, Dumitru and Vanhoucke, Vincent and Rabinovich, Andrew},
-	month = jun,
-	year = {2015},
-	note = {citecount: 03482},
-	pages = {9},
-	file = {Szegedy et al. - 2015 - Going deeper with convolutions.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/MGAFXJ4T/Szegedy et al. - 2015 - Going deeper with convolutions.pdf:application/pdf}
-}
-
-@article{baldi_dropout_2014,
-	title = {The {Dropout} {Learning} {Algorithm}},
-	volume = {210},
-	issn = {0004-3702},
-	url = {http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3996711/},
-	doi = {10.1016/j.artint.2014.02.004},
-	abstract = {Dropout is a recently introduced algorithm for training neural network by randomly dropping units during training to prevent their co-adaptation. A mathematical analysis of some of the static and dynamic properties of dropout is provided using Bernoulli gating variables, general enough to accommodate dropout on units or connections, and with variable rates. The framework allows a complete analysis of the ensemble averaging properties of dropout in linear networks, which is useful to understand the non-linear case. The ensemble averaging properties of dropout in non-linear logistic networks result from three fundamental equations: (1) the approximation of the expectations of logistic functions by normalized geometric means, for which bounds and estimates are derived; (2) the algebraic equality between normalized geometric means of logistic functions with the logistic of the means, which mathematically characterizes logistic functions; and (3) the linearity of the means with respect to sums, as well as products of independent variables. The results are also extended to other classes of transfer functions, including rectified linear functions. Approximation errors tend to cancel each other and do not accumulate. Dropout can also be connected to stochastic neurons and used to predict firing rates, and to backpropagation by viewing the backward propagation as ensemble averaging in a dropout linear network. Moreover, the convergence properties of dropout can be understood in terms of stochastic gradient descent. Finally, for the regularization properties of dropout, the expectation of the dropout gradient is the gradient of the corresponding approximation ensemble, regularized by an adaptive weight decay term with a propensity for self-consistent variance minimization and sparse representations.},
-	language = {en},
-	urldate = {2017-05-02},
-	journal = {Artificial intelligence},
-	author = {Baldi, Pierre and Sadowski, Peter},
-	month = may,
-	year = {2014},
-	pmid = {24771879},
-	pmcid = {PMC3996711},
-	note = {citecount: 00068 },
-	pages = {78--122},
-	file = {Baldi et al_2014_The Dropout Learning Algorithm.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/8GFTJJ4B/Baldi et al_2014_The Dropout Learning Algorithm.pdf:application/pdf}
-}
-
-@incollection{lecun_efficient_1998,
-	edition = {1},
-	series = {Lecture {Notes} in {Computer} {Science}},
-	title = {Efficient {BackProp}},
-	isbn = {978-3-540-49430-0},
-	url = {http://yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf},
-	language = {en},
-	number = {1524},
-	urldate = {2017-04-18},
-	booktitle = {Neural networks: tricks of the trade},
-	publisher = {Springer},
-	author = {LeCun, Yann and Bottou, Léon and Orr, Genevieve B. and Müller, Klaus-Robert},
-	year = {1998},
-	note = {citecount: 01464 
-DOI: 10.1007/3-540-49430-8},
-	pages = {VIII, 432},
-	file = {LeCun et al. - 1998 - Efficient BackProp.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/ER6NACI6/LeCun et al. - 1998 - Efficient BackProp.pdf:application/pdf}
-}
-
-@article{tang_deep_2013,
-	title = {Deep learning using linear {Support} {Vector} {Machines}},
-	url = {http://arxiv.org/abs/1306.0239},
-	abstract = {Recently, fully-connected and convolutional neural networks have been trained to achieve state-of-the-art performance on a wide variety of tasks such as speech recognition, image classification, natural language processing, and bioinformatics. For classification tasks, most of these "deep learning" models employ the softmax activation function for prediction and minimize cross-entropy loss. In this paper, we demonstrate a small but consistent advantage of replacing the softmax layer with a linear support vector machine. Learning minimizes a margin-based loss instead of the cross-entropy loss. While there have been various combinations of neural nets and SVMs in prior art, our results using L2-SVMs show that by simply replacing softmax with linear SVMs gives significant gains on popular deep learning datasets MNIST, CIFAR-10, and the ICML 2013 Representation Learning Workshop's face expression recognition challenge.},
-	language = {en},
-	urldate = {2015-04-29},
-	journal = {arXiv:1306.0239 [cs, stat]},
-	author = {Tang, Yichuan},
-	month = jun,
-	year = {2013},
-	note = {citecount: 00164 
-arXiv: 1306.0239},
-	pages = {6},
-	file = {comments-deep-svm.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/6MW3T25B/comments-deep-svm.tm:text/plain;Tang - 2013 - Deep Learning using Linear Support Vector Machines copy.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/IIV3JS62/Tang - 2013 - Deep Learning using Linear Support Vector Machines copy.pdf:application/pdf}
-}
-
-@article{goodfellow_maxout_2013,
-	title = {Maxout {Networks}},
-	url = {http://arxiv.org/abs/1302.4389},
-	abstract = {We consider the problem of designing models to leverage a recently introduced approximate model averaging technique called dropout. We define a simple new model called maxout (so named because its output is the max of a set of inputs, and because it is a natural companion to dropout) designed to both facilitate optimization by dropout and improve the accuracy of dropout's fast approximate model averaging technique. We empirically verify that the model successfully accomplishes both of these tasks. We use maxout and dropout to demonstrate state of the art classification performance on four benchmark datasets: MNIST, CIFAR-10, CIFAR-100, and SVHN.},
-	language = {en},
-	urldate = {2017-04-18},
-	journal = {arXiv:1302.4389 [cs, stat]},
-	author = {Goodfellow, Ian J. and Warde-Farley, David and Mirza, Mehdi and Courville, Aaron and Bengio, Yoshua},
-	month = feb,
-	year = {2013},
-	note = {citecount: 00756 
-code: http://www-etud.iro.umontreal.ca/{\textasciitilde}goodfeli/maxout.html
-arxiv: 1302.4389},
-	pages = {9},
-	file = {Goodfellow et al. - 2013 - Maxout Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/WSJ969AT/Goodfellow et al. - 2013 - Maxout Networks.pdf:application/pdf}
-}
-
-@article{pascanu_number_2013,
-	title = {On the number of response regions of deep feed forward networks with piece-wise linear activations},
-	url = {http://arxiv.org/abs/1312.6098},
-	abstract = {This paper explores the complexity of deep feedforward networks with linear pre-synaptic couplings and rectified linear activations. This is a contribution to the growing body of work contrasting the representational power of deep and shallow network architectures. In particular, we offer a framework for comparing deep and shallow models that belong to the family of piecewise linear functions based on computational geometry. We look at a deep rectifier multi-layer perceptron (MLP) with linear outputs units and compare it with a single layer version of the model. In the asymptotic regime, when the number of inputs stays constant, if the shallow model has \$kn\$ hidden units and \$n\_0\$ inputs, then the number of linear regions is \$O(k{\textasciicircum}\{n\_0\}n{\textasciicircum}\{n\_0\})\$. For a \$k\$ layer model with \$n\$ hidden units on each layer it is \${\textbackslash}Omega({\textbackslash}left{\textbackslash}lfloor \{n\}/\{n\_0\}{\textbackslash}right{\textbackslash}rfloor{\textasciicircum}\{k-1\}n{\textasciicircum}\{n\_0\})\$. The number \${\textbackslash}left{\textbackslash}lfloor\{n\}/\{n\_0\}{\textbackslash}right{\textbackslash}rfloor{\textasciicircum}\{k-1\}\$ grows faster than \$k{\textasciicircum}\{n\_0\}\$ when \$n\$ tends to infinity or when \$k\$ tends to infinity and \$n {\textbackslash}geq 2n\_0\$. Additionally, even when \$k\$ is small, if we restrict \$n\$ to be \$2n\_0\$, we can show that a deep model has considerably more linear regions that a shallow one. We consider this as a first step towards understanding the complexity of these models and specifically towards providing suitable mathematical tools for future analysis.},
-	journal = {arXiv:1312.6098 [cs]},
-	author = {Pascanu, Razvan and Montufar, Guido and Bengio, Yoshua},
-	month = dec,
-	year = {2013},
-	note = {citecount: 00032 
-arXiv: 1312.6098},
-	file = {Pascanu et al. - 2013 - On the number of response regions of deep feed for.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/ABQMZVIC/Pascanu et al. - 2013 - On the number of response regions of deep feed for.pdf:application/pdf}
-}
-
-@incollection{ng_spectral_2002,
-	title = {On {Spectral} {Clustering}: {Analysis} and an algorithm},
-	shorttitle = {On {Spectral} {Clustering}},
-	url = {http://papers.nips.cc/paper/2092-on-spectral-clustering-analysis-and-an-algorithm.pdf},
-	urldate = {2017-04-12},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 14},
-	publisher = {MIT Press},
-	author = {Ng, Andrew Y. and Jordan, Michael I. and Weiss, Yair},
-	editor = {Dietterich, T. G. and Becker, S. and Ghahramani, Z.},
-	year = {2002},
-	note = {citecount: 05818},
-	pages = {849--856},
-	file = {Ng et al. - 2002 - On Spectral Clustering Analysis and an algorithm.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/V8QWH8QR/Ng et al. - 2002 - On Spectral Clustering Analysis and an algorithm.pdf:application/pdf}
-}
-
-@book{bousquet_advanced_2004,
-	address = {Berlin, Heidelberg},
-	series = {Lecture {Notes} in {Computer} {Science}},
-	title = {Advanced {Lectures} on {Machine} {Learning}},
-	volume = {3176},
-	isbn = {978-3-540-23122-6 978-3-540-28650-9},
-	url = {http://link.springer.com/10.1007/b100712},
-	urldate = {2016-07-25},
-	publisher = {Springer Berlin Heidelberg},
-	editor = {Bousquet, Olivier and von Luxburg, Ulrike and Rätsch, Gunnar},
-	year = {2004},
-	note = {citecount: 00036},
-	file = {Bousquet et al. - 2004 - Advanced Lectures on Machine Learning.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/5QUS8NTS/Bousquet et al. - 2004 - Advanced Lectures on Machine Learning.pdf:application/pdf}
+	file = {comments - representation drn.tm:/home/miguel/Zotero/storage/HMTN56IG/comments - representation drn.tm:text/plain}
 }
 
 @article{ioffe_batch_2015,
@@ -361,44 +355,10 @@ arXiv: 1312.6098},
 	author = {Ioffe, Sergey and Szegedy, Christian},
 	month = feb,
 	year = {2015},
-	note = {citecount: 01618 
+	note = {citecount: 01616 
 arXiv: 1502.03167},
 	pages = {11},
-	file = {Ioffe and Szegedy - 2015 - Batch Normalization Accelerating Deep Network Tra.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/CDCNFX6S/Ioffe and Szegedy - 2015 - Batch Normalization Accelerating Deep Network Tra.pdf:application/pdf}
-}
-
-@article{rajpurkar_cardiologist-level_2017,
-	title = {Cardiologist-{Level} {Arrhythmia} {Detection} with {Convolutional} {Neural} {Networks}},
-	url = {http://arxiv.org/abs/1707.01836},
-	abstract = {We develop an algorithm which exceeds the performance of board certified cardiologists in detecting a wide range of heart arrhythmias from electrocardiograms recorded with a single-lead wearable monitor. We build a dataset with more than 500 times the number of unique patients than previously studied corpora. On this dataset, we train a 34-layer convolutional neural network which maps a sequence of ECG samples to a sequence of rhythm classes. Committees of board-certified cardiologists annotate a gold standard test set on which we compare the performance of our model to that of 6 other individual cardiologists. We exceed the average cardiologist performance in both recall (sensitivity) and precision (positive predictive value).},
-	urldate = {2017-07-16},
-	journal = {arXiv:1707.01836 [cs]},
-	author = {Rajpurkar, Pranav and Hannun, Awni Y. and Haghpanahi, Masoumeh and Bourn, Codie and Ng, Andrew Y.},
-	month = jul,
-	year = {2017},
-	note = {arXiv: 1707.01836},
-	file = {Rajpurkar et al_2017_Cardiologist-Level Arrhythmia Detection with Convolutional Neural Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/S84ZA7QA/Rajpurkar et al_2017_Cardiologist-Level Arrhythmia Detection with Convolutional Neural Networks.pdf:application/pdf}
-}
-
-@misc{noauthor_metacademy_nodate,
-	title = {Metacademy},
-	url = {https://metacademy.org/},
-	urldate = {2017-07-05}
-}
-
-@article{duchi_adaptive_2011,
-	title = {Adaptive {Subgradient} {Methods} for {Online} {Learning} and {Stochastic} {Optimization}},
-	volume = {12},
-	issn = {ISSN 1533-7928},
-	url = {http://www.jmlr.org/papers/v12/duchi11a.html},
-	number = {Jul},
-	urldate = {2016-07-31},
-	journal = {Journal of Machine Learning Research},
-	author = {Duchi, John and Hazan, Elad and Singer, Yoram},
-	year = {2011},
-	note = {citecount: 01743},
-	pages = {2121--2159},
-	file = {Duchi et al. - 2011 - Adaptive Subgradient Methods for Online Learning a.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/BZ748GK7/Duchi et al. - 2011 - Adaptive Subgradient Methods for Online Learning a.pdf:application/pdf}
+	file = {Ioffe and Szegedy - 2015 - Batch Normalization Accelerating Deep Network Tra.pdf:/home/miguel/Zotero/storage/V4QV566D/Ioffe and Szegedy - 2015 - Batch Normalization Accelerating Deep Network Tra.pdf:application/pdf}
 }
 
 @misc{jordan_gradient-based_2017,
@@ -416,430 +376,17 @@ arXiv: 1502.03167},
 	note = {citecount: 00000 
 youtube: https://youtu.be/VE2ITg\_hGnI
 duration: 3725 seconds},
-	file = {Jordan - 2017 - On Gradient-Based Optimization Accelerated, Distr.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/JZHCFHTK/Jordan - 2017 - On Gradient-Based Optimization Accelerated, Distr.pdf:application/pdf}
+	file = {Jordan - 2017 - On Gradient-Based Optimization Accelerated, Distr.pdf:/home/miguel/Zotero/storage/5MAUVS9E/Jordan - 2017 - On Gradient-Based Optimization Accelerated, Distr.pdf:application/pdf}
 }
 
-@misc{noauthor_what_nodate,
-	title = {What my deep model doesn't know... {\textbar} {Yarin} {Gal} - {Blog} {\textbar} {Cambridge} {Machine} {Learning} {Group}},
-	url = {http://mlg.eng.cam.ac.uk/yarin/blog_3d801aa532c1ce.html},
-	abstract = {Trying to understand why dropout networks work so well, I was quite surprised to see that we can get principled uncertainty information from these models for free – without changing a thing.},
-	urldate = {2017-08-28},
-	file = {What my deep model doesn't know.html:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/T59C6LD7/What my deep model doesn't know.html:text/html}
-}
-
-@article{hardt_identity_2016,
-	title = {Identity matters in {Deep} {Learning}},
-	url = {http://arxiv.org/abs/1611.04231},
-	abstract = {An emerging design principle in deep learning is that each layer of a deep artificial neural network should be able to easily express the identity transformation. This idea not only motivated various normalization techniques, such as {\textbackslash}emph\{batch normalization\}, but was also key to the immense success of {\textbackslash}emph\{residual networks\}. In this work, we put the principle of {\textbackslash}emph\{identity parameterization\} on a more solid theoretical footing alongside further empirical progress. We first give a strikingly simple proof that arbitrarily deep linear residual networks have no spurious local optima. The same result for linear feed-forward networks in their standard parameterization is substantially more delicate. Second, we show that residual networks with ReLu activations have universal finite-sample expressivity in the sense that the network can represent any function of its sample provided that the model has more parameters than the sample size. Directly inspired by our theory, we experiment with a radically simple residual architecture consisting of only residual convolutional layers and ReLu activations, but no batch normalization, dropout, or max pool. Our model improves significantly on previous all-convolutional networks on the CIFAR10, CIFAR100, and ImageNet classification benchmarks.},
-	journal = {arXiv:1611.04231 [cs, stat]},
-	author = {Hardt, Moritz and Ma, Tengyu},
-	month = nov,
-	year = {2016},
-	note = {citecount: 00001 
-arXiv: 1611.04231},
-	file = {Hardt and Ma - 2016 - Identity matters in Deep Learning.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/HIP545D2/Hardt and Ma - 2016 - Identity matters in Deep Learning.pdf:application/pdf}
-}
-
-@article{nevo_identifying_2017,
-	title = {Identifying a minimal class of models for high-dimensional data},
-	volume = {18},
-	url = {https://paperwhy.aerobatic.io/2017/05/18/deep-sparse-rectifier-neural-networks/},
-	number = {24},
-	urldate = {2017-04-16},
-	journal = {Journal of Machine Learning Research},
-	author = {Nevo, Daniel and Ritov, Ya'acov},
-	year = {2017},
-	note = {citecount: 00000
-arXiv:1504.00494},
-	pages = {1--29},
-	file = {Nevo and Ritov - 2017 - Identifying a Minimal Class of Models for High--di.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/2C4HXW4Q/Nevo and Ritov - 2017 - Identifying a Minimal Class of Models for High--di.pdf:application/pdf;nevo_identifying_2017.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/ICCER7GI/nevo_identifying_2017.tm:text/plain}
-}
-
-@inproceedings{sutskever_importance_2013,
-	title = {On the importance of initialization and momentum in deep learning},
-	url = {http://proceedings.mlr.press/v28/sutskever13.html},
-	abstract = {Deep and recurrent neural networks (DNNs and RNNs respectively) are powerful models that were considered to be almost impossible to train using stochastic gradient descent with momentum. In this pa...},
-	language = {en},
-	urldate = {2017-06-01},
-	booktitle = {{PMLR}},
-	author = {Sutskever, Ilya and Martens, James and Dahl, George and Hinton, Geoffrey E.},
-	month = feb,
-	year = {2013},
-	note = {citecount: 00593},
-	pages = {1139--1147},
-	file = {Sutskever et al. - 2013 - On the importance of initialization and momentum i.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/3KD9GB4E/Sutskever et al. - 2013 - On the importance of initialization and momentum i.pdf:application/pdf;Sutskever et al. - 2013 - On the importance - Supplementary material.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/CBSZ96I7/Sutskever et al. - 2013 - On the importance - Supplementary material.pdf:application/pdf}
-}
-
-@misc{britz_deeplearning-papernotes:_2017,
-	title = {deeplearning-papernotes: {Summaries} and notes on {Deep} {Learning} research papers},
-	shorttitle = {deeplearning-papernotes},
-	url = {https://github.com/dennybritz/deeplearning-papernotes},
-	urldate = {2017-07-16},
-	author = {Britz, Denny},
-	month = jul,
-	year = {2017},
-	note = {original-date: 2015-12-19T18:34:21Z}
-}
-
-@article{kaiser_one_2017,
-	title = {One {Model} {To} {Learn} {Them} {All}},
-	url = {http://arxiv.org/abs/1706.05137},
-	abstract = {Deep learning yields great results across many fields, from speech recognition, image classification, to translation. But for each problem, getting a deep model to work well involves research into the architecture and a long period of tuning. We present a single model that yields good results on a number of problems spanning multiple domains. In particular, this single model is trained concurrently on ImageNet, multiple translation tasks, image captioning (COCO dataset), a speech recognition corpus, and an English parsing task. Our model architecture incorporates building blocks from multiple domains. It contains convolutional layers, an attention mechanism, and sparsely-gated layers. Each of these computational blocks is crucial for a subset of the tasks we train on. Interestingly, even if a block is not crucial for a task, we observe that adding it never hurts performance and in most cases improves it on all tasks. We also show that tasks with less data benefit largely from joint training with other tasks, while performance on large tasks degrades only slightly if at all.},
-	urldate = {2017-07-02},
-	journal = {arXiv:1706.05137 [cs, stat]},
-	author = {Kaiser, Lukasz and Gomez, Aidan N. and Shazeer, Noam and Vaswani, Ashish and Parmar, Niki and Jones, Llion and Uszkoreit, Jakob},
-	month = jun,
-	year = {2017},
-	note = {arXiv: 1706.05137},
-	file = {Kaiser et al_2017_One Model To Learn Them All.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/7CPRJD3C/Kaiser et al_2017_One Model To Learn Them All.pdf:application/pdf}
-}
-
-@article{nesterov_method_1983,
-	title = {A method of solving a convex programming problem with convergence rate {O} (1/k2)},
-	volume = {27},
-	url = {http://www.core.ucl.ac.be/~nesterov/Research/Papers/DAN83.pdf},
-	journal = {Soviet Mathematics Doklady},
-	author = {Nesterov, Yurii},
-	year = {1983},
-	note = {citecount: 01269},
-	pages = {372--376}
-}
-
-@misc{noauthor_distill_nodate,
-	title = {Distill — {Latest} articles about machine learning},
-	url = {http://distill.pub/},
-	abstract = {Articles about Machine Learning},
-	urldate = {2017-07-05},
-	journal = {Distill}
-}
-
-@article{wang_general_2004,
-	title = {General constructive representations for continuous piecewise-linear functions},
-	volume = {51},
-	issn = {1549-8328},
-	doi = {10.1109/TCSI.2004.834521},
-	abstract = {The problem of constructing a canonical representation for an arbitrary continuous piecewise-linear (PWL) function in any dimension is considered in this paper. We solve the problem based on a general lattice PWL representation, which can be determined for a given continuous PWL function using existing methods. We first transform the lattice PWL representation into the difference of two convex functions, then propose a constructive procedure to rewrite the latter as a canonical representation that consists of at most n-level nestings of absolute-value functions in n dimensions, hence give a thorough solution to the problem mentioned above. In addition, we point out that there exist notable differences between a lattice representation and the two novel general constructive representations proposed in this paper, and explain that these differences make all the three representations be of their particular interests.},
-	number = {9},
-	journal = {IEEE Transactions on Circuits and Systems I: Regular Papers},
-	author = {Wang, Shuning},
-	month = sep,
-	year = {2004},
-	note = {citecount: 00014},
-	pages = {1889--1896}
-}
-
-@article{poggio_why_2016,
-	title = {Why and {When} {Can} {Deep} -- but {Not} {Shallow} -- {Networks} {Avoid} the {Curse} of {Dimensionality}: a {Review}},
-	shorttitle = {Why and {When} {Can} {Deep} -- but {Not} {Shallow} -- {Networks} {Avoid} the {Curse} of {Dimensionality}},
-	url = {http://arxiv.org/abs/1611.00740},
-	abstract = {The paper characterizes classes of functions for which deep learning can be exponentially better than shallow learning. Deep convolutional networks are a special case of these conditions, though weight sharing is not the main reason for their exponential advantage.},
-	urldate = {2017-04-07},
-	journal = {arXiv:1611.00740 [cs]},
-	author = {Poggio, Tomaso and Mhaskar, Hrushikesh and Rosasco, Lorenzo and Miranda, Brando and Liao, Qianli},
-	month = nov,
-	year = {2016},
-	note = {citecount: 00002 
-arXiv: 1611.00740},
-	pages = {26},
-	file = {Poggio et al. - 2016 - Why and When Can Deep -- but Not Shallow -- Networ.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/THBSRBNS/Poggio et al. - 2016 - Why and When Can Deep -- but Not Shallow -- Networ.pdf:application/pdf}
-}
-
-@article{bruna_community_2017,
-	title = {Community {Detection} with {Graph} {Neural} {Networks}},
-	url = {http://arxiv.org/abs/1705.08415},
-	abstract = {We study data-driven methods for community detection in graphs. This estimation problem is typically formulated in terms of the spectrum of certain operators, as well as via posterior inference under certain probabilistic graphical models. Focusing on random graph families such as the Stochastic Block Model, recent research has unified these two approaches, and identified both statistical and computational signal-to-noise detection thresholds. We embed the resulting class of algorithms within a generic family of graph neural networks and show that they can reach those detection thresholds in a purely data-driven manner, without access to the underlying generative models and with no parameter assumptions. The resulting model is also tested on real datasets, requiring less computational steps and performing significantly better than rigid parametric models.},
-	urldate = {2017-06-11},
-	journal = {arXiv:1705.08415 [stat]},
-	author = {Bruna, Joan and Li, Xiang},
-	month = may,
-	year = {2017},
-	note = {citecount: 00000 
-arXiv: 1705.08415},
-	keywords = {ml, ml/nn, networks/communities, networks/sbm, wf:will\_assess},
-	file = {Bruna et al_2017_Community Detection with Graph Neural Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/UNURXNQX/Bruna et al_2017_Community Detection with Graph Neural Networks.pdf:application/pdf}
-}
-
-@article{swirszcz_local_2016,
-	title = {Local minima in training of neural networks},
-	url = {http://arxiv.org/abs/1611.06310},
-	abstract = {There has been a lot of recent interest in trying to characterize the error surface of deep models. This stems from a long standing question. Given that deep networks are highly nonlinear systems optimized by local gradient methods, why do they not seem to be affected by bad local minima? It is widely believed that training of deep models using gradient methods works so well because the error surface either has no local minima, or if they exist they need to be close in value to the global minimum. It is known that such results hold under very strong assumptions which are not satisfied by real models. In this paper we present examples showing that for such theorem to be true additional assumptions on the data, initialization schemes and/or the model classes have to be made. We look at the particular case of finite size datasets. We demonstrate that in this scenario one can construct counter-examples (datasets or initialization schemes) when the network does become susceptible to bad local minima over the weight space.},
-	language = {en},
-	urldate = {2017-05-03},
-	journal = {arXiv:1611.06310 [cs, stat]},
-	author = {Swirszcz, Grzegorz and Czarnecki, Wojciech Marian and Pascanu, Razvan},
-	month = nov,
-	year = {2016},
-	note = {citecount: 00001 
-arXiv: 1611.06310},
-	pages = {12},
-	file = {comments-localminima.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/VJCJB7XE/comments-localminima.tm:text/plain;Swirszcz et al. - 2016 - Local minima in training of neural networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/I8GERV73/Swirszcz et al. - 2016 - Local minima in training of neural networks.pdf:application/pdf}
-}
-
-@misc{noauthor_emerging_nodate,
-	title = {Emerging {Technology} from the {arXiv}},
-	url = {https://www.technologyreview.com/profile/emerging-technology-from-the-arxiv/},
-	abstract = {The mission of MIT Technology Review is to equip its audiences with the intelligence to understand a world shaped by technology.},
-	urldate = {2017-07-10},
-	journal = {MIT Technology Review}
-}
-
-@article{saxe_exact_2013,
-	title = {Exact solutions to the nonlinear dynamics of learning in deep linear neural networks},
-	url = {http://arxiv.org/abs/1312.6120},
-	abstract = {Despite the widespread practical success of deep learning methods, our theoretical understanding of the dynamics of learning in deep neural networks remains quite sparse. We attempt to bridge the gap between the theory and practice of deep learning by systematically analyzing learning dynamics for the restricted case of deep linear neural networks. Despite the linearity of their input-output map, such networks have nonlinear gradient descent dynamics on weights that change with the addition of each new hidden layer. We show that deep linear networks exhibit nonlinear learning phenomena similar to those seen in simulations of nonlinear networks, including long plateaus followed by rapid transitions to lower error solutions, and faster convergence from greedy unsupervised pretraining initial conditions than from random initial conditions. We provide an analytical description of these phenomena by finding new exact solutions to the nonlinear dynamics of deep learning. Our theoretical analysis also reveals the surprising finding that as the depth of a network approaches infinity, learning speed can nevertheless remain finite: for a special class of initial conditions on the weights, very deep networks incur only a finite, depth independent, delay in learning speed relative to shallow networks. We show that, under certain conditions on the training data, unsupervised pretraining can find this special class of initial conditions, while scaled random Gaussian initializations cannot. We further exhibit a new class of random orthogonal initial conditions on weights that, like unsupervised pre-training, enjoys depth independent learning times. We further show that these initial conditions also lead to faithful propagation of gradients even in deep nonlinear networks, as long as they operate in a special regime known as the edge of chaos.},
-	journal = {arXiv:1312.6120 [cond-mat, q-bio, stat]},
-	author = {Saxe, Andrew M. and McClelland, James L. and Ganguli, Surya},
-	month = dec,
-	year = {2013},
-	note = {citecount: 00174 
-arXiv: 1312.6120},
-	file = {Saxe et al. - 2013 - Exact solutions to the nonlinear dynamics of learn.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/BDXN9JWC/Saxe et al. - 2013 - Exact solutions to the nonlinear dynamics of learn.pdf:application/pdf}
-}
-
-@article{athiwaratkun_multimodal_2017,
-	title = {Multimodal {Word} {Distributions}},
-	url = {http://arxiv.org/abs/1704.08424},
-	abstract = {Word embeddings provide point representations of words containing useful semantic information. We introduce multimodal word distributions formed from Gaussian mixtures, for multiple word meanings, entailment, and rich uncertainty information. To learn these distributions, we propose an energy-based max-margin objective. We show that the resulting approach captures uniquely expressive semantic information, and outperforms alternatives, such as word2vec skip-grams, and Gaussian embeddings, on benchmark datasets such as word similarity and entailment.},
-	urldate = {2017-05-25},
-	journal = {arXiv:1704.08424 [cs, stat]},
-	author = {Athiwaratkun, Ben and Wilson, Andrew Gordon},
-	month = apr,
-	year = {2017},
-	note = {citecount: 00000 
-arXiv: 1704.08424},
-	file = {Athiwaratkun et al_2017_Multimodal Word Distributions.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/VKNWTJWF/Athiwaratkun et al_2017_Multimodal Word Distributions.pdf:application/pdf}
-}
-
-@article{hyland_generative_2015,
-	title = {A {Generative} {Model} of {Words} and {Relationships} from {Multiple} {Sources}},
-	url = {http://arxiv.org/abs/1510.00259},
-	abstract = {Neural language models are a powerful tool to embed words into semantic vector spaces. However, learning such models generally relies on the availability of abundant and diverse training examples. In highly specialised domains this requirement may not be met due to difficulties in obtaining a large corpus, or the limited range of expression in average use. Such domains may encode prior knowledge about entities in a knowledge base or ontology. We propose a generative model which integrates evidence from diverse data sources, enabling the sharing of semantic information. We achieve this by generalising the concept of co-occurrence from distributional semantics to include other relationships between entities or words, which we model as affine transformations on the embedding space. We demonstrate the effectiveness of this approach by outperforming recent models on a link prediction task and demonstrating its ability to profit from partially or fully unobserved data training labels. We further demonstrate the usefulness of learning from different data sources with overlapping vocabularies.},
-	urldate = {2015-12-07},
-	journal = {arXiv:1510.00259 [cs, stat]},
-	author = {Hyland, Stephanie L. and Karaletsos, Theofanis and Rätsch, Gunnar},
+@article{martius_extrapolation_2016,
+	title = {Extrapolation and learning equations},
+	url = {http://arxiv.org/abs/1610.02995},
+	abstract = {In classical machine learning, regression is treated as a black box process of identifying a suitable function from a hypothesis set without attempting to gain insight into the mechanism connecting inputs and outputs. In the natural sciences, however, finding an interpretable function for a phenomenon is the prime goal as it allows to understand and generalize results. This paper proposes a novel type of function learning network, called equation learner (EQL), that can learn analytical expressions and is able to extrapolate to unseen domains. It is implemented as an end-to-end differentiable feed-forward network and allows for efficient gradient based training. Due to sparsity regularization concise interpretable expressions can be obtained. Often the true underlying source expression is identified.},
+	journal = {arXiv:1610.02995 [cs]},
+	author = {Martius, Georg and Lampert, Christoph H.},
 	month = oct,
-	year = {2015},
-	note = {arXiv: 1510.00259},
-	keywords = {semantic analysis, wf:will\_read},
-	file = {Hyland et al_2015_A Generative Model of Words and Relationships from Multiple Sources.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/WPT29XU7/Hyland et al_2015_A Generative Model of Words and Relationships from Multiple Sources.pdf:application/pdf}
-}
-
-@unpublished{schmidt_minimizing_2016,
-	title = {Minimizing {Finite} {Sums} with the {Stochastic} {Average} {Gradient}},
-	url = {https://hal.inria.fr/hal-00860051},
-	language = {en},
-	author = {Schmidt, Mark and Le Roux, Nicolas and Bach, Francis},
-	month = may,
 	year = {2016},
-	note = {citecount: 00250},
-	file = {Schmidt et al. - 2016 - Minimizing Finite Sums with the Stochastic Average.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/PA9X6F7U/Schmidt et al. - 2016 - Minimizing Finite Sums with the Stochastic Average.pdf:application/pdf}
-}
-
-@incollection{bengio_greedy_2007,
-	title = {Greedy layer-wise training of {Deep} {Networks}},
-	url = {http://papers.nips.cc/paper/3048-greedy-layer-wise-training-of-deep-networks.pdf},
-	urldate = {2017-05-13},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 19},
-	publisher = {MIT Press},
-	author = {Bengio, Yoshua and Lamblin, Pascal and Popovici, Dan and Larochelle, Hugo},
-	editor = {Schölkopf, P. B. and Platt, J. C. and Hoffman, T.},
-	year = {2007},
-	note = {citecount: 02175},
-	pages = {153--160},
-	file = {Bengio et al. - 2007 - Appendix - Greedy Layer-Wise Training of Deep Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/72BRF4IS/Bengio et al. - 2007 - Appendix - Greedy Layer-Wise Training of Deep Networks.pdf:application/pdf;Bengio et al. - 2007 - Greedy Layer-Wise Training of Deep Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/2DV7TVUB/Bengio et al. - 2007 - Greedy Layer-Wise Training of Deep Networks.pdf:application/pdf;comments - greedy layer-wise.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/M6DKKEIN/comments - greedy layer-wise.tm:text/plain}
-}
-
-@article{shimodaira_improving_2000,
-	title = {Improving predictive inference under covariate shift by weighting the log-likelihood function},
-	volume = {90},
-	number = {2},
-	journal = {Journal of statistical planning and inference},
-	author = {Shimodaira, Hidetoshi},
-	year = {2000},
-	note = {citecount: 00623},
-	pages = {227--244},
-	file = {Shimodaira - 2000 - Improving predictive inference under covariate shi.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/7EIM58T4/Shimodaira - 2000 - Improving predictive inference under covariate shi.pdf:application/pdf}
-}
-
-@article{su_differential_2016,
-	title = {A differential equation for modeling {Nesterov}'s accelerated gradient method: {Theory} and insights},
-	volume = {17},
-	shorttitle = {A {Differential} {Equation} for {Modeling} {Nesterov}'s {Accelerated} {Gradient} {Method}},
-	url = {http://jmlr.org/papers/v17/15-084.html},
-	number = {153},
-	urldate = {2017-05-31},
-	journal = {Journal of Machine Learning Research},
-	author = {Su, Weijie and Boyd, Stephen and Candès, Emmanuel J.},
-	year = {2016},
-	note = {citecount: 00083 
-arXiv: 1503.01243},
-	pages = {1--43},
-	file = {Su et al. - 2016 - A Differential Equation for Modeling Nesterov's Ac.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/J6Z8K5CW/Su et al. - 2016 - A Differential Equation for Modeling Nesterov's Ac.pdf:application/pdf}
-}
-
-@article{breiman_bagging_1996,
-	title = {Bagging predictors},
-	volume = {24},
-	issn = {0885-6125, 1573-0565},
-	url = {https://link.springer.com/article/10.1023/A:1018054314350},
-	doi = {10.1023/A:1018054314350},
-	abstract = {Bagging predictors is a method for generating multiple versions of a predictor and using these to get an aggregated predictor. The aggregation averages over the versions when predicting a numerical outcome and does a plurality vote when predicting a class. The multiple versions are formed by making bootstrap replicates of the learning set and using these as new learning sets. Tests on real and simulated data sets using classification and regression trees and subset selection in linear regression show that bagging can give substantial gains in accuracy. The vital element is the instability of the prediction method. If perturbing the learning set can cause significant changes in the predictor constructed, then bagging can improve accuracy.},
-	language = {en},
-	number = {2},
-	urldate = {2017-05-23},
-	journal = {Machine Learning},
-	author = {Breiman, Leo},
-	month = aug,
-	year = {1996},
-	note = {citecount: 16604},
-	pages = {123--140},
-	file = {Breiman_1996_Bagging predictors.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/QDKF9BJS/Breiman_1996_Bagging predictors.pdf:application/pdf}
-}
-
-@article{vilnis_word_2014,
-	title = {Word {Representations} via {Gaussian} {Embedding}},
-	url = {http://arxiv.org/abs/1412.6623},
-	abstract = {Current work in lexical distributed representations maps each word to a point vector in low-dimensional space. Mapping instead to a density provides many interesting advantages, including better capturing uncertainty about a representation and its relationships, expressing asymmetries more naturally than dot product or cosine similarity, and enabling more expressive parameterization of decision boundaries. This paper advocates for density-based distributed embeddings and presents a method for learning representations in the space of Gaussian distributions. We compare performance on various word embedding benchmarks, investigate the ability of these embeddings to model entailment and other asymmetric relationships, and explore novel properties of the representation.},
-	urldate = {2017-05-25},
-	journal = {arXiv:1412.6623 [cs]},
-	author = {Vilnis, Luke and McCallum, Andrew},
-	month = dec,
-	year = {2014},
-	note = {citecount: 00043 
-arXiv: 1412.6623},
-	file = {Vilnis et al_2014_Word Representations via Gaussian Embedding.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/69MPBPKU/Vilnis et al_2014_Word Representations via Gaussian Embedding.pdf:application/pdf}
-}
-
-@inproceedings{glorot_deep_2011,
-	address = {Florida, USA},
-	title = {Deep {Sparse} {Rectifier} {Neural} {Networks}},
-	volume = {15},
-	url = {http://www.jmlr.org/proceedings/papers/v15/},
-	abstract = {While logistic sigmoid neurons are more biologically plausible than hyperbolic tangent neurons, the latter work better for training multi-layer neural networks. This paper shows that rectifying neurons are an even better model of biological neurons and yield equal or better performance than hyperbolic tangent networks in spite of the hard non-linearity and non-differentiability at zero, creating sparse representations with true zeros which seem remarkably suitable for naturally sparse data. Even though they can take advantage of semi-supervised setups with extra-unlabeled data, deep rectifier networks can reach their best performance without requiring any unsupervised pre-training on purely supervised tasks with large labeled datasets. Hence, these results can be seen as a new milestone in the attempts at understanding the difficulty in training deep but purely supervised neural networks, and closing the performance gap between neural networks learnt with and without unsupervised pre-training.},
-	language = {en},
-	urldate = {2017-04-07},
-	booktitle = {Proceedings of the {Fourteenth} {International} {Conference} on {Artificial} {Intelligence} and {Statistics}  {April} 11-13, 2011, {Fort} {Lauderdale}, {FL}, {USA}},
-	author = {Glorot, Xavier and Bordes, Antoine and Bengio, Yoshua},
-	month = apr,
-	year = {2011},
-	note = {citecount: 00935},
-	pages = {315--323},
-	file = {comments-relu.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/HHNE6QEU/comments-relu.tm:text/plain;Glorot et al. - 2011 - Deep Sparse Rectifier Neural Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/R9J6MQD7/Glorot et al. - 2011 - Deep Sparse Rectifier Neural Networks.pdf:application/pdf}
-}
-
-@article{pinkus_approximation_1999,
-	title = {Approximation theory of the {MLP} model in neural networks},
-	volume = {8},
-	url = {http://journals.cambridge.org/abstract_s0962492900002919},
-	urldate = {2017-05-29},
-	journal = {Acta Numerica},
-	author = {Pinkus, Allan},
-	year = {1999},
-	note = {citecount: 00333},
-	pages = {143--195},
-	file = {Pinkus - 1999 - Approximation theory of the MLP model in neural ne.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/KC52QJD2/Pinkus - 1999 - Approximation theory of the MLP model in neural ne.pdf:application/pdf}
-}
-
-@misc{noauthor_fermats_nodate,
-	title = {Fermat's {Library} {\textbar} {Home}},
-	url = {http://fermatslibrary.com/},
-	abstract = {Fermat’s Library is a platform for illuminating academic papers. A new scientific paper annotated every week.},
-	urldate = {2017-07-05},
-	journal = {Fermat's Library}
-}
-
-@incollection{baldi_understanding_2013,
-	title = {Understanding {Dropout}},
-	url = {http://papers.nips.cc/paper/4878-understanding-dropout.pdf},
-	abstract = {Dropout is a relatively new algorithm for training neural networks which relies on stochastically dropping out neurons during training in order to avoid the co-adaptation of feature detectors. We introduce a general formalism for studying dropout on either units or connections, with arbitrary probability values, and use it to analyze the averaging and regularizing properties of dropout in both linear and non-linear networks. For deep neural networks, the averaging properties of dropout are characterized by three recursive equations, including the approximation of expectations by normalized weighted geometric means. We provide estimates and bounds for these approximations and corroborate the results with simulations. We also show in simple cases how dropout performs stochastic gradient descent on a regularized error function.},
-	language = {en},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 26},
-	author = {Baldi, Pierre and Sadowski, Peter J},
-	editor = {Burges, C. J. C. and Bottou, L. and Welling, M. and Ghahramani, Z. and Weinberger, K. Q.},
-	year = {2013},
-	note = {citecount: 00066},
-	pages = {2814--2822},
-	file = {Baldi and Sadowski - 2013 - Understanding Dropout.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/7H3AJGB9/Baldi and Sadowski - 2013 - Understanding Dropout.pdf:application/pdf;comments-understanding-dropout.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/935UE3TS/comments-understanding-dropout.tm:text/plain}
-}
-
-@article{tresp_learning_2015,
-	title = {Learning with {Memory} {Embeddings}},
-	url = {http://arxiv.org/abs/1511.07972},
-	abstract = {Embedding learning, a.k.a. representation learning, has been shown to be able to model large-scale semantic knowledge graphs. A key concept is a mapping of the knowledge graph to a tensor representation whose entries are predicted by models using latent representations of generalized entities. Latent variable models are well suited to deal with the high dimensionality and sparsity of typical knowledge graphs. In recent publications the embedding models were extended to also consider time evolutions, time patterns and subsymbolic representations. In this paper we map embedding models, which were developed purely as solutions to technical problems for modelling temporal knowledge graphs, to various cognitive memory functions, in particular to semantic and concept memory, episodic memory, sensory memory, short-term memory, and working memory. We discuss learning, query answering, the path from sensory input to semantic decoding, and the relationship between episodic memory and semantic memory. We introduce a number of hypotheses on human memory that can be derived from the developed mathematical models.},
-	urldate = {2017-06-11},
-	journal = {arXiv:1511.07972 [cs]},
-	author = {Tresp, Volker and Esteban, Cristóbal and Yang, Yinchong and Baier, Stephan and Krompaß, Denis},
-	month = nov,
-	year = {2015},
-	note = {citecount: 00004 
-arXiv: 1511.07972},
-	keywords = {ml/embeddings/tensor, wf:will\_assess},
-	file = {Tresp et al_2015_Learning with Memory Embeddings.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/EDXKI4GA/Tresp et al_2015_Learning with Memory Embeddings.pdf:application/pdf}
-}
-
-@inproceedings{nair_rectified_2010,
-	address = {Haifa, Israel},
-	title = {Rectified linear units improve restricted boltzmann machines},
-	language = {en},
-	booktitle = {Proceedings of the 27th international conference on machine learning ({ICML}-10)},
-	author = {Nair, Vinod and Hinton, Geoffrey E},
-	year = {2010},
-	note = {citecount: 01616},
-	pages = {807--814},
-	file = {Nair et al_2010_Rectified linear units improve restricted boltzmann machines.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/7A7E8KBZ/Nair et al_2010_Rectified linear units improve restricted boltzmann machines.pdf:application/pdf}
-}
-
-@article{he_identity_2016,
-	title = {Identity {Mappings} in {Deep} {Residual} {Networks}},
-	url = {http://arxiv.org/abs/1603.05027},
-	abstract = {Deep residual networks have emerged as a family of extremely deep architectures showing compelling accuracy and nice convergence behaviors. In this paper, we analyze the propagation formulations behind the residual building blocks, which suggest that the forward and backward signals can be directly propagated from one block to any other block, when using identity mappings as the skip connections and after-addition activation. A series of ablation experiments support the importance of these identity mappings. This motivates us to propose a new residual unit, which makes training easier and improves generalization. We report improved results using a 1001-layer ResNet on CIFAR-10 (4.62\% error) and CIFAR-100, and a 200-layer ResNet on ImageNet. Code is available at: https://github.com/KaimingHe/resnet-1k-layers},
-	language = {en},
-	urldate = {2017-05-02},
-	journal = {arXiv:1603.05027 [cs]},
-	author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
-	month = mar,
-	year = {2016},
-	note = {citecount: 00247 
-arXiv: 1603.05027},
-	pages = {15},
-	file = {He et al. - 2016 - Identity Mappings in Deep Residual Networks.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/J9ZDITST/He et al. - 2016 - Identity Mappings in Deep Residual Networks.pdf:application/pdf}
-}
-
-@article{bishop_training_1995,
-	title = {Training with noise is equivalent to {Tikhonov} regularization},
-	volume = {7},
-	number = {1},
-	journal = {Neural computation},
-	author = {Bishop, Chris M},
-	year = {1995},
-	note = {citecount: 00545},
-	pages = {108--116},
-	file = {Bishop - 1995 - Training with noise is equivalent to Tikhonov regu.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/GQ6JMP3U/Bishop - 1995 - Training with noise is equivalent to Tikhonov regu.pdf:application/pdf}
-}
-
-@article{arias-castro_spectral_2017,
-	title = {Spectral {Clustering} based on local {PCA}},
-	volume = {18},
-	url = {http://jmlr.org/papers/v18/14-318.html},
-	number = {9},
-	urldate = {2017-04-12},
-	journal = {Journal of Machine Learning Research},
-	author = {Arias-Castro, Ery and Lerman, Gilad and Zhang, Teng},
-	year = {2017},
-	note = {citecount: 00025 
-code: http://sciences.ucf.edu/math/tengz},
-	pages = {1--57},
-	file = {Arias-Castro et al. - 2017 - Spectral Clustering Based on Local PCA.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/54HPC7MI/Arias-Castro et al. - 2017 - Spectral Clustering Based on Local PCA.pdf:application/pdf;comments - arias-castro et al.tm:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/4M3AWNQ7/comments - arias-castro et al.tm:text/plain}
-}
-
-@incollection{wager_dropout_2013,
-	title = {Dropout training as adaptive regularization},
-	url = {http://papers.nips.cc/paper/4882-dropout-training-as-adaptive-regularization},
-	booktitle = {Advances in {Neural} {Information} {Processing} {Systems} 26},
-	author = {Wager, Stefan and Wang, Sida and Liang, Percy},
-	editor = {Burges, C. J. C. and Bottou, L. and Welling, M. and Ghahramani, Z. and Weinberger, K. Q.},
-	year = {2013},
-	note = {citecount: 00156},
-	pages = {351--359},
-	file = {Appendix.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/DIVNE53N/Appendix.pdf:application/pdf;Wager et al. - 2013 - Dropout Training as Adaptive Regularization.pdf:/Users/miguel/Library/Application Support/Zotero/Profiles/1fz1fwch.default/zotero/storage/WC5CCE9A/Wager et al. - 2013 - Dropout Training as Adaptive Regularization.pdf:application/pdf}
+	note = {arXiv: 1610.02995},
+	file = {Martius and Lampert - 2016 - Extrapolation and learning equations.pdf:/home/miguel/Zotero/storage/97Q6R86D/Martius and Lampert - 2016 - Extrapolation and learning equations.pdf:application/pdf}
 }
