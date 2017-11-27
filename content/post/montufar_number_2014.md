@@ -18,13 +18,13 @@ networks with rectifier or maxout networks.
 ---
 
 Consider a **feed forward neural network** with linear layers $f\_{l} (x) = 
-W^l x + b^l$ followed by ReLUs $g\_{l} (z) = \max \{ 0, z \}$:
+W^l x + b^l$ followed by ReLUs $g\_{l} (z) = \max  \lbrace  0, z  \rbrace $:
 
 \\[ F = f\_{\operatorname{out}} \circ g\_{L} \circ f\_{L} \circ \ldots g\_{1}
    \circ f\_{1} . \\]
 
 Each unit $i$ of layer $l$ is linear at each side of the hyperplane $H\_{i} = 
-\{ W^l\_{i :} x + b^l = 0 \}$, where $g$ changes from 0 to the identity. The 
+\ \lbrace  W^l\_{i :} x + b^l = 0  \rbrace $, where $g$ changes from 0 to the identity. The 
 collection of al $H\_{i}$ therefore splits the space of inputs to this layer 
 into open, connected (and convex) sets. These are called **linear regions** for 
 $g\_{l} \circ f\_{l}$. More generally:

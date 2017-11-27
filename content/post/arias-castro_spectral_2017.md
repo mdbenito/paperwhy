@@ -61,8 +61,8 @@ $x\_i, x\_j$ which are both close enough and have similar enough
 covariance matrices $| C\_i - C\_j \| \le \eta r^2 $. This is encoded
 in the **affinity**:
 
-\\[ W\_{i j} = \mathbb{1}\_{\{ \| x\_i - x\_j \| < \varepsilon \}} 
-   \mathbb{1}\_{\{ \| C\_i - C\_j \| < \eta r^2 \}}, \\]
+\\[ W\_{i j} = \mathbb{1}\_{ \lbrace  \| x\_i - x\_j \| < \varepsilon  \rbrace } 
+   \mathbb{1}\_{ \lbrace  \| C\_i - C\_j \| < \eta r^2  \rbrace }, \\]
 
 Here the matrix norm is the *spectral norm*: intuitively, the smaller
 $\| C\_i - C\_j \|$ is, the "more parallel" the covariance matrices
@@ -75,14 +75,14 @@ The second method, local projection, skips the heuristic but instead
 computes projections $Q\_i$ onto the principal vectors of the $C\_i$
 (with eigenvalues $>\sqrt{\eta}\|Q\_i\|$) and uses the affinity
 
-\\[ W\_{i j} = \mathbb{1}\_{\{ \| x\_i - x\_j \| < \varepsilon \}} 
-   \mathbb{1}\_{\{ \| Q\_i - Q\_j \| < \eta \}}, \\]
+\\[ W\_{i j} = \mathbb{1}\_{ \lbrace  \| x\_i - x\_j \| < \varepsilon  \rbrace } 
+   \mathbb{1}\_{ \lbrace  \| Q\_i - Q\_j \| < \eta  \rbrace }, \\]
 
 Here is the third and best performing method, using local PCA, in
 detail:
 
-1. Create a subsample of adequately spaced data points $S = \{ x\_1,
-  \ldots, x\_{n\_0} \}$, which are centers of disjoint balls of radius
+1. Create a subsample of adequately spaced data points $S =  \lbrace  x\_1,
+  \ldots, x\_{n\_0}  \rbrace $, which are centers of disjoint balls of radius
   $r > 0$ a fixed hyperparameter.
 2. For each $x\_i \in S$, perform *local PCA* in the nhood $N\_r
    (x\_i)$ to compute the principal directions of an approximate

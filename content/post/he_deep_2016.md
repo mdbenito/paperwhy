@@ -66,11 +66,11 @@ Assuming that we augment data in one dimension to include biases into the
 network's weight matrices, we can compactly denote the building block of the 
 figure as
 
-\\[ \boldsymbol{y}=\mathcal{F} (\boldsymbol{x}, \{ W\_{i} \}) +\boldsymbol{x}, \\]
+\\[ \boldsymbol{y}=\mathcal{F} (\boldsymbol{x},  \lbrace  W\_{i}  \rbrace ) +\boldsymbol{x}, \\]
 
 where
 
-\\[ \mathcal{F} (\boldsymbol{x}, \{ W\_{i} \}) = W\_{i + 1} \sigma (W\_{i}
+\\[ \mathcal{F} (\boldsymbol{x},  \lbrace  W\_{i}  \rbrace ) = W\_{i + 1} \sigma (W\_{i}
    \boldsymbol{x}) . \\]
 
 Note that the shortcut $\mathcal{F}+\boldsymbol{x}$ doesn't add any parameters 
@@ -129,6 +129,6 @@ localization which I won't repeat here because the paper has "all" the
 details (modulo any actual implementation details ;-).
 
 
-[^1]: One minor modification is required in case $\dim \boldsymbol{x} \neq \dim \mathcal{F}$, namely using some projection matrix to change the dimension: $\boldsymbol{y}=\mathcal{F} (\boldsymbol{x}, \{ W\_{i} \}) + W\_{s} \boldsymbol{x}$.
+[^1]: One minor modification is required in case $\dim \boldsymbol{x} \neq \dim \mathcal{F}$, namely using some projection matrix to change the dimension: $\boldsymbol{y}=\mathcal{F} (\boldsymbol{x},  \lbrace  W\_{i}  \rbrace ) + W\_{s} \boldsymbol{x}$.
 
 [^2]: {{< cite ioffe_batch_2015 >}}.

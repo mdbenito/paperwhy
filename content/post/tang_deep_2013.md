@@ -51,7 +51,7 @@ of the (unconstrained, primal) SVM's objective:
 $$ l (w ; \mathrm{x}, \mathrm{t}) = \underset{w}{\min} \frac{1}{2} | w
    |^2 + C \sum\_{n = 1}^N \max (1 - w^{\top} x\_n t\_n, 0)^2, $$
 
-where $(x\_n, t\_n) \in \mathbb{R}^d \times \{ - 1, 1 \}$ are the
+where $(x\_n, t\_n) \in \mathbb{R}^d \times  \lbrace  - 1, 1  \rbrace $ are the
 outputs from the last layer and the training labels respectively and
 $w$ are the weights for the SVM. Note the square after the maximum:
 because the arguments of the max are linear, the whole function is
