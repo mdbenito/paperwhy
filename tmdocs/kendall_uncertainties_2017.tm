@@ -22,8 +22,18 @@
 
   <hrule>
 
-  <inactive|<cite|kendall_multi-task_2017>> builds upon this.
-  <inactive|<cite|kendall_geometric_2017>> too.
+  <cite|kendall_multi-task_2017> builds upon this.
+  <cite|kendall_geometric_2017> too.
+
+  Possibly one of the greatest drawbacks for many applications of deep
+  learning techniques is the lack of error bars. Typically, softmax outputs
+  are used and although they can be interpreted as probability distributions,
+  they are artificial and the lack of a true probabilistic model renders them
+  useless for the estimation of error other than test error and uncertainty.
+
+  Today's paper is a prequel to an application we already covered.<\footnote>
+    <cite|kendall_geometric_2017>.
+  </footnote>
 
   <\quotation>
     <dfn|Aleatoric uncertainty> captures noise inherent in the observations.
@@ -80,11 +90,18 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|3|?>>
+    <associate|footnote-1|<tuple|1|?>>
+    <associate|footnr-1|<tuple|1|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|bib>
+      kendall_multi-task_2017
+
+      kendall_geometric_2017
+    </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
