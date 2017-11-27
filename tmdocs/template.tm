@@ -1,4 +1,4 @@
-<TeXmacs|1.99.4>
+<TeXmacs|1.99.5>
 
 <style|<tuple|generic|paperwhy>>
 
@@ -9,9 +9,9 @@
     <assign|by-text|<macro|>>
   </hide-preamble>
 
-  <\doc-data|<doc-title|blah>|<doc-author|<author-data|<author-name|name,
-  surname>>>|<doc-author|<author-data|<author-name|name,
-  surname>>>|<doc-running-author|Miguel de Benito Delgado>>
+  <\doc-data|<doc-title|blah>|<doc-author|<author-data|<author-name|surname,
+  name>>>|<doc-author|<author-data|<author-name|surname,
+  name>>>|<doc-running-author|Miguel de Benito Delgado>>
     \;
   </doc-data|<doc-running-author|Miguel de Benito Delgado>>
 
@@ -24,8 +24,7 @@
   \;
 
   <\bibliography|bib|tm-plain|paperwhy.bib>
-    <\bib-list|0>
-      </bib-list>
+    <bib-list|0|>
   </bibliography>
 </body>
 
