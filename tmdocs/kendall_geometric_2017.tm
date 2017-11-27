@@ -10,9 +10,9 @@
   </hide-preamble>
 
   <\doc-data|<doc-title|Geometric loss functions for camera pose regression
-  with deep learning>|<doc-author|<author-data|<author-name|Alex,
-  Kendall>>>|<doc-author|<author-data|<author-name|Roberto,
-  Cipolla>>>|<doc-running-author|Miguel de Benito Delgado>>
+  with deep learning>|<doc-author|<author-data|<author-name|Kendall,
+  Alex>>>|<doc-author|<author-data|<author-name|Cipolla,
+  Roberto>>>|<doc-running-author|Miguel de Benito Delgado>>
     \;
   </doc-data|<doc-running-author|Miguel de Benito Delgado>>
 
@@ -20,8 +20,8 @@
 
   <strong|tl;dr:> A Bayesian point of view allows simultaneously training for
   two different losses without hyperparameters. For camera pose estimation,
-  geometric reprojection loss can be used to fine tune results. Improves:
-  <inactive|<cite|walch_image-based_2017>>
+  geometric reprojection loss can be used to fine tune results. This paper
+  improves <inactive|<cite|walch_image-based_2017>>.
 
   <hrule>
 
@@ -34,21 +34,20 @@
 
   <section*|Goal>
 
-  Given a flat image, we wish to recover position and orientation of the
+  Given some photograph, we wish to recover position and orientation of the
   camera (6 dofs). Some application examples are:
 
   <\itemize-dot>
     <item>Overlay a 3D model onto an image, e.g. for <em|augmented reality>.
 
-    <item>Locate photographs in maps, e.g. Google Maps' feature placing
-    users' pictures automatically.
+    <item>Locate pictures in maps, e.g. Google Maps' feature placing users'
+    pictures automatically.
 
     <item>Estimate full pose of autonomous vehicles with inaccurate
     positioning: the idea is to fuse GPS and / or inertial sensor data with
-    visual information (e.g. via some filtering technique) for full 6 dof
-    estimation in an \Pabsolute\Q frame of reference. Note that this is
-    easier in a structured (road) environment than e.g. in the air or
-    sea.<\footnote>
+    visual information for full 6 dof estimation in an \Pabsolute\Q frame of
+    reference. Note that this is easier in a structured (road) environment
+    than e.g. in the air or sea.<\footnote>
       Note too that LIDAR is not an option for ships due to the long ranges
       required and radar has too low resolution.
     </footnote>
@@ -220,8 +219,8 @@
 <\auxiliary>
   <\collection>
     <\associate|figure>
-      <tuple|normal|Architecture. Picture cannibalized without permission
-      from <mark|<arg|body>|<inline-tag|cite|<with|mode|<quote|src>|color|<quote|black>|walch_image-based_2017>>>|<pageref|auto-3>>
+      <tuple|normal|Architecture. Picture shamelessly cannibalized without
+      permission from <mark|<arg|body>|<inline-tag|cite|<with|mode|<quote|src>|color|<quote|black>|walch_image-based_2017>>>.|<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Goal>
