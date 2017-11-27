@@ -1451,4 +1451,125 @@ references:
     the lasso in low SNR scenarios, and as well as best subset selection in high SNR
     scenarios.'
   URL: http://arxiv.org/abs/1707.08692
+
+- id: kendall_multi-task_2017
+  type: article-journal
+  author:
+  - family: Kendall
+    given: Alex
+  - family: Gal
+    given: Yarin
+  - family: Cipolla
+    given: Roberto
+  issued:
+  - year: '2017'
+    month: '5'
+  title: Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry
+    and Semantics
+  container-title: arXiv:1705.07115 \[cs\]
+  note: 'arXiv: 1705.07115'
+  abstract: Numerous deep learning applications benefit from multi-task learning with
+    multiple regression and classification objectives. In this paper we make the observation
+    that the performance of such systems is strongly dependent on the relative weighting
+    between each task’s loss. Tuning these weights by hand is a difficult and expensive
+    process, making multi-task learning prohibitive in practice. We propose a principled
+    approach to multi-task deep learning which weighs multiple loss functions by considering
+    the homoscedastic uncertainty of each task. This allows us to simultaneously learn
+    various quantities with different units or scales in both classification and regression
+    settings. We demonstrate our model learning per-pixel depth regression, semantic
+    and instance segmentation from a monocular input image. Perhaps surprisingly,
+    we show our model can learn multi-task weightings and outperform separate models
+    trained individually on each task.
+  URL: http://arxiv.org/abs/1705.07115
+
+- id: kendall_geometric_2017
+  type: article-journal
+  author:
+  - family: Kendall
+    given: Alex
+  - family: Cipolla
+    given: Roberto
+  issued:
+  - year: '2017'
+    month: '4'
+  title: Geometric Loss Functions for Camera Pose Regression with Deep Learning
+  container-title: arXiv:1704.00390 \[cs\]
+  note: 'arXiv: 1704.00390'
+  abstract: Deep learning has shown to be effective for robust and real-time monocular
+    image relocalisation. In particular, PoseNet is a deep convolutional neural network
+    which learns to regress the 6-DOF camera pose from a single image. It learns to
+    localize using high level features and is robust to difficult lighting, motion
+    blur and unknown camera intrinsics, where point based SIFT registration fails.
+    However, it was trained using a naive loss function, with hyper-parameters which
+    require expensive tuning. In this paper, we give the problem a more fundamental
+    theoretical treatment. We explore a number of novel loss functions for learning
+    camera pose which are based on geometry and scene reprojection error. Additionally
+    we show how to automatically learn an optimal weighting to simultaneously regress
+    position and orientation. By leveraging geometry, we demonstrate that our technique
+    significantly improves PoseNet’s performance across datasets ranging from indoor
+    rooms to a small city.
+  URL: http://arxiv.org/abs/1704.00390
+
+- id: walch_image-based_2016
+  type: article-journal
+  author:
+  - family: Walch
+    given: Florian
+  - family: Hazirbas
+    given: Caner
+  - family: Leal-Taixé
+    given: Laura
+  - family: Sattler
+    given: Torsten
+  - family: Hilsenbeck
+    given: Sebastian
+  - family: Cremers
+    given: Daniel
+  issued:
+  - year: '2016'
+    month: '11'
+  title: Image-based localization using LSTMs for structured feature correlation
+  container-title: arXiv:1611.07890 \[cs\]
+  note: 'arXiv: 1611.07890'
+  abstract: In this work we propose a new CNN+LSTM architecture for camera pose regression
+    for indoor and outdoor scenes. CNNs allow us to learn suitable feature representations
+    for localization that are robust against motion blur and illumination changes.
+    We make use of LSTM units on the CNN output, which play the role of a structured
+    dimensionality reduction on the feature vector, leading to drastic improvements
+    in localization performance. We provide extensive quantitative comparison of CNN-based
+    and SIFT-based localization methods, showing the weaknesses and strengths of each.
+    Furthermore, we present a new large-scale indoor dataset with accurate ground
+    truth from a laser scanner. Experimental results on both indoor and outdoor public
+    datasets show our method outperforms existing deep architectures, and can localize
+    images in hard conditions, e.g., in the presence of mostly textureless surfaces,
+    where classic SIFT-based methods fail.
+  URL: http://arxiv.org/abs/1611.07890
+
+- id: kendall_what_2017
+  type: article-journal
+  author:
+  - family: Kendall
+    given: Alex
+  - family: Gal
+    given: Yarin
+  issued:
+  - year: '2017'
+    month: '3'
+  title: What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?
+  container-title: arXiv:1703.04977 \[cs\]
+  note: 'arXiv: 1703.04977'
+  abstract: There are two major types of uncertainty one can model. Aleatoric uncertainty
+    captures noise inherent in the observations. On the other hand, epistemic uncertainty
+    accounts for uncertainty in the model – uncertainty which can be explained away
+    given enough data. Traditionally it has been difficult to model epistemic uncertainty
+    in computer vision, but with new Bayesian deep learning tools this is now possible.
+    We study the benefits of modeling epistemic vs. aleatoric uncertainty in Bayesian
+    deep learning models for vision tasks. For this we present a Bayesian deep learning
+    framework combining input-dependent aleatoric uncertainty together with epistemic
+    uncertainty. We study models under the framework with per-pixel semantic segmentation
+    and depth regression tasks. Further, our explicit uncertainty formulation leads
+    to new loss functions for these tasks, which can be interpreted as learned attenuation.
+    This makes the loss more robust to noisy data, also giving new state-of-the-art
+    results on segmentation and depth regression benchmarks.
+  URL: http://arxiv.org/abs/1703.04977
 ...
