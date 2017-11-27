@@ -20,17 +20,17 @@
 
   <strong|tl;dr:> A Bayesian point of view allows simultaneously training for
   two different losses without hyperparameters. For camera pose estimation,
-  geometric reprojection loss can be used to fine tune results. This paper
-  improves <inactive|<cite|walch_image-based_2017>>.
+  geometric reprojection loss can be used to fine tune results.
 
   <hrule>
 
   Today's paper application is interesting enough by itself, but perhaps more
   so how it uses Bayesian ideas to train jointly for multiple losses,
-  balancing them but without adding hyperparameters. Since I find this to be
-  the take-away message, instead of going through a tedious literature review
-  of the field of application, which the paper does much better, let's just
-  dive in with a couple of quick comments:
+  balancing them but without adding hyperparameters.<\footnote>
+    The basic idea is explained in <cite|kendall_what_2017>.
+  </footnote> Since I find this to be the take-away message, instead of going
+  through a tedious literature review of the field of application, which the
+  paper does much better, let's just dive in with a couple of quick comments:
 
   <section*|Goal>
 
@@ -59,11 +59,12 @@
   <\itemize-dot>
     <item>Flat images and 3D points: costly because it requires careful
     crafting with LIDAR-like solutions or must be approximated with things
-    like <todo|structure from motion>.
+    like <hlink|structure from motion|https://en.wikipedia.org/wiki/Structure_from_motion>.
 
     <item>RGB-D sensor data: best used in indoor applications because depth
-    info in RGB-D degrades (quadratically <inactive|<cite|walch_im>>) with
-    distance.
+    info in RGB-D degrades with distance (quadratically<\footnote>
+      <cite|walch_image-based_2016>.
+    </footnote>).
 
     <item>Stereoscopic images: this option seems best for outdoor
     applications: standard techniques can provide relative position and
@@ -74,13 +75,14 @@
   <section*|Architecture>
 
   As is common, the authors use a pretrained CNN model for image
-  classification (<todo|GoogLeNet paper>) with the top layer and softmax
-  output removed. In their stead two independent fully connected layers
-  perform regression to predict the position vector
-  <math|\<b-p\>\<in\>\<bbb-R\><rsup|3>> and rotation quaternion
-  <math|\<b-q\>\<in\>\<bbb-R\><rsup|4>>. Naturally, one wishes to train for
-  <math|\<b-p\>,\<b-q\>> jointly since it is to be expected that, conditioned
-  on an image, they are strongly related.
+  classification<\footnote>
+    <cite|szegedy_going_2015>.
+  </footnote> with the top layer and softmax output removed. In their stead
+  two independent fully connected layers perform regression to predict the
+  position vector <math|\<b-p\>\<in\>\<bbb-R\><rsup|3>> and rotation
+  quaternion <math|\<b-q\>\<in\>\<bbb-R\><rsup|4>>. Naturally, one wishes to
+  train for <math|\<b-p\>,\<b-q\>> jointly since it is to be expected that,
+  conditioned on an image, they are strongly related.
 
   <\quotation>
     The model learns a better representation for pose when supervised with
@@ -93,7 +95,7 @@
 
   <big-figure|<image|../static/img/kendall_geometric_2017-fig1-fake.jpg|755px|228px||>|Architecture.
   Picture shamelessly cannibalized without permission from
-  <inactive|<cite|walch_image-based_2017>>.>
+  <cite|walch_image-based_2016>.>
 
   <section*|Improving the loss>
 
@@ -118,8 +120,7 @@
   where <math|f> is the neural network, <math|\<b-x\>> the input image and
   <math|\<b-y\>> is one of <math|\<b-p\>,\<b-q\>>. We leave the details of
   this idea for a later post on a previous paper,<\footnote>
-    <inactive|<cite|>> Multi-Task Learning Using Uncertainty to Weigh Losses
-    for Scene Geometry and Semantics
+    <cite|kendall_multi-task_2017> but also <cite|kendall_what_2017>.
   </footnote> but for now, suffice to say that it boils down to adding two
   <em|trainable parameters> <math|<wide|\<sigma\>|^><rsub|p>,<wide|\<sigma\>|^><rsub|q>\<in\>\<bbb-R\>>
   to the model and optimising
@@ -175,9 +176,9 @@
 
   As usual, check the paper for the benchmarks and the details of how it
   outperforms everyone else ;). We only remark that this model improves the
-  already impressive results of <inactive|<cite|walch_>>, using PoseNet with
-  spatial LSTMs, but since this paper uses a linear combination for the loss,
-  the fruit is hanging really low! Also, stay tuned:
+  already impressive results of <cite|walch_image-based_2016>, using PoseNet
+  with spatial LSTMs, but since this paper uses a linear combination for the
+  loss, the fruit is hanging really low! Also, stay tuned:
 
   <\quotation>
     For many applications which require localization, such as mobile
@@ -187,7 +188,34 @@
   </quotation>
 
   <\bibliography|bib|tm-plain|paperwhy.bib>
-    <bib-list|0|>
+    <\bib-list|4>
+      <bibitem*|1><label|bib-kendall_what_2017>Alex Kendall<localize| and
+      >Yarin Gal.<newblock> What Uncertainties Do We Need in Bayesian Deep
+      Learning for Computer Vision?<newblock>
+      <with|font-shape|italic|ArXiv:1703.04977 [cs]>, mar 2017.<newblock>
+      ArXiv: 1703.04977.<newblock>
+
+      <bibitem*|2><label|bib-kendall_multi-task_2017>Alex Kendall, Yarin
+      Gal<localize|, and >Roberto Cipolla.<newblock> Multi-Task Learning
+      Using Uncertainty to Weigh Losses for Scene Geometry and
+      Semantics.<newblock> <with|font-shape|italic|ArXiv:1705.07115 [cs]>,
+      may 2017.<newblock> ArXiv: 1705.07115.<newblock>
+
+      <bibitem*|3><label|bib-szegedy_going_2015>Christian Szegedy, Wei Liu,
+      Yangqing Jia, Pierre Sermanet, Scott Reed, Dragomir Anguelov, Dumitru
+      Erhan, Vincent Vanhoucke<localize|, and >Andrew Rabinovich.<newblock>
+      Going deeper with convolutions.<newblock> <localize|In
+      ><with|font-shape|italic|2015 IEEE Conference on Computer Vision and
+      Pattern Recognition (CVPR)>, <localize|page >9. Jun 2015.<newblock>
+      Citecount: 03482.<newblock>
+
+      <bibitem*|4><label|bib-walch_image-based_2016>Florian Walch, Caner
+      Hazirbas, Laura Leal-Taixé, Torsten Sattler, Sebastian
+      Hilsenbeck<localize|, and >Daniel Cremers.<newblock> Image-based
+      localization using LSTMs for structured feature correlation.<newblock>
+      <with|font-shape|italic|ArXiv:1611.07890 [cs]>, nov 2016.<newblock>
+      ArXiv: 1611.07890.<newblock>
+    </bib-list>
   </bibliography>
 </body>
 
@@ -200,27 +228,52 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|?>>
+    <associate|auto-1|<tuple|1|?>>
     <associate|auto-2|<tuple|<with|mode|<quote|math>|\<bullet\>>|?>>
     <associate|auto-3|<tuple|1|?>>
     <associate|auto-4|<tuple|1|?>>
-    <associate|auto-5|<tuple|3|?>>
-    <associate|auto-6|<tuple|3|?>>
-    <associate|auto-7|<tuple|3|?>>
+    <associate|auto-5|<tuple|6|?>>
+    <associate|auto-6|<tuple|6|?>>
+    <associate|auto-7|<tuple|6|?>>
+    <associate|bib-kendall_multi-task_2017|<tuple|2|?>>
+    <associate|bib-kendall_what_2017|<tuple|1|?>>
+    <associate|bib-szegedy_going_2015|<tuple|3|?>>
+    <associate|bib-walch_image-based_2016|<tuple|4|?>>
     <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-2|<tuple|2|?>>
     <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-4|<tuple|4|?>>
+    <associate|footnote-5|<tuple|5|?>>
+    <associate|footnote-6|<tuple|6|?>>
     <associate|footnr-1|<tuple|1|?>>
     <associate|footnr-2|<tuple|2|?>>
     <associate|footnr-3|<tuple|3|?>>
+    <associate|footnr-4|<tuple|4|?>>
+    <associate|footnr-5|<tuple|5|?>>
+    <associate|footnr-6|<tuple|6|?>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
+    <\associate|bib>
+      kendall_what_2017
+
+      walch_image-based_2016
+
+      szegedy_going_2015
+
+      walch_image-based_2016
+
+      kendall_multi-task_2017
+
+      kendall_what_2017
+
+      walch_image-based_2016
+    </associate>
     <\associate|figure>
       <tuple|normal|Architecture. Picture shamelessly cannibalized without
-      permission from <mark|<arg|body>|<inline-tag|cite|<with|mode|<quote|src>|color|<quote|black>|walch_image-based_2017>>>.|<pageref|auto-3>>
+      permission from [<write|bib|walch_image-based_2016><reference|bib-walch_image-based_2016>].|<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Goal>
