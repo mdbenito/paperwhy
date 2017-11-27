@@ -121,17 +121,17 @@ requires that sampling from training data be representative of the full data
 distribution, but precisely one of the desired abilities of this model is that 
 it extrapolate (generalize) beyond its input to data ranges not represented 
 in the training data. Therefore the authors propose a two-goal objective to 
-choose the best architecture among a set $\\{ \phi \_{k} \\}\_{k = 1}^K$:
+choose the best architecture among a set $ \lbrace  \phi \_{k}  \rbrace \_{k = 1}^K$:
 
 \\[ \underset{k = 1, \ldots, K}{\operatorname{argmin}}  [(r^v (\phi \_{k}))^2 
 +
    (r^s (\phi \_{k}))^2], \\]
 
-where $r^v, r^s : \\{ \phi \_{k} \\}\_{k = 1} \rightarrow \{ 1, \ldots, K \}$ 
+where $r^v, r^s :  \lbrace  \phi \_{k}  \rbrace \_{k = 1} \rightarrow  \lbrace  1, \ldots, K  \rbrace $ 
 sort (rank) all $K$ models respectively by validation accuracy and and 
 complexity (measured as the number of units with activation above a given 
-threshold). This is a way of embedding both measures into a common space ($\{ 
-1, \ldots, K \}$) for joint optimization.
+threshold). This is a way of embedding both measures into a common space ($ \lbrace  
+1, \ldots, K  \rbrace $) for joint optimization.
 
 Because these values might correspond to (possibly poor) local optima subject 
 to the initial values of the parameters, multiple runs are used to "estimate 
@@ -151,8 +151,8 @@ Estimates as to the accuracy of some sample-approximation to these quantities
 would then be necessary.
 
 An alternative idea to explore could be Bayesian model selection. Basically 
-one postulates some prior over a set of hypothesis spaces $\\{ \mathcal{H}\_{k} 
-\\}\_{k = 1}^K$, then computes the posterior of the data given some hypothesis 
+one postulates some prior over a set of hypothesis spaces $ \lbrace  \mathcal{H}\_{k} 
+ \rbrace \_{k = 1}^K$, then computes the posterior of the data given some hypothesis 
 by marginalizing over parameter space $\Omega$:
 
 \\[ p (\boldsymbol{t}|\mathcal{H}\_{k}) = \int\_{\Omega} p (\boldsymbol{t}|W,

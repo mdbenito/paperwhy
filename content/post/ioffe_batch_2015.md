@@ -89,7 +89,7 @@ propose two simplifications:
 This avoids computing covariance matrices and still improves convergence even 
    if there are cross-correlations among features.
 1. Compute statistics $\mu \_{l, B}$ and $\sigma \_{l, B}$ at each layer $l$ 
-   *for SGD mini-batches* $B = \{ x\_{B_1}, \ldots, x\_{B_n} \}$ instead of 
+   *for SGD mini-batches* $B =  \lbrace  x\_{B_1}, \ldots, x\_{B_n}  \rbrace $ instead of 
    over the full sample (these are rough approximations to the “true” 
    statistics $\mu \_{l}, \sigma \_{l}$ at a layer with *fixed* parameters).
 

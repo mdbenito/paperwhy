@@ -236,17 +236,17 @@ picture for intuition:
 By rewriting standard SGD into an iterative solution of linear $L^2$-penalized 
 problems
 
-\\[ \hat{\beta}\_{t + 1} = \operatorname{argmin}\_{\beta}  \left\\{ l
+\\[ \hat{\beta}\_{t + 1} = \operatorname{argmin}\_{\beta}  \left \lbrace  l
    (\hat{\beta}\_{t} ; x\_{t}, y\_{t}) + \nabla l (\hat{\beta}\_{t})  (\beta -
    \hat{\beta}\_{t}) + \frac{1}{2 \eta \_{t}}  \| \beta - \hat{\beta}\_{t}
-   \|\_{2}^2 \right\\} \\]
+   \|\_{2}^2 \right \rbrace  \\]
 
 and substituting the dropout penalty for the penalty in this formulation, one
 obtains the update rule
 
-\\[ \hat{\beta}\_{t + 1} =\operatorname{argmin}\_{\beta}  \left\\{ l
+\\[ \hat{\beta}\_{t + 1} =\operatorname{argmin}\_{\beta}  \left \lbrace  l
    (\hat{\beta}\_{t} ; x\_{t}, y\_{t}) + g\_{t}  (\beta - \hat{\beta}\_{t}) +
-   R^q (\beta - \hat{\beta}\_{t} ; \hat{\beta}\_{t}) \right\\} \\]
+   R^q (\beta - \hat{\beta}\_{t} ; \hat{\beta}\_{t}) \right \rbrace  \\]
 
 with the **centered quadratic dropout penalty**, similarly to the entry in 
 Table 1:
@@ -293,7 +293,7 @@ authors' approach
 
 [^1]: See {{< cite duchi_adaptive_2011 >}}.
 
-[^2]: Recall that in a GLM one uses a so-called **link function** $h$ to relate a linear predictor $x \beta$ with the posterior $p (y|x)$ by means of the relationship $\mathbb{E} [y|x] = h^{- 1} (x \beta)$. In our notation, $h = A'$. To fix ideas think of logistic regression, where $p (y|x) = (1 + \mathrm{e}^{- x \beta})^{- 1}$. In this case we assume $y \in \\{ 0, 1 \\}$, the log likelihood is $p (\boldsymbol{y}|\boldsymbol{x}) = \prod\_{i} p\_{i}^{y\_{i}} (1 -p\_{i})^{1 - y\_{i}}$, with $p\_{i} := (1 + \mathrm{e}^{- x\_{i} \beta})^{- 1}$ and the negative log likelihood is the **cross entropy loss**: $\log p (y|x) = - \sum\_{i} y\_{i} \log p\_{i} + (1 - y\_{i}) \log (1 -p\_{i})$.
+[^2]: Recall that in a GLM one uses a so-called **link function** $h$ to relate a linear predictor $x \beta$ with the posterior $p (y|x)$ by means of the relationship $\mathbb{E} [y|x] = h^{- 1} (x \beta)$. In our notation, $h = A'$. To fix ideas think of logistic regression, where $p (y|x) = (1 + \mathrm{e}^{- x \beta})^{- 1}$. In this case we assume $y \in \lbrace  0, 1  \rbrace $, the log likelihood is $p (\boldsymbol{y}|\boldsymbol{x}) = \prod\_{i} p\_{i}^{y\_{i}} (1 -p\_{i})^{1 - y\_{i}}$, with $p\_{i} := (1 + \mathrm{e}^{- x\_{i} \beta})^{- 1}$ and the negative log likelihood is the **cross entropy loss**: $\log p (y|x) = - \sum\_{i} y\_{i} \log p\_{i} + (1 - y\_{i}) \log (1 -p\_{i})$.
 
 [^3]: Indeed $A (\tilde{x} \beta) - A (x \beta) = A' (x \beta)  (\tilde{x} \beta - x \beta)+ \frac{1}{2} A'' (x \beta)  (\tilde{x} \beta - x \beta)^2 + \text{h.o.t.}$ and taking expectations: $\mathbb{E}\_{\xi} [A (\tilde{x} \beta)] - A (x \beta) = A' (x \beta) (\mathbb{E} [\tilde{x} \beta] - x \beta) + \frac{1}{2} A'' (x \beta)\mathbb{E} (\tilde{x} \beta - x \beta)^2 + \text{h.o.t}$.
 
