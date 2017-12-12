@@ -49,7 +49,7 @@ Paths are relative to the root of the code.
    to bibtex as `tmdocs/paperwhy.bib` and cite as usual inside the
    TeXmacs document.
 1. Convert the bibtex to yaml with
-   `pandoc-citeproc -y bibtexfile > data/bibliography.yml`.
+   `pandoc-citeproc -y tmdocs/paperwhy.bib > data/bibliography.yml`.
 1. Export your posts as markdown into `content/post/`.
 1. **Two things need manual fixing in the markdown for now:** the
    `paper_key` field and paths to images, which need to be corrected
