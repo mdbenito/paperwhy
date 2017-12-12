@@ -6,7 +6,7 @@ authors: ["Miguel de Benito Delgado"]
 date: "2017-06-04"
 tags: ["optimization", "accelerated-gradient-descent", "talks"]
 paper_authors: ["Jordan, Michael I."]
-paper_key: "jordan_gradient-based_2017"
+paper_key: "jordan_gradientbased_2017"
 
 ---
 
