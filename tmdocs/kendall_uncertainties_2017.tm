@@ -22,7 +22,7 @@
 
   <hrule>
 
-  <cite|kendall_multi-task_2017> builds upon this.
+  <cite|kendall_multitask_2017> builds upon this.
   <cite|kendall_geometric_2017> too.
 
   Possibly one of the greatest drawbacks for many applications of deep
@@ -98,7 +98,7 @@
 <\auxiliary>
   <\collection>
     <\associate|bib>
-      kendall_multi-task_2017
+      kendall_multitask_2017
 
       kendall_geometric_2017
     </associate>

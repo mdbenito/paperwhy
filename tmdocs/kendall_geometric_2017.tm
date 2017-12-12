@@ -63,7 +63,7 @@
 
     <item>RGB-D sensor data: best used in indoor applications because depth
     info in RGB-D degrades with distance (quadratically<\footnote>
-      <cite|walch_image-based_2016>.
+      <cite|walch_imagebased_2016>.
     </footnote>).
 
     <item>Stereoscopic images: this option seems best for outdoor
@@ -95,7 +95,7 @@
 
   <big-figure|<image|../static/img/kendall_geometric_2017-fig1-fake.jpg|755px|228px||>|Architecture.
   Picture shamelessly cannibalized without permission from
-  <cite|walch_image-based_2016>.>
+  <cite|walch_imagebased_2016>.>
 
   <section*|Improving the loss>
 
@@ -120,7 +120,7 @@
   where <math|f> is the neural network, <math|\<b-x\>> the input image and
   <math|\<b-y\>> is one of <math|\<b-p\>,\<b-q\>>. We leave the details of
   this idea for a later post on a previous paper,<\footnote>
-    <cite|kendall_multi-task_2017> but also <cite|kendall_what_2017>.
+    <cite|kendall_multitask_2017> but also <cite|kendall_what_2017>.
   </footnote> but for now, suffice to say that it boils down to adding two
   <em|trainable parameters> <math|<wide|\<sigma\>|^><rsub|p>,<wide|\<sigma\>|^><rsub|q>\<in\>\<bbb-R\>>
   to the model and optimising
@@ -176,7 +176,7 @@
 
   As usual, check the paper for the benchmarks and the details of how it
   outperforms everyone else ;). We only remark that this model improves the
-  already impressive results of <cite|walch_image-based_2016>, using PoseNet
+  already impressive results of <cite|walch_imagebased_2016>, using PoseNet
   with spatial LSTMs, but since this paper uses a linear combination for the
   loss, the fruit is hanging really low! Also, stay tuned:
 
@@ -195,7 +195,7 @@
       <with|font-shape|italic|ArXiv:1703.04977 [cs]>, mar 2017.<newblock>
       ArXiv: 1703.04977.<newblock>
 
-      <bibitem*|2><label|bib-kendall_multi-task_2017>Alex Kendall, Yarin
+      <bibitem*|2><label|bib-kendall_multitask_2017>Alex Kendall, Yarin
       Gal<localize|, and >Roberto Cipolla.<newblock> Multi-Task Learning
       Using Uncertainty to Weigh Losses for Scene Geometry and
       Semantics.<newblock> <with|font-shape|italic|ArXiv:1705.07115 [cs]>,
@@ -209,7 +209,7 @@
       Pattern Recognition (CVPR)>, <localize|page >9. Jun 2015.<newblock>
       Citecount: 03482.<newblock>
 
-      <bibitem*|4><label|bib-walch_image-based_2016>Florian Walch, Caner
+      <bibitem*|4><label|bib-walch_imagebased_2016>Florian Walch, Caner
       Hazirbas, Laura Leal-Taixé, Torsten Sattler, Sebastian
       Hilsenbeck<localize|, and >Daniel Cremers.<newblock> Image-based
       localization using LSTMs for structured feature correlation.<newblock>
@@ -235,10 +235,10 @@
     <associate|auto-5|<tuple|6|?>>
     <associate|auto-6|<tuple|6|?>>
     <associate|auto-7|<tuple|6|?>>
-    <associate|bib-kendall_multi-task_2017|<tuple|2|?>>
+    <associate|bib-kendall_multitask_2017|<tuple|2|?>>
     <associate|bib-kendall_what_2017|<tuple|1|?>>
     <associate|bib-szegedy_going_2015|<tuple|3|?>>
-    <associate|bib-walch_image-based_2016|<tuple|4|?>>
+    <associate|bib-walch_imagebased_2016|<tuple|4|?>>
     <associate|footnote-1|<tuple|1|?>>
     <associate|footnote-2|<tuple|2|?>>
     <associate|footnote-3|<tuple|3|?>>
@@ -259,21 +259,21 @@
     <\associate|bib>
       kendall_what_2017
 
-      walch_image-based_2016
+      walch_imagebased_2016
 
       szegedy_going_2015
 
-      walch_image-based_2016
+      walch_imagebased_2016
 
-      kendall_multi-task_2017
+      kendall_multitask_2017
 
       kendall_what_2017
 
-      walch_image-based_2016
+      walch_imagebased_2016
     </associate>
     <\associate|figure>
       <tuple|normal|Architecture. Picture shamelessly cannibalized without
-      permission from [<write|bib|walch_image-based_2016><reference|bib-walch_image-based_2016>].|<pageref|auto-3>>
+      permission from [<write|bib|walch_imagebased_2016><reference|bib-walch_imagebased_2016>].|<pageref|auto-3>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Goal>
