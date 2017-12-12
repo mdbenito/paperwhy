@@ -93,9 +93,10 @@
     vice versa.
   </quotation>
 
-  <big-figure|<image|../static/img/kendall_geometric_2017-fig1-fake.jpg|755px|228px||>|Architecture.
+  <big-figure|<image|../static/img/kendall_geometric_2017-fig1-fake.jpg|755px|228px||>|Architecture.>
+
   Picture shamelessly cannibalized without permission from
-  <cite|walch_imagebased_2016>.>
+  <cite|walch_imagebased_2016>.
 
   <section*|Improving the loss>
 
@@ -176,9 +177,11 @@
 
   As usual, check the paper for the benchmarks and the details of how it
   outperforms everyone else ;). We only remark that this model improves the
-  already impressive results of <cite|walch_imagebased_2016>, using PoseNet
-  with spatial LSTMs, but since this paper uses a linear combination for the
-  loss, the fruit is hanging really low! Also, stay tuned:
+  already impressive results of a previous paper using PoseNet with spatial
+  LSTMs,<\footnote>
+    <cite|walch_imagebased_2016>.
+  </footnote> but since this paper uses a linear combination for the loss,
+  the fruit is hanging really low! Also, stay tuned:
 
   <\quotation>
     For many applications which require localization, such as mobile
@@ -234,7 +237,7 @@
     <associate|auto-4|<tuple|1|?>>
     <associate|auto-5|<tuple|6|?>>
     <associate|auto-6|<tuple|6|?>>
-    <associate|auto-7|<tuple|6|?>>
+    <associate|auto-7|<tuple|7|?>>
     <associate|bib-kendall_multitask_2017|<tuple|2|?>>
     <associate|bib-kendall_what_2017|<tuple|1|?>>
     <associate|bib-szegedy_going_2015|<tuple|3|?>>
@@ -245,12 +248,14 @@
     <associate|footnote-4|<tuple|4|?>>
     <associate|footnote-5|<tuple|5|?>>
     <associate|footnote-6|<tuple|6|?>>
+    <associate|footnote-7|<tuple|7|?>>
     <associate|footnr-1|<tuple|1|?>>
     <associate|footnr-2|<tuple|2|?>>
     <associate|footnr-3|<tuple|3|?>>
     <associate|footnr-4|<tuple|4|?>>
     <associate|footnr-5|<tuple|5|?>>
     <associate|footnr-6|<tuple|6|?>>
+    <associate|footnr-7|<tuple|7|?>>
   </collection>
 </references>
 
