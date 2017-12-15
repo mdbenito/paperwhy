@@ -17,7 +17,7 @@ local version of PCA at each point to determine the "principal" or
 "approximate tangent space" at that point in order to compute a set of
 weights for neighboring points. Then these weights are used to build a
 graph and _**S**pectral **G**raph **P**artitioning_[^2] is applied to
-compute its connected componets.
+compute its connected components.
 
 ---
 
