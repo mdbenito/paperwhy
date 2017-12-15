@@ -1,7 +1,7 @@
 FROM alpine:3.6
 MAINTAINER Miguel de Benito <m.debenito.d@gmail.com>
 
-ENV HUGO_VERSION=0.22
+ENV HUGO_VERSION=0.30.2
 
 RUN apk add --no-cache wget ca-certificates nodejs nodejs-npm python2 python2-dev py-pip bash git
 
