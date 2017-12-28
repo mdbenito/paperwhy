@@ -49,7 +49,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 26
   publisher: Curran Associates, Inc.
   page: '351-359'
-  note: 'citecount: 00158'
+  note: 'citecount: 00000'
 
 - id: baldi_understanding_2013
   type: chapter
@@ -74,7 +74,7 @@ references:
   title: Understanding Dropout
   container-title: Advances in Neural Information Processing Systems 26
   page: '2814-2822'
-  note: 'citecount: 00067'
+  note: 'citecount: 00000'
 
 - id: zagoruyko_diracnets_2017
   type: article-journal
@@ -106,7 +106,7 @@ references:
   title: Deep learning using linear Support Vector Machines
   container-title: arXiv:1306.0239 \[cs, stat\]
   page: '6'
-  note: 'citecount: 00169'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1306.0239
 
 - id: ba_multiple_2014
@@ -220,7 +220,7 @@ references:
   title: Why does deep and cheap learning work so well?
   container-title: arXiv:1608.08225 \[cond-mat, stat\]
   page: '17'
-  note: 'citecount: 00022'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1608.08225
 
 - id: poggio_why_2016
@@ -249,7 +249,7 @@ references:
     of Dimensionality
   container-title: arXiv:1611.00740 \[cs\]
   page: '26'
-  note: 'citecount: 00004'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1611.00740
 
 - id: glorot_deep_2011
@@ -274,7 +274,7 @@ references:
   publisher-place: Florida, USA
   page: '315-323'
   volume: '15'
-  note: 'citecount: 00995'
+  note: 'citecount: 00000'
 
 - id: arias-castro_spectral_2017
   type: article-journal
@@ -296,7 +296,7 @@ references:
   page: '1-57'
   volume: '18'
   issue: '9'
-  note: 'citecount: 00025 code: http://sciences.ucf.edu/math/tengz'
+  note: 'citecount: 00000 code: http://sciences.ucf.edu/math/tengz'
 
 - id: ng_spectral_2002
   type: chapter
@@ -379,7 +379,7 @@ references:
   title: Local minima in training of neural networks
   container-title: arXiv:1611.06310 \[cs, stat\]
   page: '12'
-  note: 'citecount: 00001'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1611.06310
 
 - id: goodfellow_maxout_2013
@@ -405,7 +405,7 @@ references:
   title: Maxout Networks
   container-title: arXiv:1302.4389 \[cs, stat\]
   page: '9'
-  note: 'citecount: 00781 code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html'
+  note: 'citecount: 00000 code: http://www-etud.iro.umontreal.ca/\~goodfeli/maxout.html'
   URL: http://arxiv.org/abs/1302.4389
 
 - id: nevo_identifying_2017
@@ -447,7 +447,7 @@ references:
   title-short: Batch Normalization
   container-title: arXiv:1502.03167 \[cs\]
   page: '11'
-  note: 'citecount: 01616'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1502.03167
 
 - id: bartlett_representational_2017
@@ -569,7 +569,7 @@ references:
   title: Improving neural networks by preventing co-adaptation of feature detectors
   container-title: arXiv:1207.0580 \[cs\]
   page: '18'
-  note: 'citecount: 01928'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1207.0580
 
 - id: he_deep_2016
@@ -591,7 +591,7 @@ references:
     day: '2'
   title: Deep Residual Learning for Image Recognition
   page: '770-778'
-  note: 'citecount: 02451 Extended version with appendix from the Arxiv'
+  note: 'citecount: 00000 Extended version with appendix from the Arxiv'
 
 - id: jordan_gradientbased_2017
   type: no-type
@@ -640,7 +640,7 @@ references:
   page: '108-116'
   volume: '7'
   issue: '1'
-  note: 'citecount: 00550'
+  note: 'citecount: 00000'
   DOI: 10.1162/neco.1995.7.1.108
 
 - id: vidal_subspace_2011
@@ -705,7 +705,7 @@ references:
     month: '11'
   title: Identity matters in Deep Learning
   container-title: arXiv:1611.04231 \[cs, stat\]
-  note: 'citecount: 00015'
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1611.04231
 
 - id: montufar_number_2014
@@ -736,7 +736,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 27
   publisher: Curran Associates, Inc.
   page: '2924-2932'
-  note: 'citecount: 00139'
+  note: 'citecount: 00000'
 
 - id: pinkus_approximation_1999
   type: article-journal
@@ -810,7 +810,7 @@ references:
   container-title: Advances in Neural Information Processing Systems 19
   publisher: MIT Press
   page: '153-160'
-  note: 'citecount: 02230'
+  note: 'citecount: 00000'
 
 - id: breiman_bagging_1996
   type: article-journal
@@ -943,6 +943,7 @@ references:
   title: Multi-Task Learning Using Uncertainty to Weigh Losses for Scene Geometry
     and Semantics
   container-title: arXiv:1705.07115 \[cs\]
+  note: 'citecount: 00009'
   URL: http://arxiv.org/abs/1705.07115
 
 - id: dauphin_identifying_2014
@@ -1037,6 +1038,7 @@ references:
     month: '10'
   title: Extrapolation and learning equations
   container-title: arXiv:1610.02995 \[cs\]
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1610.02995
 
 - id: ba_layer_2016
@@ -1074,6 +1076,28 @@ references:
   note: 'citecount: 00032'
   URL: http://arxiv.org/abs/1312.6098
 
+- id: mnih_recurrent_2014
+  type: article-journal
+  author:
+  - family: Mnih
+    given: Volodymyr
+  - family: Heess
+    given: Nicolas
+  - family: Graves
+    given: Alex
+  - family: Kavukcuoglu
+    given: Koray
+  issued:
+  - year: '2014'
+    month: '6'
+  accessed:
+  - year: '2017'
+    month: '10'
+    day: '27'
+  title: Recurrent models of visual attention
+  container-title: arXiv:1406.6247 \[cs, stat\]
+  URL: http://arxiv.org/abs/1406.6247
+
 - id: kendall_geometric_2017
   type: article-journal
   author:
@@ -1086,6 +1110,7 @@ references:
     month: '4'
   title: Geometric Loss Functions for Camera Pose Regression with Deep Learning
   container-title: arXiv:1704.00390 \[cs\]
+  note: 'citecount: 00014'
   URL: http://arxiv.org/abs/1704.00390
 
 - id: walch_imagebased_2016
@@ -1108,7 +1133,36 @@ references:
     month: '11'
   title: Image-based localization using LSTMs for structured feature correlation
   container-title: arXiv:1611.07890 \[cs\]
+  note: 'citecount: 00000'
   URL: http://arxiv.org/abs/1611.07890
+
+- id: kaiser_one_2017
+  type: article-journal
+  author:
+  - family: Kaiser
+    given: Lukasz
+  - family: Gomez
+    given: Aidan N.
+  - family: Shazeer
+    given: Noam
+  - family: Vaswani
+    given: Ashish
+  - family: Parmar
+    given: Niki
+  - family: Jones
+    given: Llion
+  - family: Uszkoreit
+    given: Jakob
+  issued:
+  - year: '2017'
+    month: '6'
+  accessed:
+  - year: '2017'
+    month: '7'
+    day: '2'
+  title: One Model To Learn Them All
+  container-title: arXiv:1706.05137 \[cs, stat\]
+  keyword: importante,priority,queue,readme
 
 - id: kendall_what_2017
   type: article-journal
@@ -1123,4 +1177,245 @@ references:
   title: What Uncertainties Do We Need in Bayesian Deep Learning for Computer Vision?
   container-title: arXiv:1703.04977 \[cs\]
   URL: http://arxiv.org/abs/1703.04977
+
+- id: chen_zoo_2017
+  type: article-journal
+  author:
+  - family: Chen
+    given: Pin-Yu
+  - family: Zhang
+    given: Huan
+  - family: Sharma
+    given: Yash
+  - family: Yi
+    given: Jinfeng
+  - family: Hsieh
+    given: Cho-Jui
+  issued:
+  - year: '2017'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '15'
+  title: 'ZOO: Zeroth Order Optimization based Black-box Attacks to Deep Neural
+    Networks without Training Substitute Models'
+  title-short: ZOO
+  container-title: arXiv:1708.03999 \[cs, stat\]
+  page: '15-26'
+  note: 'citecount: 00007'
+  URL: http://arxiv.org/abs/1708.03999
+  DOI: 10.1145/3128572.3140448
+
+- id: salimans_evolution_2017
+  type: article-journal
+  author:
+  - family: Salimans
+    given: Tim
+  - family: Ho
+    given: Jonathan
+  - family: Chen
+    given: Xi
+  - family: Sidor
+    given: Szymon
+  - family: Sutskever
+    given: Ilya
+  issued:
+  - year: '2017'
+    month: '3'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '15'
+  title: Evolution Strategies as a Scalable Alternative to Reinforcement Learning
+  container-title: arXiv:1703.03864 \[cs, stat\]
+  note: 'citecount: 00036'
+  URL: http://arxiv.org/abs/1703.03864
+
+- id: cavallo_exploring_2017
+  type: article-journal
+  author:
+  - family: Cavallo
+    given: Marco
+  - family: Demiralp
+    given: Çağatay
+  issued:
+  - year: '2017'
+    month: '7'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '15'
+  title: Exploring Dimensionality Reductions with Forward and Backward Projections
+  container-title: arXiv:1707.04281 \[cs\]
+  note: 'citecount: 00000'
+  URL: http://arxiv.org/abs/1707.04281
+
+- id: sorzano_survey_2014
+  type: article-journal
+  author:
+  - family: Sorzano
+    given: C. O. S.
+  - family: Vargas
+    given: J.
+  - family: Montano
+    given: A. Pascual
+  issued:
+  - year: '2014'
+    month: '3'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '15'
+  title: A survey of dimensionality reduction techniques
+  container-title: arXiv:1403.2877 \[cs, q-bio, stat\]
+  note: 'citecount: 00043'
+  URL: http://arxiv.org/abs/1403.2877
+
+- id: koster_flexpoint_2017
+  type: article-journal
+  author:
+  - family: Köster
+    given: Urs
+  - family: Webb
+    given: Tristan J.
+  - family: Wang
+    given: Xin
+  - family: Nassar
+    given: Marcel
+  - family: Bansal
+    given: Arjun K.
+  - family: Constable
+    given: William H.
+  - family: Elibol
+    given: Oğuz H.
+  - family: Gray
+    given: Scott
+  - family: Hall
+    given: Stewart
+  - family: Hornof
+    given: Luke
+  - family: Khosrowshahi
+    given: Amir
+  - family: Kloss
+    given: Carey
+  - family: Pai
+    given: Ruby J.
+  - family: Rao
+    given: Naveen
+  issued:
+  - year: '2017'
+    month: '11'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '27'
+  title: 'Flexpoint: An Adaptive Numerical Format for Efficient Training of Deep
+    Neural Networks'
+  title-short: Flexpoint
+  container-title: arXiv:1711.02213 \[cs, stat\]
+  URL: http://arxiv.org/abs/1711.02213
+
+- id: courbariaux_training_2014a
+  type: article-journal
+  author:
+  - family: Courbariaux
+    given: Matthieu
+  - family: Bengio
+    given: Yoshua
+  - family: David
+    given: Jean-Pierre
+  issued:
+  - year: '2014'
+    month: '12'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '28'
+  title: Training deep neural networks with low precision multiplications
+  container-title: arXiv:1412.7024 \[cs\]
+  URL: http://arxiv.org/abs/1412.7024
+
+- id: dettmers_8bit_2015a
+  type: article-journal
+  author:
+  - family: Dettmers
+    given: Tim
+  issued:
+  - year: '2015'
+    month: '11'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '28'
+  title: 8-Bit Approximations for Parallelism in Deep Learning
+  container-title: arXiv:1511.04561 \[cs\]
+  URL: http://arxiv.org/abs/1511.04561
+
+- id: anderson_highdimensional_2017
+  type: article-journal
+  author:
+  - family: Anderson
+    given: Alexander G.
+  - family: Berg
+    given: Cory P.
+  issued:
+  - year: '2017'
+    month: '5'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '28'
+  title: The High-Dimensional Geometry of Binary Neural Networks
+  container-title: arXiv:1705.07199 \[cs\]
+  URL: http://arxiv.org/abs/1705.07199
+
+- id: courbariaux_binarized_2016a
+  type: article-journal
+  author:
+  - family: Courbariaux
+    given: Matthieu
+  - family: Hubara
+    given: Itay
+  - family: Soudry
+    given: Daniel
+  - family: El-Yaniv
+    given: Ran
+  - family: Bengio
+    given: Yoshua
+  issued:
+  - year: '2016'
+    month: '2'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '28'
+  title: 'Binarized Neural Networks: Training Deep Neural Networks with Weights
+    and Activations Constrained to +1 or -1'
+  title-short: Binarized Neural Networks
+  container-title: arXiv:1602.02830 \[cs\]
+  URL: http://arxiv.org/abs/1602.02830
+
+- id: zhang_shufflenet_2017
+  type: article-journal
+  author:
+  - family: Zhang
+    given: Xiangyu
+  - family: Zhou
+    given: Xinyu
+  - family: Lin
+    given: Mengxiao
+  - family: Sun
+    given: Jian
+  issued:
+  - year: '2017'
+    month: '7'
+  accessed:
+  - year: '2017'
+    month: '12'
+    day: '28'
+  title: 'ShuffleNet: An Extremely Efficient Convolutional Neural Network for Mobile
+    Devices'
+  title-short: ShuffleNet
+  container-title: arXiv:1707.01083 \[cs\]
+  URL: http://arxiv.org/abs/1707.01083
 ...
