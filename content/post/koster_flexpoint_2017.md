@@ -109,9 +109,12 @@ announced flex16+5 is on par with float32.
 {{< figure src="/img/koster_flexpoint_2017_blog_fig_7.png"
          title="Flexpoint versus floating point on AlexNet, ResNet 110 and a Wasserstein GAN." >}}
 
-One can only wait expectantly for intel to deliver this awesome piece of tech! 
-Hopefully they will be able to integrate Autoflex into known deep learning 
-frameworks.
+One can only wait expectantly for intel to [deliver their Nervana 
+Neural Network Processor](https://www.intelnervana.com/intel-nervana-neural-network-processor-architecture-update/)
+implementing flexpoint. At half the bitsize of float32, they will have
+double the bandwidth, plus all the goodies they will be packing into
+their processors. Hopefully they will be able to integrate Autoflex
+into popular deep learning frameworks.
 
 If this has piqued your interest, do read their [blog post accompanying the 
 paper](https://www.intelnervana.com/flexpoint-numerical-innovation-underlying-intel-nervana-neural-network-processor/). 

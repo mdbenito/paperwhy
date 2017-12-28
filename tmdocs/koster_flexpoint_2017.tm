@@ -164,9 +164,12 @@
   <big-figure|<image|../static/img/koster_flexpoint_2017_blog_fig_7.png|0.9par|||>|Flexpoint
   versus floating point on AlexNet, ResNet 110 and a Wasserstein GAN.>
 
-  One can only wait expectantly for intel to deliver this awesome piece of
-  tech! Hopefully they will be able to integrate Autoflex into known deep
-  learning frameworks.
+  One can only wait expectantly for intel to <hlink|deliver their Nervana
+  Neural Network Processor|https://www.intelnervana.com/intel-nervana-neural-network-processor-architecture-update/>
+  implementing flexpoint. At half the bitsize of float32, they will have
+  double the bandwidth, plus all the goodies they will be packing into their
+  processors. Hopefully they will be able to integrate Autoflex into popular
+  deep learning frameworks.
 
   If this has piqued your interest, do read their \ <hlink|blog post
   accompanying the paper|https://www.intelnervana.com/flexpoint-numerical-innovation-underlying-intel-nervana-neural-network-processor/>.
@@ -267,18 +270,30 @@
     </associate>
     <\associate|figure>
       <tuple|normal|<surround|<hidden|<tuple>>||Dynamic range of tensor
-      entries of a ResNet on CIFAR10.>|<pageref|auto-1>>
+      entries of a ResNet on CIFAR10.>|<pageref|auto-2>>
 
-      <tuple|normal|<surround|<hidden|<tuple>>||Autoflex. >|<pageref|auto-3>>
+      <tuple|normal|<surround|<hidden|<tuple>>||Flexpoint16+5.
+      >|<pageref|auto-4>>
+
+      <tuple|normal|<surround|<hidden|<tuple>>||Flexpoint versus floating
+      point on AlexNet, ResNet 110 and a Wasserstein GAN.>|<pageref|auto-6>>
     </associate>
     <\associate|toc>
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Some
-      basics> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>The
+      idea> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-1><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>flexpointN+M>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Autoflex>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-5><vspace|0.5fn>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Bibliography>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <no-break><pageref|auto-7><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
