@@ -26,7 +26,7 @@
   locations in the image and tentative labels. The state (full image) is
   partially observed through a fixed size subimage around each location. The
   policy takes the full history into account compressed into a hidden vector
-  via an RNN. Policy gradient is used in REINFORCE.
+  via an RNN. REINFORCE is used to compute the policy gradient.
 
   <hrule>
 
