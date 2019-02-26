@@ -6,7 +6,7 @@ authors: ["Miguel de Benito Delgado"]
 date: "2018-12-22"
 tags: ["image classification", "policy gradient", "attention", "reinforcement learning", "POMDP", "RNN"]
 paper_authors: ["Mnih, Volodymir", "Hees, Nicolas", "Graves, Alex", "Kavukcuoglu, Koray"]
-paper_key: mnih_recurrent_2014
+paper_key: "mnih_recurrent_2014"
 
 ---
 
@@ -20,8 +20,8 @@ paper_key: mnih_recurrent_2014
 modeled as a sequential decision problem where actions are salient locations in 
 the image and tentative labels. The state (full image) is partially observed 
 through a fixed size subimage around each location. The policy takes the full 
-history into account compressed into a hidden vector via an RNN. Policy 
-gradient is used in REINFORCE.
+history into account compressed into a hidden vector via an RNN. REINFORCE is 
+used to compute the policy gradient.
 
 
 
@@ -88,20 +88,23 @@ when computing the distribution over trajectories $\tau = (s\_{1}, a\_{1},
 
 The goal is to maximise the total expected reward
 
-\\[ J (\theta) := \mathbb{E}\_{\tau \sim p_{\theta} (\tau)} [\sum\_{t = 1}^T r
+\\[ J (\theta) := \mathbb{E}\_{\tau \sim p\_{\theta} (\tau)} [\sum\_{t = 1}^T r
    (s\_{t}, a\_{t})] . \\]
 
 The algorithm used is basically the policy gradient method with the REINFORCE 
 rule:[^3]
 
-**Algorithm 1:** 1. Initialise $\pi \_{\theta}$ with some random set of 
-parameters.˙1. For $n = 1 \ldots N$, pick some input image $x\_{n}$ with label 
-$y\_{n}$.˙1. Sample some random initial location $l\_{0}$.˙1. Run the policy 
-(the recurrent network) $\pi \_{\theta}$ for $T$ timesteps, ˙   creating new 
-locations $l\_{t}$ and labels $y\_{t}$. At the end collect the ˙   reward 
-$r\_{T} \in \lbrace 0, 1 \rbrace$.˙1. Compute the gradient of the reward 
-$\nabla \_{\theta} J (\theta \_{n})$.˙1. Update $\theta \_{n + 1} \leftarrow 
-\theta \_{n} + \alpha \_{n} \nabla ˙   \_{\theta} J\_{\theta} (\theta \_{n})$.
+**Algorithm 1:**
+
+1. Initialise $\pi \_{\theta}$ with some random set of parameters.
+1. For $n = 1 \ldots N$, pick some input image $x\_{n}$ with label $y\_{n}$.
+1. Sample some random initial location $l\_{0}$.
+1. Run the policy (the recurrent network) $\pi \_{\theta}$ for $T$ timesteps,
+   creating new locations $l\_{t}$ and labels $y\_{t}$. At the end collect the
+   reward$r\_{T} \in \lbrace 0, 1 \rbrace$.
+1. Compute the gradient of the reward $\nabla \_{\theta} J (\theta \_{n})$.
+1. Update $\theta \_{n + 1} \leftarrow \theta \_{n} + \alpha \_{n} \nabla
+   \_{\theta} J\_{\theta} (\theta \_{n})$.
 
 The difficulty lies in step $5$ because the reward is an expectation over 
 trajectories whose gradient cannot be analitically computed. One solution is to 
@@ -116,7 +119,7 @@ but clever substitution:
 
 and this is
 
-\\[ \nabla \_{\theta} J (\theta) =\mathbb{E}\_{\tau \sim p_{\theta} (\tau)}
+\\[ \nabla \_{\theta} J (\theta) =\mathbb{E}\_{\tau \sim p\_{\theta} (\tau)}
    [\nabla \_{\theta} \log p\_{\theta} (\tau) r (\tau)] \\]
 
 In order to compute this integral we can now use Monte-Carlo sampling:
