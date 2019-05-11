@@ -112,7 +112,7 @@
 
   The algorithm used is basically the policy gradient method with the
   REINFORCE rule:<\footnote>
-    See e.g. <cite|sutton_reinforcement_2018>, <math|>Ÿ13.3.
+    See e.g. <cite|sutton_reinforcement_2018>, <math|>ï¿½13.3.
   </footnote>
 
   <\algorithm>
@@ -161,7 +161,7 @@
 
   <\equation*>
     \<nabla\><rsub|\<theta\>> J<around*|(|\<theta\>|)>\<approx\><frac|1|M>*<big|sum><rsub|m=1><rsup|M>\<nabla\><rsub|\<theta\>>
-    log p<rsub|\<theta\>><around*|(|\<tau\>|)>*r<around*|(|\<tau\>|)>,
+    log p<rsub|\<theta\>><around*|(|\<tau\><rsub|m>|)>*r<around*|(|\<tau\><rsub|m>|)>,
   </equation*>
 
   and after rewriting <math|log p<rsub|\<theta\>><around*|(|\<tau\>|)>> as a
