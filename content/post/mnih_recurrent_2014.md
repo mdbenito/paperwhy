@@ -125,7 +125,7 @@ and this is
 In order to compute this integral we can now use Monte-Carlo sampling:
 
 \\[ \nabla \_{\theta} J (\theta) \approx \frac{1}{M}  \sum\_{m = 1}^M \nabla
-   \_{\theta} \log p\_{\theta} (\tau) r (\tau), \\]
+   \_{\theta} \log p\_{\theta} (\tau\_m) r (\tau\_m), \\]
 
 and after rewriting $\log p\_{\theta} (\tau)$ as a sum of logarithms and 
 discarding the terms which do not depend on $\theta$ we obtain:
