@@ -1,4 +1,4 @@
-baseurl = "https://paperwhy.8027.org/"
+baseurl = "https://paperwhy.netlify.com/"
 languageCode = "en-gb"
 title = "Paperwhy"
 # Enable comments by entering a Disqus shortname
@@ -45,7 +45,7 @@ FootnoteReturnLinkContents = "<sup>⇧</sup>"
 
 [[params.authors]]
         name = "Miguel de Benito Delgado"
-        url = "//mdbenito.8027.org"
+        url = "//mdbenito.netlify.com"
         thumbnail = "/img/people/miguel.jpg"
 
 [taxonomies]
