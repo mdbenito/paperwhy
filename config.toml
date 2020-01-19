@@ -1,4 +1,4 @@
-baseurl = "https://paperwhy.aerobatic.io/"
+baseurl = "https://paperwhy.8027.org/"
 languageCode = "en-gb"
 title = "Paperwhy"
 # Enable comments by entering a Disqus shortname
@@ -45,7 +45,7 @@ FootnoteReturnLinkContents = "<sup>⇧</sup>"
 
 [[params.authors]]
         name = "Miguel de Benito Delgado"
-        url = "//mdbenito.aerobatic.io"
+        url = "//mdbenito.8027.org"
         thumbnail = "/img/people/miguel.jpg"
 
 [taxonomies]

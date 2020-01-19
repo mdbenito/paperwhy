@@ -1,8 +1,0 @@
-image: mdbenito/aero-hugo
-pipelines:
-  branches:
-    master:
-      - step:
-          script:
-            - hugo -v --baseURL https://__baseurl__/
-            - aero deploy -d public
