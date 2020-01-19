@@ -12,8 +12,8 @@ ourselves and hopefully someone else.
 
 * [pandoc](http://pandoc.org/) with `pandoc-citeproc` to generate the
   bibliography.
-* [Hugo](https://gohugo.io) to generate the site. This is only
-  local. Deployment is done with bitbucket pipelines.
+* [Hugo](https://gohugo.io) **version 0.41** to locally generate the site.
+  Breaking changes after this version make upgrading too much of a hassle.
 * Optional: [TeXmacs](http://www.texmacs.org) with
   the [markdown converter](https://bitbucket.org/mdbenito/tm2md) to
   write the posts in a sensible editor with typesetting.
@@ -149,10 +149,7 @@ There's also a caption field, but looks worse in the current theme.
 
 This site is built with [HUGO](gohugo.io) based on
 the [hikari](github.com/digitalcraftsman/hugo-hikari-theme) theme.
-Deployment is through bitbucket pipelines
-via [aerobatic](aerobatic.com).  A custom docker image is used because
-we need Hugo >= 0.20 and currently (May 2017) aerobatic's docker
-container for hugo has version 0.19
+Branch `master` is automatically deployed onto [netlify](https://netlify.com).
 
 ## Credits
 

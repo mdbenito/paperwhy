@@ -1,3 +1,7 @@
+#
+# WARNING: there are breaking changes in Hugo > 0.41
+#
+
 [build]
 publish = "public"
 command = "hugo --gc"
