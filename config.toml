@@ -14,7 +14,7 @@ FootnoteReturnLinkContents = "<sup>⇧</sup>"
 	post = "/:year/:month/:day/:slug"
 
 [params]
-        gitRepository = "//bitbucket.org/mdbenito/paperwhy"
+	gitRepository = "https://bitbucket.org/mdbenito/paperwhy"
 	name = "Paperwhy"
 	description = "Paperwhy: your (ir)regular source of paper digests."
 	copyright = "Built with [HUGO](//gohugo.io) based on [hikari](//github.com/digitalcraftsman/hugo-hikari-theme) - © 2017 the authors"
@@ -38,18 +38,18 @@ FootnoteReturnLinkContents = "<sup>⇧</sup>"
 	# Enable Google search
 	search_enabled = true
 
-[[params.authors]]
-        name = "Álvaro Tejero Cantero"
-	url = "//scholar.google.com/citations?user=VObPwpUAAAAJ&hl=en"
-        thumbnail = "/img/people/alvaro.jpg"
+#[[params.authors]]
+#	name = "Álvaro Tejero Cantero"
+#	url = "//scholar.google.com/citations?user=VObPwpUAAAAJ&hl=en"
+#	thumbnail = "/img/people/alvaro.jpg"
 
 [[params.authors]]
-        name = "Miguel de Benito Delgado"
-        url = "//mdbenito.8027.org"
-        thumbnail = "/img/people/miguel.jpg"
+	name = "Miguel de Benito Delgado"
+	url = "https://mdbenito.8027.org"
+	thumbnail = "/img/people/miguel.jpg"
 
 [taxonomies]
-        tag = "tags"
-        paper_author = "paper_authors"
-        author = "authors"
+	tag = "tags"
+	paper_author = "paper_authors"
+	author = "authors"
                 
