@@ -33,6 +33,21 @@ this hasn't been pushed to TeXmacs' trunk it can be easily installed
 following the instructions at the projects page. Directly writing
 markdown is of course also possible, see below.
 
+### Using docker
+
+Alternatively to installing hugo, you can use the provided Dockerfile to first
+build an image:
+
+```shell
+docker build -f docker/Dockerfile -t paperwhy .
+```
+
+and then run hugo from a container with:
+
+```shell
+docker run --rm -it -v $(pwd):/site -p 1313:1313 paperwhy \
+       serve --bind 0.0.0.0
+```
 
 ## Adding a new post using TeXmacs
 
