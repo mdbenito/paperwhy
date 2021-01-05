@@ -1,3 +1,4 @@
 .dir-locals.el
 tmp/
 logo.png
+/.idea/
