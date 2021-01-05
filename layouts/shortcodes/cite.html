@@ -16,11 +16,25 @@
           {{ $full := printf "%s %s" $author.given $author.family }}
           {{ $fullrev := printf "%s, %s" $author.family $author.given }}
           {{ $abbrev := delimit (slice $author.family (substr $author.given 0 1)) ", "}}
-          {{ if (index $.Site.Taxonomies.paper_authors $fullrev) }}
-          <a href="{{ $.Site.BaseURL }}paper_authors/{{ print $fullrev | urlize }}">{{ $abbrev | htmlEscape }}.</a>
-          {{ else }}
-            {{ $abbrev | htmlEscape }}.
+          {{/*Retrieve all paper entries in Data for which there is a post */}}
+          {{ $.Scratch.Set "keys" slice }}
+          {{ range $k := $.Site.RegularPages }}
+            {{ $.Scratch.Add "keys" $k.Params.paper_key }}
           {{ end }}
+          {{ with $papersWithPost := where $bib "id" "in" ($.Scratch.Get "keys") }}
+            {{/* (index $papersWithPost 0).author is an array of author maps*/}}
+            {{ $.Scratch.Set "flag" false }}
+            {{ range $p := $papersWithPost }}
+              {{ with $matches := where (where $p.author "family" $author.family) "given" $author.given }}
+                {{ $.Scratch.Set "flag" true}}
+              {{ end }}
+            {{end}}
+            {{ if $.Scratch.Get "flag" }}
+              <a href="{{ $.Site.BaseURL }}paper_authors/{{ print $fullrev | urlize }}">{{ $abbrev | htmlEscape }}.</a>
+            {{ else }}
+              {{ $abbrev | htmlEscape }}.
+            {{ end }}
+          {{end}}
           {{ if lt $i (sub (len $entry.author) 1)}}, {{end}}
         {{ end }}
       </span>

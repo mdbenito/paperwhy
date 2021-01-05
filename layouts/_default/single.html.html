@@ -28,12 +28,12 @@
                 </div>
                 <h1 class="page-title" itemprop="name headline">{{ .Title }}</h1>
                 <div class="paper-metadata">
-                    {{ range .Params.paper_authors }}
-                      {{ $both := split . "," }}
-                      {{ $full := printf "%s %s" (index $both 1) (index $both 0)}}
-		      <a href="{{ $.Site.BaseURL }}paper_authors/{{ . | urlize }}"
-                         class="paper-author">{{ $full }}</a>&nbsp;
-		    {{ end }}
+                    {{ range $author := $entry.author }}
+                        {{ $full := printf "%s %s" $author.given $author.family }}
+                        {{ $term := printf "%s %s" $author.family $author.given }}
+                        <a href="{{ $.Site.BaseURL }}paper_authors/{{ $term | urlize }}"
+                           class="paper-author">{{ $full }}</a>&nbsp;
+        		    {{ end }}
                     | <time datetime="" >
                         {{ if $month }}
                           {{ dateFormat "Jan 2006" (printf "%s-%02s-01" $year $month)}}

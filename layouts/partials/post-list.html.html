@@ -22,13 +22,12 @@
                         </p>
                     </a>
                     <p class="post-authors">
-		        {{ range .Params.paper_authors }}
-                        {{ $both := split . "," }}
-                        {{ $name := index $both 1 }}
-                        {{ $surname := index $both 0 }}
-		        <a href="{{ $.Site.BaseURL }}paper_authors/{{ . | urlize }}"
-                           class="paper-author">{{ $surname }}</a>&nbsp;
-		        {{ end }}
+                        {{ range $author := $entry.author }}
+                            {{ $full := printf "%s %s" $author.given $author.family }}
+                            {{ $term := printf "%s %s" $author.family $author.given }}
+                            <a href="{{ $.Site.BaseURL }}paper_authors/{{ $term | urlize }}"
+                               class="paper-author">{{ $author.family }}</a>&nbsp;
+                        {{ end }}
 		    </p>
                 </div>
             </li>

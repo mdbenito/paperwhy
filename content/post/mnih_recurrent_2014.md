@@ -5,7 +5,7 @@ author: "Miguel de Benito Delgado"
 authors: ["Miguel de Benito Delgado"]
 date: "2018-12-22"
 tags: ["image classification", "policy gradient", "attention", "reinforcement learning", "POMDP", "RNN"]
-paper_authors: ["Mnih, Volodymir", "Hees, Nicolas", "Graves, Alex", "Kavukcuoglu, Koray"]
+paper_authors: ["Mnih, Volodymyr", "Heess, Nicolas", "Graves, Alex", "Kavukcuoglu, Koray"]
 paper_key: "mnih_recurrent_2014"
 
 ---
